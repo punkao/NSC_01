@@ -49,7 +49,7 @@ def main():
     ap.add_argument("--frames", default="/workspace/frames")
     ap.add_argument("--events", default="cam_a05_ai_events.json")
     ap.add_argument("--out", default="cam_a05_timeline.json")
-    ap.add_argument("--tokens", type=int, default=90)
+    ap.add_argument("--tokens", type=int, default=150)  # ตรงกับ live_demo_combined.py (จบประโยคสวย ไม่ตัดคำ)
     ap.add_argument("--step", type=int, default=1, help="ทุกกี่วินาที (1 = per-second)")
     args = ap.parse_args()
 
