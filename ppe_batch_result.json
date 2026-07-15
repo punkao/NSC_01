@@ -1,0 +1,662 @@
+[
+  {
+    "t": 0,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": false,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมถุงมือ",
+    "raw": null
+  },
+  {
+    "t": 8,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 16,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 24,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 32,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 40,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 48,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 56,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 64,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 72,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": false,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 1 ไม่สวมถุงมือ",
+    "raw": null
+  },
+  {
+    "t": 80,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 88,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 96,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทุกคนสวมอุปกรณ์ป้องกันส่วนบุคคลครบถ้วน",
+    "raw": null
+  },
+  {
+    "t": 104,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 112,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 120,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": false
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 1 ไม่สวมหน้ากากอนามัย",
+    "raw": null
+  },
+  {
+    "t": 128,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 136,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": false,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 1 ไม่สวมถุงมือ",
+    "raw": null
+  },
+  {
+    "t": 144,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 152,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 160,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 168,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 176,
+    "ppe_violation": false,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานทั้งสองคนสวมหมวก ถุงมือ และหน้ากากอนามัยครบถ้วนตามมาตรฐานความปลอดภัย",
+    "raw": null
+  },
+  {
+    "t": 179,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": false
+      },
+      {
+        "id": 2,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 1 ไม่สวมหน้ากากอนามัย",
+    "raw": null
+  },
+  {
+    "t": 181,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวกนิรภัย",
+    "raw": null
+  },
+  {
+    "t": 184,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวก",
+    "raw": null
+  },
+  {
+    "t": 192,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวก",
+    "raw": null
+  },
+  {
+    "t": 200,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": false
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 1 ไม่สวมหน้ากากอนามัย ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวกกันน้ำ",
+    "raw": null
+  },
+  {
+    "t": 208,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวก",
+    "raw": null
+  },
+  {
+    "t": 212,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวกนิรภัย",
+    "raw": null
+  },
+  {
+    "t": 215,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": true,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวกนิรภัย",
+    "raw": null
+  },
+  {
+    "t": 217,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": true,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": false,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานคนที่ 2 ไม่สวมหมวกและถุงมือ",
+    "raw": null
+  },
+  {
+    "t": 219,
+    "ppe_violation": true,
+    "workers": [
+      {
+        "id": 1,
+        "cap": true,
+        "gloves": false,
+        "mask": true
+      },
+      {
+        "id": 2,
+        "cap": false,
+        "gloves": false,
+        "mask": true
+      }
+    ],
+    "note": "ผู้ปฏิบัติงานที่ 1 ไม่สวมถุงมือ ผู้ปฏิบัติงานที่ 2 ไม่สวมหมวกและถุงมือ",
+    "raw": null
+  }
+]

@@ -1,0 +1,25 @@
+# ---- large / regeneratable media (เก็บบนเครื่อง ไม่ลง git) ----
+*.mp4
+*.tar.gz
+_frames/
+_dbg_*.jpg
+*.jpg
+*.jpeg
+*.png
+
+# ---- models / caches ----
+models/
+*.safetensors
+*.bin
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- secrets ----
+.hf_env
+*.token
+.env
+
+# ---- os ----
+.DS_Store
+Thumbs.db

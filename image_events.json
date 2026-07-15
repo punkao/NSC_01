@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "start_sec": 96,
+      "end_sec": 102,
+      "event_type": "unauthorized_person",
+      "severity": "high",
+      "description_th": "บุคคลภายนอกเข้ามาในพื้นที่ทำงาน",
+      "_sig": "unauthorized_person",
+      "start": "01:36",
+      "end": "01:42"
+    },
+    {
+      "start_sec": 99,
+      "end_sec": 135,
+      "event_type": "hygiene_violation",
+      "severity": "low",
+      "description_th": "มีของแปลกปลอม (ขวดน้ำ) ในพื้นที่ทำงาน",
+      "_sig": "foreign_object",
+      "start": "01:39",
+      "end": "02:15"
+    },
+    {
+      "start_sec": 180,
+      "end_sec": 219,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "description_th": "ผู้ปฏิบัติงาน 2 ไม่สวมหมวก",
+      "_sig": "ppe|2|cap",
+      "start": "03:00",
+      "end": "03:39"
+    },
+    {
+      "start_sec": 216,
+      "end_sec": 219,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "description_th": "ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ",
+      "_sig": "ppe|2|gloves",
+      "start": "03:36",
+      "end": "03:39"
+    },
+    {
+      "start_sec": 216,
+      "end_sec": 219,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "description_th": "ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ",
+      "_sig": "ppe|1|gloves",
+      "start": "03:36",
+      "end": "03:39"
+    }
+  ]
+}

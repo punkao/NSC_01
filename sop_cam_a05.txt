@@ -1,0 +1,31 @@
+# REAL SOP for CAM-A05 — extracted from db/seed.sql (sops id=4, SOP-002 "Production Line" v1.15)
+# Process: "Inspection and Clean the Can." | Station 1-2 | Responsible: Thongpan.S
+
+Station: Production line — can quality inspection & cleaning (2 workers).
+Required PPE (must be worn at all times in the work area):
+  - ถุงมือผ้า (cloth gloves)
+  - หน้ากากอนามัย (hygiene mask)
+  - หมวก cap (cap)
+  - รองเท้า Safety (safety shoes)
+
+Correct procedure (7 steps):
+  1. กระป๋องรอเข้ากระบวนการตรวจสอบคุณภาพถูกวางอยู่ในลัง
+  2. worker1 หยิบกระป๋องและตรวจสอบด้วยสายตา หากพบกระป๋องผิดปกติให้หยิบออกใส่ถาด NG
+  3. [CRITICAL — ระวัง Conveyor หนีบมือ] worker1 วางกระป๋องที่สภาพดีลงบน conveyor
+  4. Conveyor เลื่อนกระป๋องผ่านกล้องเพื่อถ่ายรูปและตรวจสอบด้วย AI
+  5. [ระวัง Conveyor หนีบมือ] worker2 หยิบกระป๋องออกจาก conveyor
+  6. [ระวังกระป๋องหล่น] worker2 เช็ดกระป๋องให้ครบทุกด้าน
+  7. worker2 เก็บใส่ลัง Good เพื่อส่งกระบวนการถัดไป
+
+Safety rules (violations to watch for, with severity):
+  - สายพานหนีบมือ (Conveyor pinches hand) .......................... CRITICAL / near_miss
+  - กระป๋องหล่น (can falls) ......................................... CRITICAL / near_miss
+  - ไม่ใส่อุปกรณ์ PPE (missing PPE) ................................. MEDIUM / ppe_violation
+  - ทำงานข้ามขั้นตอน ไม่ตรวจสอบด้วยสายตาก่อนนำขึ้นสายพาน .............. MEDIUM / sop_violation
+  - ทำงานข้ามขั้นตอน ไม่เช็ดกระป๋อง ................................. MEDIUM / sop_violation
+  - วางของที่ไม่เกี่ยวข้องกับงานไว้ในพื้นที่ทำงาน .................... MEDIUM / hygiene_violation
+  - บุคคลอื่นเข้าพื้นที่ทำงาน (unauthorized person) ................. LOW / unauthorized_person
+
+Key point for detection: a can placed on the conveyor MUST first be visually
+inspected (Step 2). Taking NG cans and placing them on the conveyor without visual
+inspection is a sop_violation. Never put hands into the moving conveyor.

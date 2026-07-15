@@ -1,0 +1,286 @@
+{
+  "camera_id": "CAM-A05",
+  "total_events": 35,
+  "events": [
+    {
+      "timestamp_mmss": "01:13",
+      "timestamp_sec": 73.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "Person A หยิบกระป๋องจากกล่อง NG (ควรหยิบจาก WAIT) — เริ่มนำกระป๋อง NG กลับเข้าสายการผลิตโดยไม่ผ่านขั้นตอนที่ถูกต้อง"
+    },
+    {
+      "timestamp_mmss": "01:16",
+      "timestamp_sec": 76.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา (ไม่พบบันทึกการตรวจสอบที่ 01:15)"
+    },
+    {
+      "timestamp_mmss": "01:18",
+      "timestamp_sec": 78.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:20",
+      "timestamp_sec": 80.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:22",
+      "timestamp_sec": 82.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:24",
+      "timestamp_sec": 84.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:26",
+      "timestamp_sec": 86.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:28",
+      "timestamp_sec": 88.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:30",
+      "timestamp_sec": 90.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:32",
+      "timestamp_sec": 92.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:34",
+      "timestamp_sec": 94.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:36",
+      "timestamp_sec": 96.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:36",
+      "timestamp_sec": 96.0,
+      "event_type": "unauthorized_person",
+      "severity": "low",
+      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+      "description": "Person C เดินเข้าพื้นที่ทำงาน ถือขวดน้ำ"
+    },
+    {
+      "timestamp_mmss": "01:37",
+      "timestamp_sec": 97.0,
+      "event_type": "unauthorized_person",
+      "severity": "low",
+      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+      "description": "Person C ยังอยู่ในพื้นที่ทำงาน — ยื่นขวดน้ำให้ Person B"
+    },
+    {
+      "timestamp_mmss": "01:38",
+      "timestamp_sec": 98.0,
+      "event_type": "unauthorized_person",
+      "severity": "low",
+      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+      "description": "Person C ยังอยู่ในพื้นที่ทำงาน — Person B รับขวดน้ำ"
+    },
+    {
+      "timestamp_mmss": "01:39",
+      "timestamp_sec": 99.0,
+      "event_type": "unauthorized_person",
+      "severity": "low",
+      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+      "description": "Person C ยังอยู่ในพื้นที่ทำงาน"
+    },
+    {
+      "timestamp_mmss": "01:39",
+      "timestamp_sec": 99.0,
+      "event_type": "hygiene_violation",
+      "severity": "medium",
+      "event_type_label": "วางของไม่เกี่ยวข้อง",
+      "description": "Person B วางขวดน้ำบนโต๊ะในพื้นที่ทำงาน"
+    },
+    {
+      "timestamp_mmss": "01:40",
+      "timestamp_sec": 100.0,
+      "event_type": "unauthorized_person",
+      "severity": "low",
+      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+      "description": "Person C กำลังเดินออกจากพื้นที่ทำงาน"
+    },
+    {
+      "timestamp_mmss": "01:41",
+      "timestamp_sec": 101.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:43",
+      "timestamp_sec": 103.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:45",
+      "timestamp_sec": 105.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:47",
+      "timestamp_sec": 107.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:49",
+      "timestamp_sec": 109.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:51",
+      "timestamp_sec": 111.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:55",
+      "timestamp_sec": 115.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:57",
+      "timestamp_sec": 117.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "01:59",
+      "timestamp_sec": 119.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "02:03",
+      "timestamp_sec": 123.0,
+      "event_type": "sop_violation",
+      "severity": "medium",
+      "event_type_label": "ทำงานข้ามขั้นตอน",
+      "description": "วางกระป๋องใบสุดท้ายจากกล่อง NG ขึ้นสายพานโดยไม่ตรวจสอบด้วยสายตา"
+    },
+    {
+      "timestamp_mmss": "02:55",
+      "timestamp_sec": 175.0,
+      "event_type": "near_miss",
+      "severity": "critical",
+      "event_type_label": "Near-Miss สายพานหนีบมือ",
+      "description": "Person B ยื่นมือขวาไปที่ส่วนกลางของเครื่องจักร (ขณะสายพานยังเดิน)"
+    },
+    {
+      "timestamp_mmss": "02:59",
+      "timestamp_sec": 179.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ถอดหมวกออก (ขณะยังอยู่ในพื้นที่ทำงาน)"
+    },
+    {
+      "timestamp_mmss": "03:00",
+      "timestamp_sec": 180.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ยังไม่สวมหมวก (กำลังสวมคืน)"
+    },
+    {
+      "timestamp_mmss": "03:35",
+      "timestamp_sec": 215.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ถอดหมวก + ถุงมือออก (สิ้นสุดการทำงาน — เครื่องยังทำงานอยู่)"
+    },
+    {
+      "timestamp_mmss": "03:36",
+      "timestamp_sec": 216.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ไม่สวมหมวกและถุงมือ (ยืนพูดคุยในพื้นที่ทำงาน)"
+    },
+    {
+      "timestamp_mmss": "03:37",
+      "timestamp_sec": 217.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ไม่สวมหมวกและถุงมือ (Person A ปรับเครื่องจักร)"
+    },
+    {
+      "timestamp_mmss": "03:38",
+      "timestamp_sec": 218.0,
+      "event_type": "ppe_violation",
+      "severity": "medium",
+      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+      "description": "Person B ไม่สวมหมวกและถุงมือ (Person A ปิดเครื่องจักร)"
+    }
+  ]
+}

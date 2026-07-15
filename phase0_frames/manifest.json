@@ -1,0 +1,124 @@
+{
+  "frames": [
+    {
+      "file": "f_073.jpg",
+      "sec": 73,
+      "window": "sop"
+    },
+    {
+      "file": "f_078.jpg",
+      "sec": 78,
+      "window": "sop"
+    },
+    {
+      "file": "f_083.jpg",
+      "sec": 83,
+      "window": "sop"
+    },
+    {
+      "file": "f_088.jpg",
+      "sec": 88,
+      "window": "sop"
+    },
+    {
+      "file": "f_093.jpg",
+      "sec": 93,
+      "window": "sop"
+    },
+    {
+      "file": "f_098.jpg",
+      "sec": 98,
+      "window": "sop"
+    },
+    {
+      "file": "f_103.jpg",
+      "sec": 103,
+      "window": "sop"
+    },
+    {
+      "file": "f_108.jpg",
+      "sec": 108,
+      "window": "sop"
+    },
+    {
+      "file": "f_113.jpg",
+      "sec": 113,
+      "window": "sop"
+    },
+    {
+      "file": "f_118.jpg",
+      "sec": 118,
+      "window": "sop"
+    },
+    {
+      "file": "f_123.jpg",
+      "sec": 123,
+      "window": "sop"
+    },
+    {
+      "file": "f_000.jpg",
+      "sec": 0,
+      "window": "normal"
+    },
+    {
+      "file": "f_010.jpg",
+      "sec": 10,
+      "window": "normal"
+    },
+    {
+      "file": "f_020.jpg",
+      "sec": 20,
+      "window": "normal"
+    },
+    {
+      "file": "f_030.jpg",
+      "sec": 30,
+      "window": "normal"
+    },
+    {
+      "file": "f_040.jpg",
+      "sec": 40,
+      "window": "normal"
+    },
+    {
+      "file": "f_050.jpg",
+      "sec": 50,
+      "window": "normal"
+    },
+    {
+      "file": "f_060.jpg",
+      "sec": 60,
+      "window": "normal"
+    },
+    {
+      "file": "f_130.jpg",
+      "sec": 130,
+      "window": "normal"
+    },
+    {
+      "file": "f_136.jpg",
+      "sec": 136,
+      "window": "normal"
+    },
+    {
+      "file": "f_142.jpg",
+      "sec": 142,
+      "window": "normal"
+    },
+    {
+      "file": "f_148.jpg",
+      "sec": 148,
+      "window": "normal"
+    },
+    {
+      "file": "f_154.jpg",
+      "sec": 154,
+      "window": "normal"
+    },
+    {
+      "file": "f_160.jpg",
+      "sec": 160,
+      "window": "normal"
+    }
+  ]
+}

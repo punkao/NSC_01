@@ -1,0 +1,20 @@
+[
+  {
+    "event_type": "ppe_violation",
+    "severity": "medium",
+    "worker": "1",
+    "item": "mask",
+    "start_sec": 132,
+    "end_sec": 186,
+    "description_th": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
+  },
+  {
+    "event_type": "ppe_violation",
+    "severity": "medium",
+    "worker": "1",
+    "item": "mask",
+    "start_sec": 213,
+    "end_sec": 219,
+    "description_th": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
+  }
+]
