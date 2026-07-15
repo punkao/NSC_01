@@ -73,8 +73,8 @@ v.addEventListener('timeupdate',()=>{
   for(let i=0;i<TL.length;i++){ if(TL[i].t<=t) idx=i; else break; }
   if(idx>=0 && idx!==lastIdx){ lastIdx=idx; const e=TL[idx];
     now.innerHTML='<div class="w">'+e.mmss+'</div><div class="n">'+e.narration+'</div>';
-    hlog.unshift('<b>'+e.mmss+'</b> '+e.narration);
-    hist.innerHTML=hlog.slice(0,8).map(x=>'<div style="margin-bottom:6px">'+x+'</div>').join('');
+    const _h=document.createElement('div');_h.style.marginBottom='6px';
+    _h.innerHTML='<b>'+e.mmss+'</b> '+e.narration; hist.prepend(_h);  // เก็บครบ เลื่อนอ่านได้
     st.textContent='บรรยายถึง '+mmss(t);
   }
 });

@@ -219,8 +219,8 @@ function showNarr(){
   let s=-1; for(let k=cur;k>=0;k--){ if(BUF.has(k)){s=k;break;} }  // โชว์ล่าสุดที่มี (ไม่ปล่อยว่าง)
   if(s>=0 && s!==lastShown){ lastShown=s; const d=BUF.get(s);
     now.innerHTML='<div class="w">ช่วง '+d.mmss+'</div><div class="n">'+d.narration+'</div>';
-    hlog.unshift('<b>'+d.mmss+'</b> '+d.narration);
-    hist.innerHTML=hlog.slice(0,8).map(x=>'<div style="margin-bottom:6px">'+x+'</div>').join('');
+    const _h=document.createElement('div');_h.style.marginBottom='6px';
+    _h.innerHTML='<b>'+d.mmss+'</b> '+d.narration; hist.prepend(_h);  // เก็บครบ เลื่อนอ่านได้
     st.textContent='บรรยายถึง '+mmss(t)+' · buffer +'+Math.max(0,genT-1-cur)+'วิ · '+NEP+' GPU';
   }
 }
