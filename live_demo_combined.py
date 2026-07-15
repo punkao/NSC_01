@@ -160,7 +160,7 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
 </style></head><body>
 <div class="left">
   <h2>🏭 Line Guard — VLM Safety (จับแม่น + เล่าเข้าใจสด)</h2>
-  <div class="h">CAM-A05 · CATCH=structured (reliable) · UNDERSTAND=Cosmos พ่นสดทุก ~1วิ · 0.8× · co-located</div>
+  <div class="h">CAM-A05 · CATCH=structured (reliable) · UNDERSTAND=Cosmos พ่นสด per-second (buffer-ahead 2GPU, sync ตรง playhead)</div>
   <video id="v" src="/video" controls autoplay muted></video>
   <div class="stat"><span class="dot" id="d"></span><span id="st">กด play เพื่อเริ่ม</span></div>
 </div>
@@ -174,9 +174,12 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
 const CATCH=__CATCH__;
 const v=document.getElementById('v'),box=document.getElementById('alerts'),st=document.getElementById('st'),dd=document.getElementById('d');
 const now=document.getElementById('now'),hist=document.getElementById('hist');
-const shown=new Set();let first=true,busy=false,lastT=-99,hlog=[];
+const shown=new Set();let first=true,hlog=[];
+// buffer-ahead state: 2 GPU คิดล่วงหน้า playhead
+const NEP=__NEP__, BUF=new Map(), LOOKAHEAD=8; let genT=0,inflight=0,lastShown=-1;
 function mmss(s){s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
-v.addEventListener('play',()=>{v.playbackRate=0.8; if(!window._go){window._go=1; loop()}});
+v.addEventListener('play',()=>{v.playbackRate=__RATE__; dd.className='dot live'; if(!window._go){window._go=1; setInterval(pump,150)}});
+v.addEventListener('seeking',()=>{genT=Math.floor(v.currentTime); lastShown=-1;});
 // CATCH = precomputed structured, sync client-side (ไม่ต้อง server)
 v.addEventListener('timeupdate',()=>{
   const t=v.currentTime;
@@ -185,6 +188,7 @@ v.addEventListener('timeupdate',()=>{
     const d=document.createElement('div');d.className='card '+c.sev;
     d.innerHTML='<span class="t">'+mmss(c.t)+'</span> <span class="ty">'+c.type+'</span> <span class="cf wait" id="cf'+i+'">⏳ Cosmos ตรวจสด…</span><div class="x">'+c.text+'</div>';
     box.prepend(d); confirmLive(i);} } }
+  showNarr();
 });
 // LIVE CONFIRM = ยิง Cosmos ยืนยัน event ตอน playhead ถึง (trigger ยัง curate 100%)
 async function confirmLive(i){
@@ -196,21 +200,29 @@ async function confirmLive(i){
     else{el.textContent='';}
   }catch(e){const el=document.getElementById('cf'+i);if(el)el.textContent='';}
 }
-// UNDERSTAND = live narration จาก Cosmos ทุก ~3วิ
-async function loop(){
-  if(v.paused||v.ended){setTimeout(loop,500);return}
-  const t=v.currentTime;
-  if(busy||t-lastT<0.9){setTimeout(loop,120);return}
-  busy=true;lastT=t;dd.className='dot live';st.textContent='Cosmos กำลังดู '+mmss(t)+' …';
-  try{
-    const r=await fetch('/narrate?t='+t.toFixed(1));const d=await r.json();
-    if(d.narration){
-      now.innerHTML='<div class="w">ช่วง '+d.mmss+'</div><div class="n">'+d.narration+'</div>';
-      hlog.unshift('<b>'+d.mmss+'</b> '+d.narration);hist.innerHTML=hlog.slice(0,7).map(x=>'<div style="margin-bottom:6px">'+x+'</div>').join('');
-    }
-    st.textContent='เล่าถึง '+mmss(t);
-  }catch(e){st.textContent='narrate error'}
-  dd.className='dot';busy=false;setTimeout(loop,300);
+// ---- UNDERSTAND (buffer-ahead): ยิง NEP call ขนาน คิดล่วงหน้า playhead เก็บ BUF ----
+function DUR(){return Math.floor(v.duration||220)}
+function pump(){
+  if(v.paused||v.ended) return;
+  const cur=Math.floor(v.currentTime);
+  while(inflight<NEP && genT<=cur+LOOKAHEAD && genT<=DUR()){
+    const t=genT++;
+    if(BUF.has(t)) continue;
+    inflight++;
+    fetch('/narrate?t='+t).then(r=>r.json()).then(d=>{if(d&&d.narration)BUF.set(t,d)})
+      .catch(()=>{}).finally(()=>{inflight--});
+  }
+}
+// โชว์ narration จาก BUF ตาม playhead (per-second, ไม่มี lag เพราะคิดล่วงหน้าไว้แล้ว)
+function showNarr(){
+  const t=v.currentTime, cur=Math.floor(t);
+  let s=-1; for(let k=cur;k>=0;k--){ if(BUF.has(k)){s=k;break;} }  // โชว์ล่าสุดที่มี (ไม่ปล่อยว่าง)
+  if(s>=0 && s!==lastShown){ lastShown=s; const d=BUF.get(s);
+    now.innerHTML='<div class="w">ช่วง '+d.mmss+'</div><div class="n">'+d.narration+'</div>';
+    hlog.unshift('<b>'+d.mmss+'</b> '+d.narration);
+    hist.innerHTML=hlog.slice(0,8).map(x=>'<div style="margin-bottom:6px">'+x+'</div>').join('');
+    st.textContent='บรรยายถึง '+mmss(t)+' · buffer +'+Math.max(0,genT-1-cur)+'วิ · '+NEP+' GPU';
+  }
 }
 </script></body></html>"""
 
@@ -229,7 +241,9 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         p = urllib.parse.urlparse(self.path)
         if p.path == "/":
-            body = PAGE.replace("__CATCH__", json.dumps(CATCH, ensure_ascii=False)).encode("utf-8")
+            body = (PAGE.replace("__CATCH__", json.dumps(CATCH, ensure_ascii=False))
+                        .replace("__NEP__", str(len(_EPS)))
+                        .replace("__RATE__", os.environ.get("PLAYBACK_RATE", "0.8"))).encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
         elif p.path == "/narrate":
             t = float(urllib.parse.parse_qs(p.query).get("t", ["0"])[0])
