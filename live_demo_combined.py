@@ -8,15 +8,26 @@
 Run: python live_demo_combined.py -> http://localhost:5003
 """
 import base64
+import itertools
 import json
 import os
 import re
+import threading
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 VIDEO = "cam_a05_720p.mp4"
 FRAMES = "_frames"
-COSMOS = "http://localhost:18000/v1/chat/completions"
+# 1 GPU/A100 = endpoint เดียว; 2 GPU = ตั้ง env COSMOS_ENDPOINTS="http://127.0.0.1:18000/...,http://127.0.0.1:18001/..."
+_EPS = [e.strip() for e in os.environ.get(
+    "COSMOS_ENDPOINTS", "http://localhost:18000/v1/chat/completions").split(",") if e.strip()]
+_ep_cycle = itertools.cycle(_EPS)
+_ep_lock = threading.Lock()
+
+
+def _cosmos_ep():  # round-robin เฉลี่ยโหลดข้าม GPU (split-stream)
+    with _ep_lock:
+        return next(_ep_cycle)
 
 # ---- CATCH layer: structured events (precomputed + human-verified, reliable) ----
 # falling_object = curated/verified frames (00:14, 01:52) — เชื่อถือได้เพราะ human-in-loop ไม่ใช่ live VLM
@@ -74,7 +85,7 @@ def narrate_live(t):
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fb)}"}}]}],
         "max_tokens": 30, "temperature": 0}
     try:
-        r = requests.post(COSMOS, json=payload, timeout=60)
+        r = requests.post(_cosmos_ep(), json=payload, timeout=60)
         m = r.json()["choices"][0]["message"]
         txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
     except Exception as ex:
@@ -102,7 +113,7 @@ def confirm_live(idx):
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fb)}"}}]}],
         "max_tokens": 90, "temperature": 0}
     try:
-        r = requests.post(COSMOS, json=payload, timeout=60)
+        r = requests.post(_cosmos_ep(), json=payload, timeout=60)
         m = r.json()["choices"][0]["message"]
         txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
     except Exception as ex:
