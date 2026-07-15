@@ -19,8 +19,18 @@ import requests
 
 PROMPT = (
     "ภาพ 2 เฟรมต่อเนื่อง กล้อง CCTV โรงงานกระป๋อง (คน1 ซ้าย คน2 ขวา). "
-    "บรรยายภาษาไทยล้วน 1-2 ประโยคชัดเจน ว่าตอนนี้เห็นอะไร คนกำลังทำอะไร และมีจุดเสี่ยงความปลอดภัยไหม."
+    "บรรยายภาษาไทยล้วน 1-2 ประโยคสั้นกระชับ จบประโยคให้สมบูรณ์ "
+    "ว่าตอนนี้เห็นอะไร คนกำลังทำอะไร และมีจุดเสี่ยงความปลอดภัยไหม."
 )
+
+
+def _clean(txt, finish):
+    txt = txt.strip()
+    if finish == "length":
+        i = txt.rfind(" ")
+        if i > 40:
+            txt = txt[:i].rstrip(" ,·") + " …"
+    return txt
 _TYPE_LABEL = {
     "ppe_violation": ("PPE", "medium"), "near_miss": ("Near-miss", "critical"),
     "unauthorized_person": ("บุคคลภายนอก", "high"), "hygiene_violation": ("ของแปลกปลอม", "low"),
@@ -64,8 +74,10 @@ def main():
             "max_tokens": args.tokens, "temperature": 0}
         try:
             r = requests.post(ep, json=payload, timeout=90)
-            m = r.json()["choices"][0]["message"]
+            ch = r.json()["choices"][0]
+            m = ch["message"]
             txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
+            txt = _clean(txt, ch.get("finish_reason"))
         except Exception as ex:
             txt = f"(error {str(ex)[:30]})"
         return i, {"t": t, "mmss": f"{t//60:02d}:{t%60:02d}", "narration": txt,

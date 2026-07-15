@@ -52,12 +52,22 @@ for e in json.load(open("cam_a05_ai_events.json", encoding="utf-8"))["events"]:
 CATCH.sort(key=lambda x: x["t"])
 
 # ---- UNDERSTAND layer: live narration prompt (image mode, 2 frames/window) ----
-# per-second mode: วลีสั้นมาก -> ~1.2s/call พอดีกับ 0.7x (สดทุก ~1วิ)
+# co-located mode: บรรยายชัด 1-2 ประโยค — token พอให้จบประโยคเอง ไม่ตัดกลางคำ
 NARR_PROMPT = (
-    "ภาพ CCTV โรงงานกระป๋อง (คน1 ซ้าย, คน2 ขวา). "
-    "บอกสั้นมากเป็นวลีเดียวภาษาไทยล้วน (ไม่เกิน 10 คำ ห้ามปนภาษาอื่น) ว่าตอนนี้เห็นอะไร/มีจุดเสี่ยงไหม. "
-    "ถ้าไม่มีความเสี่ยงให้ตอบว่า 'ทำงานปกติ'."
+    "ภาพ 2 เฟรมต่อเนื่อง กล้อง CCTV โรงงานกระป๋อง (คน1 ซ้าย คน2 ขวา). "
+    "บรรยายภาษาไทยล้วน 1-2 ประโยคสั้นกระชับ จบประโยคให้สมบูรณ์ "
+    "ว่าตอนนี้เห็นอะไร คนกำลังทำอะไร และมีจุดเสี่ยงความปลอดภัยไหม."
 )
+
+
+def _clean_narration(txt, finish):
+    """ถ้าโดนตัดกลางคำ (finish=length) -> ตัดถึงช่องว่างสุดท้าย + … ให้สวย"""
+    txt = txt.strip()
+    if finish == "length":
+        i = txt.rfind(" ")
+        if i > 40:
+            txt = txt[:i].rstrip(" ,·") + " …"
+    return txt
 
 
 # เฟรมมีทุก ~1วิ (มี gap บ้าง) -> เลือกเฟรมที่ใกล้ที่สุดที่มีจริง เพื่อ window ถี่ 2วิ
@@ -83,11 +93,13 @@ def narrate_live(t):
         {"type": "text", "text": NARR_PROMPT},
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fa)}"}},
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fb)}"}}]}],
-        "max_tokens": 30, "temperature": 0}
+        "max_tokens": 150, "temperature": 0}
     try:
         r = requests.post(_cosmos_ep(), json=payload, timeout=60)
-        m = r.json()["choices"][0]["message"]
+        ch = r.json()["choices"][0]
+        m = ch["message"]
         txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
+        txt = _clean_narration(txt, ch.get("finish_reason"))
     except Exception as ex:
         txt = f"(narration error: {str(ex)[:40]})"
     return {"mmss": f"{a//60:02d}:{a%60:02d}", "narration": txt}
@@ -148,7 +160,7 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
 </style></head><body>
 <div class="left">
   <h2>🏭 Line Guard — VLM Safety (จับแม่น + เล่าเข้าใจสด)</h2>
-  <div class="h">CAM-A05 · CATCH=structured (reliable) · UNDERSTAND=Cosmos พ่นสดทุก ~1วิ · 0.6×</div>
+  <div class="h">CAM-A05 · CATCH=structured (reliable) · UNDERSTAND=Cosmos พ่นสดทุก ~1วิ · 0.8× · co-located</div>
   <video id="v" src="/video" controls autoplay muted></video>
   <div class="stat"><span class="dot" id="d"></span><span id="st">กด play เพื่อเริ่ม</span></div>
 </div>
@@ -164,7 +176,7 @@ const v=document.getElementById('v'),box=document.getElementById('alerts'),st=do
 const now=document.getElementById('now'),hist=document.getElementById('hist');
 const shown=new Set();let first=true,busy=false,lastT=-99,hlog=[];
 function mmss(s){s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
-v.addEventListener('play',()=>{v.playbackRate=0.6; if(!window._go){window._go=1; loop()}});
+v.addEventListener('play',()=>{v.playbackRate=0.8; if(!window._go){window._go=1; loop()}});
 // CATCH = precomputed structured, sync client-side (ไม่ต้อง server)
 v.addEventListener('timeupdate',()=>{
   const t=v.currentTime;
