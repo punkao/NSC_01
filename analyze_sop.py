@@ -74,45 +74,30 @@ def main():
     observed = [s["step"] for s in steps if s.get("status") == "observed"]
     skipped = [s["step"] for s in steps if s.get("status") == "skipped"]
     unclear = [s["step"] for s in steps if s.get("status") == "unclear"]
+    # ⚠️ DATA CEILING: Cosmos แยกกล่อง NG/WAIT/GOOD ไม่ออก (verify จากเฟรม 01:53/03:27 =
+    # worker หยิบจาก WAIT แต่ narration บอก NG). R2/R7/R8 อิงกล่อง -> ไม่น่าเชื่อถือ.
+    # เก็บเป็น candidate ต้อง human verify เท่านั้น, ไม่ promote เป็น alert (กัน false positive).
+    LIMITATION = ("Cosmos แยกกล่อง NG/WAIT/GOOD ไม่ออก (data ceiling; verify แล้ว 01:53/03:27 = "
+                  "หยิบจาก WAIT แต่ narration ว่า NG). R2/R7/R8 ที่อิงกล่อง = candidate ต้องคนตรวจซ้ำ ไม่รายงานเป็น alert.")
     data["sop_compliance"] = {
         "steps_observed": observed, "steps_skipped": skipped, "steps_unclear": unclear,
-        "detail": steps, "process_violations": violations,
-        "summary": result.get("summary", ""), "analyzed_by": env["OPENROUTER_MODEL"],
+        "detail": steps, "candidate_violations_unverified": violations, "process_violations": [],
+        "limitation": LIMITATION, "summary": result.get("summary", ""),
+        "analyzed_by": env["OPENROUTER_MODEL"],
     }
-
-    # ใส่ process violations เข้า events[] (dedupe ตาม type+mmss) ให้ demo โชว์เป็น alert
-    avail = sorted(int(f[1:5]) for f in os.listdir("_frames") if f.startswith("t") and f.endswith(".jpg")) \
-        if os.path.isdir("_frames") else []
-    nearest = (lambda s: min(avail, key=lambda x: abs(x - s))) if avail else (lambda s: s)
-
-    def _sec(m):
-        p = str(m).split(":")
-        return int(p[0]) * 60 + int(p[1]) if len(p) == 2 else 0
-
-    # idempotent: ลบ sop_violation เก่าออกก่อน (รันซ้ำได้ ไม่สะสม)
+    # idempotent: ไม่ promote box-dependent violation เข้า events (false positive)
     data["events"] = [e for e in data["events"] if e.get("type") != "sop_violation"]
-    added = 0
-    for v in violations:
-        ts = _sec(v.get("mmss", "00:00"))
-        data["events"].append({
-            "t_start": ts, "t_end": ts, "mmss": v.get("mmss"),
-            "type": "sop_violation", "label": "⛔ ผิดขั้นตอน",
-            "severity": v.get("severity", "high"), "category": "Unsafe Action",
-            "rule_id": v.get("rule_id"), "description": v.get("description", ""),
-            "evidence_frame": f"t{nearest(ts):04d}.jpg"})
-        added += 1
     data["events"].sort(key=lambda e: e["t_start"])
     json.dump(data, open(TIMELINE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
     print(f"\nทำจริง: {observed} | ข้าม: {skipped} | ไม่ชัด: {unclear}")
-    print(f"สรุป: {result.get('summary','')}\n")
+    print(f"สรุป: {result.get('summary','')}")
+    print(f"\n⚠️  ข้อจำกัด: {LIMITATION}")
     for s in steps:
         icon = {"observed": "✅", "skipped": "❌", "unclear": "❓"}.get(s.get("status"), "?")
-        print(f"  {icon} step {s['step']} [{s.get('confidence','?')}] @ {s.get('evidence_mmss','-')} : {s.get('note','')[:55]}")
-    print(f"\n⛔ ทำผิดกระบวนการ (จับได้ {len(violations)}, เพิ่มเป็น alert {added}):")
-    for v in violations:
-        print(f"  {v.get('mmss')} | {v.get('rule_id')} [{v.get('severity')}] : {v.get('description','')[:55]}")
-    print(f"\n-> เขียนกลับ {TIMELINE}")
+        print(f"  {icon} step {s['step']} [{s.get('confidence','?')}] : {s.get('note','')[:50]}")
+    print(f"\ncandidate violations (ไม่ยืนยัน อิงกล่อง): {len(violations)} -> ไม่ขึ้น alert")
+    print(f"-> เขียนกลับ {TIMELINE}")
 
 
 if __name__ == "__main__":

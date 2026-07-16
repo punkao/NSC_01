@@ -1387,18 +1387,6 @@
       "rule_id": null
     },
     {
-      "t_start": 113,
-      "t_end": 113,
-      "mmss": "01:53",
-      "type": "sop_violation",
-      "label": "⛔ ผิดขั้นตอน",
-      "severity": "high",
-      "category": "Unsafe Action",
-      "rule_id": "R2",
-      "description": "worker1 ถือกระป๋องจากกล่อง NG แล้ววางลงบนสายพาน (ระบุชัดในประโยคเดียวกัน)",
-      "evidence_frame": "t0113.jpg"
-    },
-    {
       "t_start": 132,
       "t_end": 186,
       "mmss": "02:12",
@@ -1449,18 +1437,6 @@
       "rule_id": "R5",
       "category": "Unsafe Action",
       "rule_reason": "ไม่สวมหมวก (PPE) ตั้งแต่เริ่มงาน"
-    },
-    {
-      "t_start": 207,
-      "t_end": 207,
-      "mmss": "03:27",
-      "type": "sop_violation",
-      "label": "⛔ ผิดขั้นตอน",
-      "severity": "high",
-      "category": "Unsafe Action",
-      "rule_id": "R2",
-      "description": "worker1 ตรวจสอบกระป๋องจากกล่อง NG แล้ววางลงบนสายพานลำเลียง",
-      "evidence_frame": "t0207.jpg"
     },
     {
       "t_start": 213,
@@ -1566,21 +1542,9 @@
         "note": "worker2 จัดเรียง/เก็บกระป๋องลงกล่อง GOOD หลายครั้ง"
       }
     ],
-    "process_violations": [
-      {
-        "mmss": "01:53",
-        "rule_id": "R2",
-        "severity": "high",
-        "description": "worker1 ถือกระป๋องจากกล่อง NG แล้ววางลงบนสายพาน (ระบุชัดในประโยคเดียวกัน)"
-      },
-      {
-        "mmss": "03:27",
-        "rule_id": "R2",
-        "severity": "high",
-        "description": "worker1 ตรวจสอบกระป๋องจากกล่อง NG แล้ววางลงบนสายพานลำเลียง"
-      }
-    ],
+    "process_violations": [],
     "summary": "กระบวนการหลักครบตาม SOP (หยิบ WAIT-ตรวจ-วางสายพาน-เช็ด-เก็บ GOOD) แต่พบการทำผิด R2 ระดับสูง 2 ครั้ง คือหยิบกระป๋องจากลัง NG กลับขึ้นสายพานที่เวลา 01:53 และ 03:27 ส่วนขั้นตอนตรวจ AI ดูจากภาพไม่ชัด",
-    "analyzed_by": "anthropic/claude-opus-4.8"
+    "analyzed_by": "anthropic/claude-opus-4.8",
+    "limitation": "❌ ตรวจ NG/WAIT/GOOD ไม่น่าเชื่อถือ: Cosmos แยกกล่องไม่ออก (data ceiling) จากภาพจริง worker1 หยิบจาก WAIT ทุกครั้ง (ปกติ) แต่ narration มักระบุผิดเป็น NG. จึงไม่รายงาน R2/R7/R8 ที่อิงกล่อง เพราะจะเป็น false positive."
   }
 }
