@@ -324,7 +324,7 @@
 | ชั้นวิเคราะห์กฎ | `analyze_safety.py`, `sop_overview.py` | จับคู่ R1–R10 |
 | การประมวลผลภายหลัง | `postprocess_events.py`, `merge_events.py` | ยุบ span, ตัดสัญญาณผิด |
 | หน้าจอสาธิต | `live_demo*.py` | เว็บ + สตรีมวิดีโอ + แจ้งเตือนสด |
-| **ชุดวัดผล** | `claude_gt.json`, `diff_gt.py`, `evaluate.py` | เฉลยรายเฟรม + ตัวเทียบ |
+| **ชุดวัดผล** | `claude_gt_v4.json`, `diff_gt.py`, `evaluate.py` | เฉลยรายเฟรม + ตัวเทียบ (รุ่นก่อนหน้าอยู่ใน `_archive/`) |
 | ชุดวัดประสิทธิภาพ | `bench_cosmos.py`, `bench_compare.py` | วัด latency ข้าม GPU |
 | การทดสอบ | `tests/test_ppe_tracker.py` | ทดสอบ state machine |
 
@@ -332,12 +332,18 @@
 
 | รายการ | แหล่งที่มา | สัญญาอนุญาต | ใช้อย่างไร |
 |---|---|---|---|
-| Cosmos-Reason2-8B | NVIDIA (Hugging Face) | NVIDIA Open Model License | เรียกใช้เป็นโมเดล ไม่ได้แก้ไข ไม่ได้เทรนต่อ |
-| vLLM | vllm-project (GitHub) | Apache-2.0 | ใช้เป็น inference server ตามค่าตั้งต้น |
-| PyTorch | Meta / PyTorch Foundation | BSD-3 | ผ่าน vLLM |
-| super-image (EDSR-4x) | eugenesiow (Hugging Face) | Apache-2.0 | เรียกใช้โมเดลที่เทรนมาแล้ว |
-| Pillow, requests | PyPI | PIL / Apache-2.0 | ไลบรารีมาตรฐาน |
-| Claude Opus | Anthropic ผ่าน OpenRouter | เชิงพาณิชย์ (API) | วิเคราะห์ข้อความในชั้น L4 |
+| Cosmos-Reason2-8B | NVIDIA (Hugging Face) | **NVIDIA Open Model License** และเพิ่มเติม **Apache-2.0** ✅ | เรียกใช้เป็นโมเดล ไม่ได้แก้ไข ไม่ได้เทรนต่อ |
+| vLLM | vllm-project (GitHub) | **Apache-2.0** ✅ | ใช้เป็น inference server ตามค่าตั้งต้น |
+| super-image (EDSR ×4) | `eugenesiow/edsr-base` (Hugging Face) | **Apache-2.0** ✅ | เรียกใช้โมเดลที่เทรนมาแล้ว ไม่ได้เทรนเอง |
+| PyTorch | Meta / PyTorch Foundation | BSD-3-Clause | ผ่าน vLLM |
+| Pillow, requests | PyPI | MIT-CMU (Pillow) / Apache-2.0 (requests) | ไลบรารีมาตรฐาน |
+| Claude Opus | Anthropic ผ่าน OpenRouter | บริการเชิงพาณิชย์ (API) | วิเคราะห์ข้อความในชั้น L4 |
+
+> ✅ = เปิดหน้าต้นทางตรวจยืนยันแล้วเมื่อ 17 กรกฎาคม 2569 (ดูบรรณานุกรม [1], [5], [7])
+> รายการที่ไม่มีเครื่องหมายเป็นไลบรารีพื้นฐานที่สัญญาอนุญาตเป็นที่ทราบทั่วไปและไม่ได้แจกจ่ายซ้ำ
+>
+> **ข้อควรทราบ:** Cosmos-Reason2-8B ใช้สัญญาอนุญาตแบบคู่ ฉบับร่างก่อนหน้าระบุเพียง
+> "NVIDIA Open Model License" ซึ่งไม่ครบ — แก้ไขหลังเปิด model card ตรวจจริง
 
 > **ไม่มีการคัดลอกโค้ดจากโครงการอื่นมาใส่ในผลงาน** — โค้ดภายนอกทั้งหมดถูกเรียกใช้
 > ผ่านการติดตั้งเป็น dependency ตามปกติ
@@ -807,7 +813,8 @@
 
 [3] Qwen Team, Alibaba. *Qwen3-VL-8B-Instruct* [model card]. Hugging Face.
     https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
-    — โมเดลที่นำมาเปรียบเทียบในหัวข้อ 5.5 (ตรวจ near-miss ไม่ได้)
+    — โมเดลที่นำมาเปรียบเทียบตอนเลือกโมเดลในหัวข้อ 5.2 (ตรวจพบ 62% · ไม่พบ near-miss
+    ขณะที่ Cosmos ตรวจพบ 75% · พบ near-miss ซึ่งเป็นจุดชี้ขาดในการเลือก)
 
 [4] Qwen Team. (2025). *Qwen3 Technical Report.* arXiv:2505.09388.
     https://arxiv.org/abs/2505.09388
