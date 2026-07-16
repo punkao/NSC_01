@@ -1387,6 +1387,18 @@
       "rule_id": null
     },
     {
+      "t_start": 113,
+      "t_end": 113,
+      "mmss": "01:53",
+      "type": "sop_violation",
+      "label": "⛔ ผิดขั้นตอน",
+      "severity": "high",
+      "category": "Unsafe Action",
+      "rule_id": "R2",
+      "description": "worker1 ถือกระป๋องจากกล่อง NG แล้ววางลงบนสายพาน (ระบุชัดในประโยคเดียวกัน)",
+      "evidence_frame": "t0113.jpg"
+    },
+    {
       "t_start": 132,
       "t_end": 186,
       "mmss": "02:12",
@@ -1437,6 +1449,18 @@
       "rule_id": "R5",
       "category": "Unsafe Action",
       "rule_reason": "ไม่สวมหมวก (PPE) ตั้งแต่เริ่มงาน"
+    },
+    {
+      "t_start": 207,
+      "t_end": 207,
+      "mmss": "03:27",
+      "type": "sop_violation",
+      "label": "⛔ ผิดขั้นตอน",
+      "severity": "high",
+      "category": "Unsafe Action",
+      "rule_id": "R2",
+      "description": "worker1 ตรวจสอบกระป๋องจากกล่อง NG แล้ววางลงบนสายพานลำเลียง",
+      "evidence_frame": "t0207.jpg"
     },
     {
       "t_start": 213,
@@ -1497,52 +1521,66 @@
         "status": "observed",
         "evidence_mmss": "00:00",
         "confidence": "high",
-        "note": "มีกระป๋องอยู่ในลัง WAIT บนโต๊ะ และ worker1 หยิบจากลัง WAIT"
+        "note": "มีกล่อง WAIT บนโต๊ะและ worker1 หยิบกระป๋องจากกล่อง WAIT"
       },
       {
         "step": 2,
         "status": "observed",
         "evidence_mmss": "00:02",
-        "confidence": "medium",
-        "note": "worker1 ถือกระป๋องตรวจสอบด้วยสายตา และมีการหยิบใส่/จัดกล่อง NG หลายครั้ง แต่การตัดสินด้วยสายตาดูจากภาพไม่ชัด"
+        "confidence": "high",
+        "note": "worker1 หยิบกระป๋องจาก WAIT และตรวจสอบด้วยสายตา อีกทั้งมีการคัดของเสียใส่กล่อง NG"
       },
       {
         "step": 3,
         "status": "observed",
-        "evidence_mmss": "00:24",
+        "evidence_mmss": "00:03",
         "confidence": "high",
-        "note": "worker1 วางกระป๋องลงบนสายพานลำเลียงหลายครั้ง (00:24, 00:52, 02:02, 02:31)"
+        "note": "worker1 วางกระป๋องที่ตรวจแล้วลงบนสายพานลำเลียง"
       },
       {
         "step": 4,
         "status": "unclear",
         "evidence_mmss": "00:04",
         "confidence": "low",
-        "note": "มีสายพานผ่านกล้อง/เครื่องตรวจวัด แต่การทำงานตรวจด้วย AI ดูจากภาพไม่ออก"
+        "note": "มีเครื่องจักร/กล้องตรวจสอบกลางโต๊ะ แต่ไม่เห็นการถ่ายรูป/ตรวจ AI ชัดจากภาพ"
       },
       {
         "step": 5,
         "status": "observed",
-        "evidence_mmss": "01:04",
+        "evidence_mmss": "02:13",
         "confidence": "medium",
-        "note": "worker2 หยิบ/จัดกระป๋องที่ผ่านการตรวจสอบ ก่อนใส่กล่อง GOOD"
+        "note": "worker2 หยิบ/ถือกระป๋องเพื่อทำความสะอาดและจัดเรียง"
       },
       {
         "step": 6,
         "status": "observed",
         "evidence_mmss": "00:14",
         "confidence": "high",
-        "note": "worker2 ใช้ผ้าแดงเช็ดกระป๋องหลายครั้ง แต่ไม่ชัดว่าเช็ดครบทุกด้าน"
+        "note": "worker2 ใช้ผ้าแดงเช็ดกระป๋องหลายครั้ง แต่ไม่แน่ชัดว่าเช็ดครบทุกด้านทุกครั้ง"
       },
       {
         "step": 7,
         "status": "observed",
         "evidence_mmss": "00:29",
         "confidence": "high",
-        "note": "worker2 จัดเรียงกระป๋องลงในกล่อง GOOD ซ้ำหลายครั้ง"
+        "note": "worker2 จัดเรียง/เก็บกระป๋องลงกล่อง GOOD หลายครั้ง"
       }
     ],
-    "summary": "ทุกขั้นตอนพบการทำจริงตามลำดับ SOP ยกเว้นขั้นตอนที่ 4 (ตรวจด้วย AI) ที่ไม่ชัดเพราะเป็นการทำงานของเครื่องที่ดูจากภาพไม่ออก ส่วนขั้นตอนที่ 2 การตัดสินด้วยสายตาก็ยืนยันจากภาพได้เพียงบางส่วน",
+    "process_violations": [
+      {
+        "mmss": "01:53",
+        "rule_id": "R2",
+        "severity": "high",
+        "description": "worker1 ถือกระป๋องจากกล่อง NG แล้ววางลงบนสายพาน (ระบุชัดในประโยคเดียวกัน)"
+      },
+      {
+        "mmss": "03:27",
+        "rule_id": "R2",
+        "severity": "high",
+        "description": "worker1 ตรวจสอบกระป๋องจากกล่อง NG แล้ววางลงบนสายพานลำเลียง"
+      }
+    ],
+    "summary": "กระบวนการหลักครบตาม SOP (หยิบ WAIT-ตรวจ-วางสายพาน-เช็ด-เก็บ GOOD) แต่พบการทำผิด R2 ระดับสูง 2 ครั้ง คือหยิบกระป๋องจากลัง NG กลับขึ้นสายพานที่เวลา 01:53 และ 03:27 ส่วนขั้นตอนตรวจ AI ดูจากภาพไม่ชัด",
     "analyzed_by": "anthropic/claude-opus-4.8"
   }
 }
