@@ -39,12 +39,16 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
  .now{background:#12233a;border:1px solid #1f6feb;border-radius:8px;padding:11px 13px;margin-bottom:10px}
  .now .w{font-size:11px;color:#58a6ff;font-weight:700}.now .n{font-size:15px;margin-top:4px;line-height:1.5}
  .hist{font-size:12px;color:#7d8aa0;line-height:1.5}.hist b{color:#adbac7}.empty{color:#5a6b7d;font-size:12px;text-align:center;margin-top:24px}
+ #sopbox{background:#111a10;border:1px solid #2a3a1c;border-radius:8px;padding:9px 12px;font-size:12px;line-height:1.5}
+ #sopbox .t{color:#7fb069;font-weight:700;margin-bottom:3px}#sopbox .ov{color:#c9d4c0}
+ #sopbox .st{color:#8fa3bd;margin-top:5px}#sopbox .dc{color:#c9a227;margin-top:5px;font-size:11px}
 </style></head><body>
 <div class="left">
   <h2>🏭 Line Guard — VLM Safety (Offline · เต็มสปีด 1.0×)</h2>
   <div class="h">CAM-A05 · narration per-second · CATCH + evidence + safety-rule severity (LLM Opus)</div>
   <video id="v" src="/video" controls autoplay muted></video>
   <div class="stat"><span class="dot" id="d"></span><span id="st">กด play เพื่อเริ่ม</span></div>
+  <div id="sopbox"></div>
 </div>
 <div class="right">
   <div class="pane catch"><div class="lbl"><span>🔔 ตรวจจับเหตุการณ์</span><span class="tag rel">structured · reliable</span></div>
@@ -53,10 +57,16 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
      <div id="now" class="now"><div class="w">—</div><div class="n">รอเริ่ม…</div></div><div id="hist" class="hist"></div></div>
 </div>
 <script>
-const TL=__TIMELINE__, EV=__EVENTS__;
+const TL=__TIMELINE__, EV=__EVENTS__, OV=__OVERVIEW__;
 const v=document.getElementById('v'),box=document.getElementById('alerts'),st=document.getElementById('st');
 const now=document.getElementById('now'),hist=document.getElementById('hist');
 const shown=new Set();let first=true,lastIdx=-1,hlog=[];
+if(OV&&OV.overall){const ic={observed:'✅',partial:'🔶',cannot_assess:'❓'};
+  document.getElementById('sopbox').innerHTML=
+    '<div class="t">📋 SOP Overview (AI ประมาณการ · ไม่ใช่คำตัดสิน)</div>'+
+    '<div class="ov">'+OV.overall+'</div>'+
+    '<div class="st">'+(OV.steps||[]).map(s=>'ขั้น'+s.step+(ic[s.assessment]||'?')).join('  ')+'</div>'+
+    '<div class="dc">⚠️ '+(OV.disclaimer||'ประมาณการ — จุดไม่ชัดควรให้คนตรวจ')+'</div>';}
 function mmss(s){s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 v.addEventListener('timeupdate',()=>{
   const t=v.currentTime;
@@ -96,7 +106,8 @@ class H(BaseHTTPRequestHandler):
         p = urllib.parse.urlparse(self.path)
         if p.path == "/":
             body = (PAGE.replace("__TIMELINE__", json.dumps(DATA["timeline"], ensure_ascii=False))
-                        .replace("__EVENTS__", json.dumps(DATA["events"], ensure_ascii=False))).encode("utf-8")
+                        .replace("__EVENTS__", json.dumps(DATA["events"], ensure_ascii=False))
+                        .replace("__OVERVIEW__", json.dumps(DATA.get("sop_overview", {}), ensure_ascii=False))).encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
         elif p.path == "/video":
             self._serve_video()
