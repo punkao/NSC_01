@@ -17,11 +17,16 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
+from test_box_layout import LAYOUT  # ผังลังตัวเดียวกับที่ A/B ทดสอบ (single source of truth)
+
 PROMPT = (
     "ภาพ 2 เฟรมต่อเนื่อง กล้อง CCTV โรงงานกระป๋อง (คน1 ซ้าย คน2 ขวา). "
     "บรรยายภาษาไทยล้วน 1-2 ประโยคสั้นกระชับ จบประโยคให้สมบูรณ์ "
     "ว่าตอนนี้เห็นอะไร คนกำลังทำอะไร และมีจุดเสี่ยงความปลอดภัยไหม."
 )
+
+# กันมั่ว: ถ้าไม่ชัดว่าลังไหน ให้เรียกกลางๆ ดีกว่าเดาผิด (เดิมพลาด 146/220 จุด = บอก NG ทั้งที่เป็น WAIT)
+NO_GUESS = " ถ้าไม่เห็นป้ายลังชัดเจน ห้ามเดาชื่อลัง ให้เรียกว่า 'ลังฝั่งซ้าย' หรือ 'ลังฝั่งขวา' แทน."
 
 
 def _clean(txt, finish):
@@ -51,7 +56,11 @@ def main():
     ap.add_argument("--out", default="cam_a05_timeline.json")
     ap.add_argument("--tokens", type=int, default=150)  # ตรงกับ live_demo_combined.py (จบประโยคสวย ไม่ตัดคำ)
     ap.add_argument("--step", type=int, default=1, help="ทุกกี่วินาที (1 = per-second)")
+    ap.add_argument("--layout-hint", action="store_true",
+                    help="ใส่ผังลัง (WAIT/NG/GOOD) + กันเดา ลงหัว prompt — ใช้เมื่อ test_box_layout.py ผ่าน")
     args = ap.parse_args()
+
+    prompt = (LAYOUT + " " + PROMPT + NO_GUESS) if args.layout_hint else PROMPT
 
     eps = [e.strip() for e in args.endpoints.split(",") if e.strip()]
     avail = sorted(int(f[1:5]) for f in os.listdir(args.frames) if f.startswith("t") and f.endswith(".jpg"))
@@ -68,7 +77,7 @@ def main():
         b = nearest(a + 1)
         fa, fb = f"{args.frames}/t{a:04d}.jpg", f"{args.frames}/t{b:04d}.jpg"
         payload = {"model": "cosmos", "messages": [{"role": "user", "content": [
-            {"type": "text", "text": PROMPT},
+            {"type": "text", "text": prompt},
             {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64(fa)}"}},
             {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64(fb)}"}}]}],
             "max_tokens": args.tokens, "temperature": 0}
@@ -114,6 +123,7 @@ def main():
         "duration_sec": hi,
         "generated_by": {"model": "Cosmos-Reason2-8B", "tokens": args.tokens,
                          "step_sec": args.step, "gpu": len(eps),
+                         "layout_hint": args.layout_hint,
                          "date": datetime.datetime.now().isoformat(timespec="seconds")},
         "timeline": timeline,
         "events": events,
