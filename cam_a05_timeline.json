@@ -12,7 +12,7 @@
     "date": "2026-07-16T12:13:37",
     "safety_analysis": {
       "model": "anthropic/claude-opus-4.8",
-      "matched": 10
+      "matched": 11
     },
     "narration_composition": {
       "method": "late fusion — Cosmos พูดการกระทำ/ฝั่ง, ROI ระบุชื่อลัง แล้วโค้ดประกอบ",
@@ -1795,7 +1795,7 @@
       "evidence_frame": "t0014.jpg",
       "rule_id": "R3",
       "category": "Unsafe Condition",
-      "rule_reason": "กระป๋องหลุดจากมือหล่นบนสายพานที่กำลังเดิน"
+      "rule_reason": "กระป๋องหล่นบนสายพานที่กำลังเดิน"
     },
     {
       "t_start": 96,
@@ -1808,7 +1808,7 @@
       "evidence_frame": "t0096.jpg",
       "rule_id": "R10",
       "category": "Unsafe Action",
-      "rule_reason": "บุคคลภายนอกที่ไม่ใช่ผู้ปฏิบัติงานประจำเข้าพื้นที่ทำงาน"
+      "rule_reason": "บุคคลภายนอกไม่ใช่ผู้ปฏิบัติงานประจำเข้าพื้นที่ทำงาน"
     },
     {
       "t_start": 99,
@@ -1832,7 +1832,9 @@
       "severity": "high",
       "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหล่นจากมือลงโต๊ะ",
       "evidence_frame": "t0112.jpg",
-      "rule_id": null
+      "rule_id": "R3",
+      "category": "Unsafe Condition",
+      "rule_reason": "กระป๋องหล่นจากมือ (จับคู่กับกฎกระป๋องหล่น)"
     },
     {
       "t_start": 120,
@@ -1845,20 +1847,20 @@
       "evidence_frame": "t0120.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
+      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ตั้งแต่ปฏิบัติงาน"
     },
     {
-      "t_start": 132,
-      "t_end": 144,
-      "mmss": "02:12",
+      "t_start": 129,
+      "t_end": 135,
+      "mmss": "02:09",
       "type": "ppe_violation",
       "label": "PPE",
       "severity": "high",
       "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD",
-      "evidence_frame": "t0132.jpg",
+      "evidence_frame": "t0129.jpg",
       "rule_id": "R4",
       "category": "Unsafe Action",
-      "rule_reason": "ถอดถุงมือออกระหว่างปฏิบัติงาน (มือซ้ายเปลือย) ขณะเครื่องยังทำงาน"
+      "rule_reason": "ถอดถุงมือระหว่างปฏิบัติงานขณะเครื่องยังทำงาน"
     },
     {
       "t_start": 165,
@@ -1871,7 +1873,7 @@
       "evidence_frame": "t0165.jpg",
       "rule_id": "R1",
       "category": "Near-Miss",
-      "rule_reason": "มือเสี่ยงถูกสายพานม้วนเข้าใกล้จุดหนีบขณะสายพานกำลังเดิน"
+      "rule_reason": "มือเข้าใกล้จุดหนีบสายพานเสี่ยงถูกม้วนเข้าไป"
     },
     {
       "t_start": 180,
@@ -1884,7 +1886,7 @@
       "evidence_frame": "t0180.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหมวกซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
+      "rule_reason": "ไม่สวมหมวกซึ่งเป็น PPE"
     },
     {
       "t_start": 189,
@@ -1897,7 +1899,7 @@
       "evidence_frame": "t0189.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
+      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE"
     },
     {
       "t_start": 216,
@@ -1910,7 +1912,7 @@
       "evidence_frame": "t0216.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
+      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE"
     },
     {
       "t_start": 216,
@@ -1923,7 +1925,7 @@
       "evidence_frame": "t0216.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
+      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE"
     }
   ],
   "sop_overview": {

@@ -144,7 +144,7 @@ ffmpeg -i cam_a05_1080p.mp4 -vf fps=1 -start_number 0 -q:v 2 _frames_full/t%04d.
 1. narration sweet-spot (1 GPU) → เติม `timeline[]`
 2. เปรียบเทียบ 2 GPU / A100 → เลือก config generate log ที่ดีสุด
 3. ~~SOP step-skip (ฟันธง)~~ → **ยกเลิก** (VLM แยกลังไม่ได้) แทนด้วย `sop_overview` + `sop_events` ✅
-4. **Safety-rule + severity** (LLM จับคู่ event กับ rule) → `rule_id`/`severity` ✅ **เสร็จ (10/11)**
+4. **Safety-rule + severity** (LLM จับคู่ event กับ rule) → `rule_id`/`severity` ✅ **เสร็จ (11/11)**
 5. **Evidence snapshot** → `evidence_frame` ทุก event ✅ **เสร็จ**
 6. **ROI box-grounding** → `box_activity`/`sop_events`/`sop_findings` ✅ **เสร็จ (ดูข้อ 9)**
 

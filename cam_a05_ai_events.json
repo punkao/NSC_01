@@ -42,12 +42,13 @@
    "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
   },
   {
-   "timestamp_mmss": "02:12",
-   "timestamp_end_mmss": "02:24",
+   "timestamp_mmss": "02:09",
+   "timestamp_end_mmss": "02:15",
    "severity": "medium",
    "event_type": "ppe_violation",
    "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-   "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD"
+   "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD",
+   "verified": "ไล่ดูเฟรม 2:09/2:12/2:15 เห็นมือเปลือย, 2:18 ใส่กลับ (audit 2026-07-17)"
   },
   {
    "timestamp_mmss": "02:45",
