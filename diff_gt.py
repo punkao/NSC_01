@@ -12,10 +12,10 @@ Per (frame, item):
 import argparse
 import json
 
-# เฉลยที่ใช้ = v3 (ตรวจด้วยตาครบทุกเฟรม). v1 ผิด 29 จุด -> เก็บใน _archive/ เพื่ออ้างอิงเท่านั้น
+# เฉลยที่ใช้ = v4 (ตรวจด้วยตาครบทุกเฟรม ทุกรายการ). v1 ผิด 32 จุด -> อยู่ใน _archive/
 # ดูเหตุผลใน MEASUREMENTS.md ข้อ 2.4
 _ap = argparse.ArgumentParser()
-_ap.add_argument("--gt", default="claude_gt_v3.json", help="ไฟล์เฉลย (ค่าเริ่มต้น = v3 ที่ตรวจแล้ว)")
+_ap.add_argument("--gt", default="claude_gt_v4.json", help="ไฟล์เฉลย (ค่าเริ่มต้น = v4 ที่ตรวจแล้ว)")
 _ap.add_argument("--obs", default="image_obs.json", help="ไฟล์คำตอบของโมเดล")
 _args = _ap.parse_args()
 

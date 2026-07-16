@@ -1,94 +1,92 @@
 {
-  "camera_id": "CAM-A05",
-  "replace": true,
-  "events": [
-    {
-      "timestamp_mmss": "00:14",
-      "timestamp_end_mmss": "00:14",
-      "severity": "high",
-      "event_type": "falling_object",
-      "event_type_label": "ของตก/กระป๋องหล่น",
-      "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหลุดจากมือที่สายพาน"
-    },
-    {
-      "timestamp_mmss": "01:36",
-      "timestamp_end_mmss": "01:42",
-      "severity": "high",
-      "event_type": "unauthorized_person",
-      "event_type_label": "บุคคลอื่นเข้าพื้นที่",
-      "description": "บุคคลภายนอกเข้ามาในพื้นที่ทำงาน"
-    },
-    {
-      "timestamp_mmss": "01:39",
-      "timestamp_end_mmss": "02:15",
-      "severity": "low",
-      "event_type": "hygiene_violation",
-      "event_type_label": "วางของไม่เกี่ยวข้อง",
-      "description": "มีของแปลกปลอม (ขวดน้ำ) ในพื้นที่ทำงาน"
-    },
-    {
-      "timestamp_mmss": "01:52",
-      "timestamp_end_mmss": "01:52",
-      "severity": "high",
-      "event_type": "falling_object",
-      "event_type_label": "ของตก/กระป๋องหล่น",
-      "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหล่นจากมือลงโต๊ะ"
-    },
-    {
-      "timestamp_mmss": "02:12",
-      "timestamp_end_mmss": "03:06",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
-    },
-    {
-      "timestamp_mmss": "02:12",
-      "timestamp_end_mmss": "02:24",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD"
-    },
-    {
-      "timestamp_mmss": "02:45",
-      "timestamp_end_mmss": "03:30",
-      "severity": "critical",
-      "event_type": "near_miss",
-      "event_type_label": "Near-Miss สายพานหนีบมือ",
-      "description": "มีความเสี่ยงสูงที่มือของผู้ปฏิบัติงานจะถูกสายพานม้วนเข้าไป ขณะวางกระป๋องลงบนสายพานโดยไม่ใช้เครื่องมือช่วย"
-    },
-    {
-      "timestamp_mmss": "03:00",
-      "timestamp_end_mmss": "03:39",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 2 ไม่สวมหมวก"
-    },
-    {
-      "timestamp_mmss": "03:33",
-      "timestamp_end_mmss": "03:39",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
-    },
-    {
-      "timestamp_mmss": "03:36",
-      "timestamp_end_mmss": "03:39",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ"
-    },
-    {
-      "timestamp_mmss": "03:36",
-      "timestamp_end_mmss": "03:39",
-      "severity": "medium",
-      "event_type": "ppe_violation",
-      "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
-      "description": "ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ"
-    }
-  ]
+ "camera_id": "CAM-A05",
+ "replace": true,
+ "events": [
+  {
+   "timestamp_mmss": "00:14",
+   "timestamp_end_mmss": "00:14",
+   "severity": "high",
+   "event_type": "falling_object",
+   "event_type_label": "ของตก/กระป๋องหล่น",
+   "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหลุดจากมือที่สายพาน"
+  },
+  {
+   "timestamp_mmss": "01:36",
+   "timestamp_end_mmss": "01:42",
+   "severity": "high",
+   "event_type": "unauthorized_person",
+   "event_type_label": "บุคคลอื่นเข้าพื้นที่",
+   "description": "บุคคลภายนอกเข้ามาในพื้นที่ทำงาน"
+  },
+  {
+   "timestamp_mmss": "01:39",
+   "timestamp_end_mmss": "02:15",
+   "severity": "low",
+   "event_type": "hygiene_violation",
+   "event_type_label": "วางของไม่เกี่ยวข้อง",
+   "description": "มีของแปลกปลอม (ขวดน้ำ) ในพื้นที่ทำงาน"
+  },
+  {
+   "timestamp_mmss": "01:52",
+   "timestamp_end_mmss": "01:52",
+   "severity": "high",
+   "event_type": "falling_object",
+   "event_type_label": "ของตก/กระป๋องหล่น",
+   "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหล่นจากมือลงโต๊ะ"
+  },
+  {
+   "event_type": "ppe_violation",
+   "severity": "medium",
+   "timestamp_mmss": "02:00",
+   "timestamp_end_mmss": "02:54",
+   "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
+  },
+  {
+   "timestamp_mmss": "02:12",
+   "timestamp_end_mmss": "02:24",
+   "severity": "medium",
+   "event_type": "ppe_violation",
+   "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+   "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD"
+  },
+  {
+   "timestamp_mmss": "02:45",
+   "timestamp_end_mmss": "03:30",
+   "severity": "critical",
+   "event_type": "near_miss",
+   "event_type_label": "Near-Miss สายพานหนีบมือ",
+   "description": "มีความเสี่ยงสูงที่มือของผู้ปฏิบัติงานจะถูกสายพานม้วนเข้าไป ขณะวางกระป๋องลงบนสายพานโดยไม่ใช้เครื่องมือช่วย"
+  },
+  {
+   "timestamp_mmss": "03:00",
+   "timestamp_end_mmss": "03:39",
+   "severity": "medium",
+   "event_type": "ppe_violation",
+   "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+   "description": "ผู้ปฏิบัติงาน 2 ไม่สวมหมวก"
+  },
+  {
+   "event_type": "ppe_violation",
+   "severity": "medium",
+   "timestamp_mmss": "03:09",
+   "timestamp_end_mmss": "03:39",
+   "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก"
+  },
+  {
+   "timestamp_mmss": "03:36",
+   "timestamp_end_mmss": "03:39",
+   "severity": "medium",
+   "event_type": "ppe_violation",
+   "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+   "description": "ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ"
+  },
+  {
+   "timestamp_mmss": "03:36",
+   "timestamp_end_mmss": "03:39",
+   "severity": "medium",
+   "event_type": "ppe_violation",
+   "event_type_label": "ไม่ใส่อุปกรณ์ PPE",
+   "description": "ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ"
+  }
+ ]
 }

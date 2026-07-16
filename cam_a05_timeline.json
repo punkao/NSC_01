@@ -1808,7 +1808,7 @@
       "evidence_frame": "t0096.jpg",
       "rule_id": "R10",
       "category": "Unsafe Action",
-      "rule_reason": "บุคคลภายนอกที่ไม่ใช่ผู้ปฏิบัติงานเข้าพื้นที่ทำงาน"
+      "rule_reason": "บุคคลภายนอกที่ไม่ใช่ผู้ปฏิบัติงานประจำเข้าพื้นที่ทำงาน"
     },
     {
       "t_start": 99,
@@ -1835,17 +1835,17 @@
       "rule_id": null
     },
     {
-      "t_start": 132,
-      "t_end": 186,
-      "mmss": "02:12",
+      "t_start": 120,
+      "t_end": 174,
+      "mmss": "02:00",
       "type": "ppe_violation",
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก",
-      "evidence_frame": "t0132.jpg",
+      "evidence_frame": "t0120.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ที่กำหนด"
+      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
     },
     {
       "t_start": 132,
@@ -1858,7 +1858,7 @@
       "evidence_frame": "t0132.jpg",
       "rule_id": "R4",
       "category": "Unsafe Action",
-      "rule_reason": "ถอดถุงมือระหว่างปฏิบัติงานขณะเครื่องยังทำงาน"
+      "rule_reason": "ถอดถุงมือออกระหว่างปฏิบัติงาน (มือซ้ายเปลือย) ขณะเครื่องยังทำงาน"
     },
     {
       "t_start": 165,
@@ -1871,7 +1871,7 @@
       "evidence_frame": "t0165.jpg",
       "rule_id": "R1",
       "category": "Near-Miss",
-      "rule_reason": "มือเข้าใกล้จุดหนีบสายพานที่กำลังเดิน เสี่ยงถูกม้วนเข้า"
+      "rule_reason": "มือเสี่ยงถูกสายพานม้วนเข้าใกล้จุดหนีบขณะสายพานกำลังเดิน"
     },
     {
       "t_start": 180,
@@ -1884,20 +1884,20 @@
       "evidence_frame": "t0180.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหมวกซึ่งเป็น PPE ที่กำหนด"
+      "rule_reason": "ไม่สวมหมวกซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
     },
     {
-      "t_start": 213,
+      "t_start": 189,
       "t_end": 219,
-      "mmss": "03:33",
+      "mmss": "03:09",
       "type": "ppe_violation",
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก",
-      "evidence_frame": "t0213.jpg",
+      "evidence_frame": "t0189.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ที่กำหนด"
+      "rule_reason": "ไม่สวมหน้ากากซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
     },
     {
       "t_start": 216,
@@ -1910,7 +1910,7 @@
       "evidence_frame": "t0216.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ที่กำหนด"
+      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
     },
     {
       "t_start": 216,
@@ -1923,7 +1923,7 @@
       "evidence_frame": "t0216.jpg",
       "rule_id": "R5",
       "category": "Unsafe Action",
-      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ที่กำหนด"
+      "rule_reason": "ไม่สวมถุงมือซึ่งเป็น PPE ตั้งแต่เริ่มงาน"
     }
   ],
   "sop_overview": {
