@@ -53,9 +53,14 @@ CATCH.sort(key=lambda x: x["t"])
 
 # ---- UNDERSTAND layer: live narration prompt (image mode, 2 frames/window) ----
 # co-located mode: บรรยายชัด 1-2 ประโยค — token พอให้จบประโยคเอง ไม่ตัดกลางคำ
-# ใช้ prompt + ตัวกรองตัวเดียวกับ generate_timeline.py (single source of truth)
-# -> demo สด กับ JSON offline พูดตรงกันเสมอ และไม่มีทางพ่นชื่อลังผิด (VLM ระบุลังผิด 66% ดู FINDINGS_SOP.md)
+# ใช้ prompt + ตัวกรอง + ตัวประกอบ ตัวเดียวกับฝั่ง offline ทั้งหมด (single source of truth)
+# -> demo สด กับ JSON offline พ่นบรรยายเหมือนกันเป๊ะเสมอ (กฎเหล็ก: ห้ามแยกก๊อปปี้ ดู DEMO_SUMMARY.md)
+from compose_narration import compose
 from generate_timeline import BAN_BOX, PROMPT, _strip_box_names
+from roi_scan import ROI as BOX_ROI
+from roi_scan import Q as ROI_Q
+from roi_scan import UPSCALE as ROI_UPSCALE
+from roi_scan import parse as roi_parse
 
 NARR_PROMPT = PROMPT + BAN_BOX
 
@@ -81,6 +86,29 @@ def _nearest(sec):
 WIN = 1  # per-second: 2 เฟรมห่าง 1วิ = สะท้อน "ตอนนี้" แบบชิดที่สุด
 
 
+def _probe_box(fa, fb, box):
+    """ROI grounding สด: crop ลัง `box` แล้วถาม Cosmos แค่ 'มีมือไหม' (ถูกกว่า narration 8.4 เท่า: 0.27s).
+    ชื่อลังมาจาก ROI ที่โค้ดกำหนด ไม่ใช่จาก VLM อ่านป้าย (ซึ่งผิด 66%)."""
+    import io
+
+    import requests
+    from PIL import Image
+    imgs = []
+    for p in (fa, fb):
+        c = Image.open(p).crop(BOX_ROI[box])
+        c = c.resize((c.width * ROI_UPSCALE, c.height * ROI_UPSCALE), Image.LANCZOS)
+        buf = io.BytesIO()
+        c.save(buf, format="JPEG", quality=92)
+        imgs.append(base64.b64encode(buf.getvalue()).decode())
+    payload = {"model": "cosmos", "messages": [{"role": "user", "content":
+        [{"type": "text", "text": ROI_Q}] +
+        [{"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{i}"}} for i in imgs]}],
+        "max_tokens": 200, "temperature": 0}
+    m = requests.post(_cosmos_ep(), json=payload, timeout=60).json()["choices"][0]["message"]
+    txt = (m.get("content") or m.get("reasoning") or m.get("reasoning_content") or "").strip()
+    return roi_parse(txt) == "yes"
+
+
 def narrate_live(t):
     a = _nearest(int(t))
     b = _nearest(a + WIN)
@@ -94,16 +122,28 @@ def narrate_live(t):
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fa)}"}},
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fb)}"}}]}],
         "max_tokens": 150, "temperature": 0}
-    try:
+
+    def _narr():
         r = requests.post(_cosmos_ep(), json=payload, timeout=60)
         ch = r.json()["choices"][0]
         m = ch["message"]
         txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
         txt = _clean_narration(txt, ch.get("finish_reason"))
-        txt = _strip_box_names(txt)  # กันหลุด: prompt อย่างเดียวเชื่อ 100% ไม่ได้ (วัดแล้วหลุด 1/4)
+        return _strip_box_names(txt)  # กันหลุด: prompt อย่างเดียวเชื่อ 100% ไม่ได้ (วัดแล้วหลุด 1/4)
+
+    try:
+        # ยิง narration + ROI(WAIT/NG) ขนานกัน -> ROI แทบไม่เพิ่มเวลารอ (0.27s vs 2.25s)
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            f_narr = ex.submit(_narr)
+            f_box = {bx: ex.submit(_probe_box, fa, fb, bx) for bx in BOX_ROI}
+            raw = f_narr.result()
+            act = {bx: f.result() for bx, f in f_box.items()}
+        txt, src = compose(raw, act)  # ตัวประกอบตัวเดียวกับ offline -> ผลลัพธ์ตรงกันเป๊ะ
     except Exception as ex:
-        txt = f"(narration error: {str(ex)[:40]})"
-    return {"mmss": f"{a//60:02d}:{a%60:02d}", "narration": txt}
+        return {"mmss": f"{a//60:02d}:{a%60:02d}", "narration": f"(narration error: {str(ex)[:40]})"}
+    return {"mmss": f"{a//60:02d}:{a%60:02d}", "narration": txt,
+            "narration_vlm": raw, "box_source": src, "box_activity": act}
 
 
 # ---- live CONFIRM: ยิง Cosmos ยืนยัน event ที่ curate ไว้ (feel สด แต่ trigger ยังแม่น 100%) ----
