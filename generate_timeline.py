@@ -12,6 +12,7 @@ import base64
 import datetime
 import json
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 
@@ -27,6 +28,26 @@ PROMPT = (
 
 # กันมั่ว: ถ้าไม่ชัดว่าลังไหน ให้เรียกกลางๆ ดีกว่าเดาผิด (เดิมพลาด 146/220 จุด = บอก NG ทั้งที่เป็น WAIT)
 NO_GUESS = " ถ้าไม่เห็นป้ายลังชัดเจน ห้ามเดาชื่อลัง ให้เรียกว่า 'ลังฝั่งซ้าย' หรือ 'ลังฝั่งขวา' แทน."
+
+# ห้ามเอ่ยชื่อลังเลย — ใช้คู่กับ _strip_box_names() เพราะ prompt อย่างเดียวยัง 'หลุด' (วัดแล้ว 1/4 เคส)
+BAN_BOX = (" กฎเด็ดขาด: ห้ามใช้คำว่า NG, WAIT, GOOD หรือเอ่ยชื่อ/ป้ายของลังใดๆ ในคำบรรยาย "
+           "ให้เรียกว่า 'ลังฝั่งซ้าย' หรือ 'ลังฝั่งขวา' เท่านั้น.")
+
+# ผังจริง: NG+WAIT อยู่ฝั่งซ้าย, GOOD อยู่ฝั่งขวา -> map ชื่อลัง (ที่เชื่อไม่ได้) เป็น 'ฝั่ง' (ที่เชื่อได้)
+_SIDE = {"NG": "ซ้าย", "WAIT": "ซ้าย", "GOOD": "ขวา"}
+_BOX_RE = re.compile(r"(?:(?:กล่อง|ลัง)(?:กระดาษ)?(?:สี\S+?)?\s*)?(?:ที่)?(?:มี)?ป้าย\s*['\"‘’“”]?(NG|WAIT|GOOD)['\"‘’“”]?"
+                     r"|(?:กล่อง|ลัง)\s*['\"‘’“”]?(NG|WAIT|GOOD)['\"‘’“”]?"
+                     r"|['\"‘’“”]?\b(NG|WAIT|GOOD)\b['\"‘’“”]?")
+
+
+def _strip_box_names(txt: str) -> str:
+    """ลบชื่อลังออกจาก narration แบบ deterministic — โมเดลระบุลังผิด (verify แล้ว) จึงห้ามยืนยันชื่อลัง.
+    แทนด้วย 'ลังฝั่งซ้าย/ขวา' ซึ่งเป็นข้อมูลที่ VLM ระบุถูก (คน1=ซ้าย, คน2=ขวา, GOOD=ขวาลังเดียว)."""
+    def sub(m: re.Match) -> str:
+        box = m.group(1) or m.group(2) or m.group(3)
+        return f"ลังฝั่ง{_SIDE[box]}"
+    out = _BOX_RE.sub(sub, txt)
+    return re.sub(r"\s{2,}", " ", out).strip()
 
 
 def _clean(txt, finish):
@@ -58,9 +79,16 @@ def main():
     ap.add_argument("--step", type=int, default=1, help="ทุกกี่วินาที (1 = per-second)")
     ap.add_argument("--layout-hint", action="store_true",
                     help="ใส่ผังลัง (WAIT/NG/GOOD) + กันเดา ลงหัว prompt — ใช้เมื่อ test_box_layout.py ผ่าน")
+    ap.add_argument("--no-box-names", action="store_true",
+                    help="ห้ามเอ่ยชื่อลัง + กรองซ้ำแบบ deterministic (แนะนำ: prompt อย่างเดียวยังหลุด)")
     args = ap.parse_args()
 
-    prompt = (LAYOUT + " " + PROMPT + NO_GUESS) if args.layout_hint else PROMPT
+    if args.no_box_names:
+        prompt = PROMPT + BAN_BOX
+    elif args.layout_hint:
+        prompt = LAYOUT + " " + PROMPT + NO_GUESS
+    else:
+        prompt = PROMPT
 
     eps = [e.strip() for e in args.endpoints.split(",") if e.strip()]
     avail = sorted(int(f[1:5]) for f in os.listdir(args.frames) if f.startswith("t") and f.endswith(".jpg"))
@@ -87,6 +115,8 @@ def main():
             m = ch["message"]
             txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
             txt = _clean(txt, ch.get("finish_reason"))
+            if args.no_box_names:
+                txt = _strip_box_names(txt)  # กันหลุด: prompt เชื่อ 100% ไม่ได้
         except Exception as ex:
             txt = f"(error {str(ex)[:30]})"
         return i, {"t": t, "mmss": f"{t//60:02d}:{t%60:02d}", "narration": txt,
@@ -123,7 +153,7 @@ def main():
         "duration_sec": hi,
         "generated_by": {"model": "Cosmos-Reason2-8B", "tokens": args.tokens,
                          "step_sec": args.step, "gpu": len(eps),
-                         "layout_hint": args.layout_hint,
+                         "layout_hint": args.layout_hint, "no_box_names": args.no_box_names,
                          "date": datetime.datetime.now().isoformat(timespec="seconds")},
         "timeline": timeline,
         "events": events,

@@ -1,0 +1,148 @@
+<svg viewBox="0 0 1600 790" width="1600" height="790" xmlns="http://www.w3.org/2000/svg" font-family="'Leelawadee UI', 'Segoe UI', Tahoma, sans-serif">
+  <title>รูปที่ 1 — ภาพรวมสถาปัตยกรรม</title>
+
+  <defs>
+    <filter id="p1sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#1A1D21" flood-opacity="0.08"/>
+    </filter>
+    <filter id="p1shB" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#2563EB" flood-opacity="0.16"/>
+    </filter>
+    <marker id="p1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,1.2 L8.6,5 L0,8.8" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="p1ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,1.2 L8.6,5 L0,8.8" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <g id="p1cam" fill="none" stroke="#1A1D21" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="1" y="8" width="24" height="19" rx="3"/><path d="M25,14 L37,8 L37,27 L25,21 Z"/><path d="M8,8 L8,2 L19,2"/>
+    </g>
+    <g id="p1film" fill="none" stroke="#1A1D21" stroke-width="1.8" stroke-linecap="round">
+      <rect x="1" y="6" width="36" height="23" rx="2.5"/><path d="M11,6 V29 M27,6 V29"/>
+      <path d="M4,11 h3 M4,24 h3 M31,11 h3 M31,24 h3" stroke-width="1.5"/>
+    </g>
+    <g id="p1chip" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round">
+      <rect x="7" y="7" width="24" height="24" rx="3.5"/><rect x="14" y="14" width="10" height="10" rx="1.5"/>
+      <path d="M13,7 V2 M19,7 V2 M25,7 V2 M13,31 V36 M19,31 V36 M25,31 V36 M7,13 H2 M7,19 H2 M7,25 H2 M31,13 H36 M31,19 H36 M31,25 H36"/>
+    </g>
+    <g id="p1tl" fill="none" stroke="#1A1D21" stroke-width="1.8" stroke-linecap="round">
+      <path d="M1,20 H37"/><circle cx="8" cy="20" r="3.2" fill="#FAFAF8"/><circle cx="19" cy="20" r="3.2" fill="#FAFAF8"/><circle cx="30" cy="20" r="3.2" fill="#FAFAF8"/><path d="M19,17 V8" stroke-width="1.5"/>
+    </g>
+    <g id="p1doc" fill="none" stroke="#1A1D21" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M6,2 h15 l7,7 v21 a1.5,1.5 0 0 1 -1.5,1.5 h-20 a1.5,1.5 0 0 1 -1.5,-1.5 V3.5 A1.5,1.5 0 0 1 6,2 z"/><path d="M21,2 v7 h7"/>
+      <path d="M10,16 h8 M10,21 h5" stroke-width="1.5"/><path d="M19,23 l3,3 l6,-6.5" stroke-width="2"/>
+    </g>
+    <g id="p1mon" fill="none" stroke="#1A1D21" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="1" y="3" width="36" height="24" rx="3"/><path d="M13,33 h12 M19,27 v6"/><path d="M7,11 h11 M7,17 h16" stroke-width="1.4"/>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="790" fill="#FAFAF8"/>
+
+  <text x="52" y="46" font-size="21" font-weight="700" fill="#1A1D21">รูปที่ 1.</text>
+  <text x="146" y="46" font-size="21" fill="#1A1D21">ภาพรวมระบบ — ข้อมูลไหลจากกล้องไปถึงหน้าจอได้อย่างไร</text>
+  <text x="52" y="74" font-size="14" fill="#6B7280">กล้อง CAM-A05 · โมเดล Cosmos-Reason2-8B · ไม่ต้องเทรนเพิ่ม · แบ่งงานลงการ์ดจอ 2 ใบ</text>
+  <line x1="52" y1="94" x2="1548" y2="94" stroke="#DDDDD8" stroke-width="1"/>
+
+  <rect x="52" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#E6E6E1" stroke-width="1" filter="url(#p1sh)"/>
+  <use href="#p1cam" x="126" y="192"/>
+  <text x="145" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9CA3AF" letter-spacing="1">L0</text>
+  <text x="145" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1D21">ภาพเข้า</text>
+  <text x="145" y="372" text-anchor="middle" font-size="15" fill="#374151">วิดีโอจากกล้อง</text>
+  <text x="145" y="396" text-anchor="middle" font-size="15" fill="#374151">วงจรปิด</text>
+
+  <line x1="238" y1="400" x2="306" y2="400" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p1a)"/>
+  <text x="274" y="384" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">MP4</text>
+
+  <rect x="314" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#E6E6E1" stroke-width="1" filter="url(#p1sh)"/>
+  <use href="#p1film" x="388" y="194"/>
+  <text x="407" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9CA3AF" letter-spacing="1">L1</text>
+  <text x="407" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1D21">เตรียม</text>
+  <rect x="365" y="334" width="84" height="25" rx="12.5" fill="#F3F4F6" stroke="#E0E0DB"/>
+  <text x="407" y="351" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6B7280">CPU</text>
+  <text x="407" y="396" text-anchor="middle" font-size="15" fill="#374151">ตัดเฟรม 1 ภาพ/วินาที</text>
+  <text x="407" y="422" text-anchor="middle" font-size="15" fill="#374151">จับคู่เฟรมติดกัน</text>
+  <g stroke="#D1D5DB" fill="#FFFFFF" stroke-width="1.3">
+    <rect x="344" y="474" width="17" height="13" rx="2"/><rect x="365" y="474" width="17" height="13" rx="2"/>
+    <rect x="386" y="474" width="17" height="13" rx="2"/><rect x="407" y="474" width="17" height="13" rx="2"/>
+    <rect x="428" y="474" width="17" height="13" rx="2"/><rect x="449" y="474" width="17" height="13" rx="2"/>
+  </g>
+  <rect x="343" y="473" width="19" height="15" rx="2" fill="none" stroke="#1A1D21" stroke-width="2.2"/>
+  <rect x="406" y="473" width="19" height="15" rx="2" fill="none" stroke="#1A1D21" stroke-width="2.2"/>
+  <text x="407" y="512" text-anchor="middle" font-size="12" fill="#9CA3AF">กรอบหนา = เฟรมที่เก็บไว้</text>
+
+  <path d="M500,400 L537,400" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="538" y="382" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">219 งาน</text>
+  <path d="M537,400 L547,400 L547,302 L569,302" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#p1ab)"/>
+  <path d="M537,400 L547,400 L547,498 L569,498" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#p1ab)"/>
+  <rect x="509" y="412" width="58" height="34" rx="8" fill="#EFF4FE" stroke="#BFD3FA"/>
+  <text x="538" y="426" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563EB">สลับ</text>
+  <text x="538" y="440" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563EB">คู่ / คี่</text>
+
+  <rect x="577" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.2" filter="url(#p1shB)"/>
+  <use href="#p1chip" x="651" y="192"/>
+  <text x="670" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#93B4F5" letter-spacing="1">L2</text>
+  <text x="670" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#2563EB">มองเห็น</text>
+  <rect x="617" y="334" width="106" height="25" rx="12.5" fill="#2563EB"/>
+  <text x="670" y="351" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">GPU × 2</text>
+  <text x="670" y="380" text-anchor="middle" font-size="13" fill="#6B7280">โมเดลดูภาพ แล้วเขียนบรรยาย</text>
+  <rect x="594" y="396" width="152" height="52" rx="7" fill="#EFF4FE" stroke="#BFD3FA" stroke-width="1.2"/>
+  <text x="670" y="418" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">การ์ดใบที่ 1</text>
+  <text x="670" y="438" text-anchor="middle" font-size="12" fill="#4B5EAA">รับงานคู่ · โมเดลครบชุด</text>
+  <rect x="594" y="458" width="152" height="52" rx="7" fill="#EFF4FE" stroke="#BFD3FA" stroke-width="1.2"/>
+  <text x="670" y="480" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">การ์ดใบที่ 2</text>
+  <text x="670" y="500" text-anchor="middle" font-size="12" fill="#4B5EAA">รับงานคี่ · โมเดลครบชุด</text>
+  <text x="670" y="538" text-anchor="middle" font-size="12" fill="#9CA3AF">รายละเอียดดูรูปที่ 2</text>
+
+  <path d="M763,302 L791,302 L791,400 L813,400" fill="none" stroke="#9CA3AF" stroke-width="1.8"/>
+  <path d="M763,498 L791,498 L791,400" fill="none" stroke="#9CA3AF" stroke-width="1.8"/>
+  <line x1="791" y1="400" x2="836" y2="400" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p1a)"/>
+  <text x="808" y="384" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">ข้อความ</text>
+
+  <rect x="840" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#E6E6E1" stroke-width="1" filter="url(#p1sh)"/>
+  <use href="#p1tl" x="914" y="194"/>
+  <text x="933" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9CA3AF" letter-spacing="1">L3</text>
+  <text x="933" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1D21">ประกอบ</text>
+  <rect x="891" y="334" width="84" height="25" rx="12.5" fill="#F3F4F6" stroke="#E0E0DB"/>
+  <text x="933" y="351" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6B7280">CPU</text>
+  <rect x="857" y="384" width="152" height="58" rx="7" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <text x="933" y="407" text-anchor="middle" font-size="14" font-weight="700" fill="#1A1D21">เหตุการณ์เสี่ยง</text>
+  <text x="933" y="428" text-anchor="middle" font-size="12" fill="#6B7280">สิ่งที่ต้องแจ้งเตือน</text>
+  <rect x="857" y="454" width="152" height="58" rx="7" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <text x="933" y="477" text-anchor="middle" font-size="14" font-weight="700" fill="#1A1D21">คำบรรยาย</text>
+  <text x="933" y="498" text-anchor="middle" font-size="12" fill="#6B7280">ทุก 1 วินาที</text>
+
+  <line x1="1026" y1="400" x2="1094" y2="400" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p1a)"/>
+  <text x="1062" y="384" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">JSON</text>
+
+  <rect x="1102" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#E6E6E1" stroke-width="1" filter="url(#p1sh)"/>
+  <use href="#p1doc" x="1179" y="194"/>
+  <text x="1195" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9CA3AF" letter-spacing="1">L4</text>
+  <text x="1195" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1D21">วิเคราะห์</text>
+  <rect x="1129" y="334" width="132" height="25" rx="12.5" fill="#F3F4F6" stroke="#E0E0DB"/>
+  <text x="1195" y="351" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6B7280">LLM · ไม่ใช้ GPU</text>
+  <text x="1195" y="396" text-anchor="middle" font-size="15" fill="#374151">เทียบกฎความปลอดภัย</text>
+  <text x="1195" y="420" text-anchor="middle" font-size="15" fill="#374151">→ ตัดสินความรุนแรง</text>
+  <text x="1195" y="460" text-anchor="middle" font-size="15" fill="#374151">ตรวจขั้นตอนการทำงาน</text>
+  <text x="1195" y="484" text-anchor="middle" font-size="15" fill="#374151">→ ทำครบตามคู่มือไหม</text>
+
+  <line x1="1288" y1="400" x2="1356" y2="400" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p1a)"/>
+  <text x="1324" y="384" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">+ กฎ</text>
+
+  <rect x="1364" y="152" width="186" height="415" rx="11" fill="#FFFFFF" stroke="#C9C9C2" stroke-width="1.8" filter="url(#p1sh)"/>
+  <use href="#p1mon" x="1438" y="192"/>
+  <text x="1457" y="292" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9CA3AF" letter-spacing="1">L5</text>
+  <text x="1457" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1D21">ผลลัพธ์</text>
+  <text x="1457" y="372" text-anchor="middle" font-size="15" fill="#374151">หน้าจอเจ้าหน้าที่</text>
+  <text x="1457" y="396" text-anchor="middle" font-size="15" fill="#374151">ควบคุมความปลอดภัย</text>
+  <rect x="1381" y="428" width="152" height="44" rx="7" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <text x="1457" y="456" text-anchor="middle" font-size="14" font-weight="700" fill="#1A1D21">แบบสด</text>
+  <rect x="1381" y="484" width="152" height="44" rx="7" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <text x="1457" y="512" text-anchor="middle" font-size="14" font-weight="700" fill="#1A1D21">แบบเล่นย้อนหลัง</text>
+
+  <line x1="52" y1="632" x2="1548" y2="632" stroke="#DDDDD8" stroke-width="1"/>
+  <rect x="52" y="652" width="30" height="15" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.2"/>
+  <text x="96" y="665" font-size="14" fill="#374151">ชั้นเดียวที่ต้องใช้การ์ดจอ — ชั้นอื่นใช้แค่ซีพียูหรือเรียกผ่าน API</text>
+  <text x="52" y="702" font-size="14" fill="#6B7280">การ์ดจอ 2 ใบ ต่างมีโมเดลครบทั้งตัว แล้วสลับกันรับงานคู่/คี่ (ไม่ได้ผ่าโมเดลแบ่งกัน) จึงไม่ต้องส่งข้อมูลข้ามการ์ด → เร็วขึ้นประมาณ 2 เท่า</text>
+  <text x="52" y="732" font-size="14" fill="#6B7280">ความเร็วรวมประมาณ 0.91 วินาทีต่องาน → บรรยายได้ทุก 1 วินาที ขณะวิดีโอเล่นด้วยความเร็วปกติ</text>
+</svg>

@@ -1,0 +1,163 @@
+<svg viewBox="0 0 1600 900" width="1600" height="900" xmlns="http://www.w3.org/2000/svg" font-family="'Leelawadee UI', 'Segoe UI', Tahoma, sans-serif">
+  <title>รูปที่ 2 — ข้างในชั้นมองเห็น</title>
+
+  <defs>
+    <filter id="p2sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#1A1D21" flood-opacity="0.08"/>
+    </filter>
+    <filter id="p2shB" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#2563EB" flood-opacity="0.13"/>
+    </filter>
+    <marker id="p2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,1.2 L8.6,5 L0,8.8" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="p2ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,1.2 L8.6,5 L0,8.8" fill="none" stroke="#9CA3AF" stroke-width="1.6" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="#FAFAF8"/>
+
+  <text x="52" y="46" font-size="21" font-weight="700" fill="#1A1D21">รูปที่ 2.</text>
+  <text x="146" y="46" font-size="21" fill="#1A1D21">ข้างในชั้น “มองเห็น” — การ์ดจอ 1 ใบ ทำอะไรกับงาน 1 ชิ้น</text>
+  <text x="52" y="74" font-size="14" fill="#6B7280">การ์ดทั้งสองใบทำงานเหมือนกันทุกอย่าง ต่างกันแค่ได้รับงานคนละชุด</text>
+  <line x1="52" y1="94" x2="1548" y2="94" stroke="#DDDDD8" stroke-width="1"/>
+
+  <rect x="52" y="132" width="168" height="326" rx="11" fill="#FFFFFF" stroke="#E6E6E1" filter="url(#p2sh)"/>
+  <text x="136" y="166" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A1D21">งาน 1 ชิ้น</text>
+  <rect x="74" y="186" width="124" height="38" rx="6" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <text x="136" y="210" text-anchor="middle" font-size="13.5" fill="#374151">คำสั่งถาม</text>
+  <rect x="78" y="244" width="53" height="42" rx="4" fill="#FAFAF8" stroke="#1A1D21" stroke-width="1.8"/>
+  <text x="104" y="270" text-anchor="middle" font-size="13" fill="#6B7280">t</text>
+  <rect x="141" y="244" width="53" height="42" rx="4" fill="#FAFAF8" stroke="#1A1D21" stroke-width="1.8"/>
+  <text x="167" y="270" text-anchor="middle" font-size="13" fill="#6B7280">t+1</text>
+  <text x="136" y="312" text-anchor="middle" font-size="13.5" fill="#374151">2 เฟรมติดกัน</text>
+  <text x="136" y="350" text-anchor="middle" font-size="12.5" fill="#9CA3AF">เพื่อให้โมเดลเห็น</text>
+  <text x="136" y="370" text-anchor="middle" font-size="12.5" fill="#9CA3AF">ว่ามีอะไรเปลี่ยนไป</text>
+  <text x="136" y="416" text-anchor="middle" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">≈ 1 MB</text>
+
+  <line x1="220" y1="295" x2="262" y2="295" stroke="#2563EB" stroke-width="2.2" marker-end="url(#p2a)"/>
+
+  <rect x="272" y="132" width="288" height="326" rx="11" fill="#FFFFFF" stroke="#BFD3FA" stroke-width="1.5" filter="url(#p2shB)"/>
+  <circle cx="302" cy="164" r="15" fill="#2563EB"/>
+  <text x="302" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="328" y="170" font-size="18.5" font-weight="700" fill="#1A1D21">แปลงภาพเป็นตัวเลข</text>
+  <text x="294" y="198" font-size="13" fill="#6B7280">ให้โมเดลอ่านรู้เรื่อง</text>
+  <rect x="294" y="222" width="62" height="48" rx="4" fill="#FAFAF8" stroke="#1A1D21" stroke-width="1.8"/>
+  <text x="325" y="288" text-anchor="middle" font-size="12.5" fill="#9CA3AF">รูป</text>
+  <text x="372" y="252" font-size="17" fill="#9CA3AF">→</text>
+  <rect x="402" y="222" width="62" height="48" fill="#EFF4FE" stroke="#2563EB" stroke-width="1.2"/>
+  <g stroke="#2563EB" fill="none" stroke-width="1">
+    <path d="M417.5,222 V270 M433,222 V270 M448.5,222 V270 M402,234 H464 M402,246 H464 M402,258 H464"/>
+  </g>
+  <text x="433" y="288" text-anchor="middle" font-size="12.5" fill="#9CA3AF">หั่นเป็นช่อง</text>
+  <text x="478" y="252" font-size="17" fill="#9CA3AF">→</text>
+  <g fill="#EFF4FE" stroke="#2563EB" stroke-width="1.6">
+    <rect x="504" y="226" width="15" height="15" rx="3"/><rect x="504" y="250" width="15" height="15" rx="3"/>
+    <rect x="525" y="226" width="15" height="15" rx="3"/><rect x="525" y="250" width="15" height="15" rx="3"/>
+  </g>
+  <text x="522" y="288" text-anchor="middle" font-size="12.5" fill="#9CA3AF">โทเคน</text>
+  <text x="294" y="336" font-size="14.5" font-weight="600" fill="#1A1D21">1 ช่อง 28×28 จุด = 1 โทเคน</text>
+  <text x="294" y="366" font-size="13" fill="#6B7280">โมเดลไม่ได้ “ดูรูป” แบบคน —</text>
+  <text x="294" y="388" font-size="13" fill="#6B7280">มันไล่อ่านโทเคน เหมือนเราอ่านคำ</text>
+
+  <line x1="560" y1="295" x2="598" y2="295" stroke="#2563EB" stroke-width="2.2" marker-end="url(#p2a)"/>
+
+  <rect x="608" y="132" width="288" height="326" rx="11" fill="#FFFFFF" stroke="#BFD3FA" stroke-width="1.5" filter="url(#p2shB)"/>
+  <circle cx="638" cy="164" r="15" fill="#2563EB"/>
+  <text x="638" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="664" y="170" font-size="18.5" font-weight="700" fill="#1A1D21">อ่านทั้งหมดพร้อมกัน</text>
+  <text x="630" y="198" font-size="13" fill="#6B7280">เพื่อเข้าใจว่าในฉากมีอะไร</text>
+  <g fill="#EFF4FE" stroke="#2563EB" stroke-width="1.4">
+    <rect x="630" y="226" width="16" height="16" rx="3"/><rect x="652" y="226" width="16" height="16" rx="3"/>
+    <rect x="674" y="226" width="16" height="16" rx="3"/><rect x="696" y="226" width="16" height="16" rx="3"/>
+    <rect x="718" y="226" width="16" height="16" rx="3"/><rect x="740" y="226" width="16" height="16" rx="3"/>
+  </g>
+  <path d="M638,244 L700,282 M660,244 L700,282 M682,244 L700,282 M704,244 L700,282 M726,244 L700,282 M748,244 L700,282"
+        fill="none" stroke="#C7D8F8" stroke-width="1"/>
+  <circle cx="700" cy="290" r="9" fill="#2563EB"/>
+  <text x="782" y="244" font-size="12.5" fill="#9CA3AF">ทุกโทเคน</text>
+  <text x="782" y="264" font-size="12.5" fill="#9CA3AF">มองเห็นกันหมด</text>
+  <text x="630" y="336" font-size="14.5" font-weight="600" fill="#1A1D21">ขั้นที่หนักที่สุด — คำนวณล้วนๆ</text>
+  <text x="630" y="366" font-size="13" fill="#6B7280">รูปยิ่งใหญ่ → โทเคนยิ่งเยอะ → ยิ่งช้า</text>
+  <text x="630" y="388" font-size="13" fill="#6B7280">จึงต้องย่อวิดีโอเหลือ 720p ก่อน</text>
+
+  <line x1="896" y1="295" x2="934" y2="295" stroke="#2563EB" stroke-width="2.2" marker-end="url(#p2a)"/>
+
+  <rect x="944" y="132" width="288" height="326" rx="11" fill="#FFFFFF" stroke="#BFD3FA" stroke-width="1.5" filter="url(#p2shB)"/>
+  <circle cx="974" cy="164" r="15" fill="#2563EB"/>
+  <text x="974" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="1000" y="170" font-size="18.5" font-weight="700" fill="#1A1D21">เขียนคำตอบทีละคำ</text>
+  <text x="966" y="198" font-size="13" fill="#6B7280">ต่อคำไปเรื่อยๆ จนจบประโยค</text>
+  <rect x="966" y="220" width="62" height="30" rx="6" fill="#EFF4FE" stroke="#BFD3FA" stroke-width="1.2"/>
+  <text x="997" y="240" text-anchor="middle" font-size="13" fill="#1A1D21">คนงาน</text>
+  <text x="1036" y="240" font-size="14" fill="#9CA3AF">→</text>
+  <rect x="1056" y="220" width="44" height="30" rx="6" fill="#EFF4FE" stroke="#BFD3FA" stroke-width="1.2"/>
+  <text x="1078" y="240" text-anchor="middle" font-size="13" fill="#1A1D21">ไม่</text>
+  <text x="1110" y="240" font-size="14" fill="#9CA3AF">→</text>
+  <rect x="1130" y="220" width="52" height="30" rx="6" fill="#EFF4FE" stroke="#BFD3FA" stroke-width="1.2"/>
+  <text x="1156" y="240" text-anchor="middle" font-size="13" fill="#1A1D21">สวม</text>
+  <text x="1192" y="240" font-size="14" fill="#9CA3AF">→</text>
+  <text x="966" y="278" font-size="12.5" fill="#9CA3AF">แต่ละคำต้องรอคำก่อนหน้าเสร็จก่อน</text>
+  <text x="966" y="298" font-size="12.5" fill="#9CA3AF">→ ตอบยิ่งยาว ยิ่งใช้เวลานาน</text>
+  <text x="966" y="336" font-size="14.5" font-weight="600" fill="#1A1D21">60–90 โทเคน = 1–2 ประโยค</text>
+  <text x="966" y="366" font-size="13" fill="#6B7280">ตั้งค่าให้ถามซ้ำได้คำตอบเดิมทุกครั้ง</text>
+  <text x="966" y="388" font-size="13" fill="#6B7280">(ทำซ้ำได้ — สำคัญกับการทำวิจัย)</text>
+
+  <line x1="1232" y1="295" x2="1270" y2="295" stroke="#2563EB" stroke-width="2.2" marker-end="url(#p2a)"/>
+
+  <rect x="1280" y="132" width="268" height="326" rx="11" fill="#FFFFFF" stroke="#1A1D21" stroke-width="2" filter="url(#p2sh)"/>
+  <circle cx="1310" cy="164" r="15" fill="#1A1D21"/>
+  <text x="1310" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="1336" y="170" font-size="18.5" font-weight="700" fill="#1A1D21">ผลลัพธ์</text>
+  <text x="1302" y="198" font-size="13" fill="#6B7280">สิ่งที่ออกมาจากการ์ดจอ</text>
+  <rect x="1302" y="220" width="224" height="94" rx="8" fill="#FAFAF8" stroke="#E0E0DB"/>
+  <rect x="1302" y="220" width="4" height="94" rx="2" fill="#1A1D21"/>
+  <text x="1318" y="248" font-size="13.5" fill="#1A1D21">“ผู้ปฏิบัติงานคนที่ 1</text>
+  <text x="1318" y="272" font-size="13.5" fill="#1A1D21">ไม่สวมถุงมือ ขณะ</text>
+  <text x="1318" y="296" font-size="13.5" fill="#1A1D21">หยิบกระป๋อง”</text>
+  <text x="1302" y="346" font-size="13" fill="#6B7280">ข้อความไทย พร้อมเวลาที่เกิด</text>
+  <text x="1302" y="382" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">1 งาน ≈ 1.14–1.65 วินาที</text>
+  <text x="1302" y="404" font-size="12" fill="#9CA3AF" font-family="Consolas, monospace">ใช้หน่วยความจำ ≈ 22 GB / ใบ</text>
+
+  <line x1="52" y1="506" x2="1548" y2="506" stroke="#DDDDD8" stroke-width="1"/>
+  <text x="52" y="540" font-size="17.5" font-weight="700" fill="#1A1D21">แล้วการ์ดจอ 2 ใบ แบ่งงานกันยังไง</text>
+  <text x="392" y="540" font-size="14" fill="#6B7280">— ใบละงาน สลับกันไปเรื่อยๆ ไม่ต้องคุยกันเลย</text>
+
+  <text x="52" y="626" font-size="15" font-weight="700" fill="#2563EB">การ์ดใบที่ 1</text>
+  <text x="52" y="646" font-size="12" fill="#9CA3AF">รับงานคู่</text>
+  <text x="52" y="716" font-size="15" font-weight="700" fill="#2563EB">การ์ดใบที่ 2</text>
+  <text x="52" y="736" font-size="12" fill="#9CA3AF">รับงานคี่</text>
+
+  <g stroke="#E3E3DE" stroke-width="1" stroke-dasharray="3 5">
+    <path d="M300,598 V770"/><path d="M470,598 V770"/>
+  </g>
+
+  <g fill="#EFF4FE" stroke="#2563EB" stroke-width="1.6">
+    <rect x="160" y="604" width="320" height="50" rx="7"/><rect x="500" y="604" width="320" height="50" rx="7"/>
+    <rect x="840" y="604" width="320" height="50" rx="7"/><rect x="1180" y="604" width="280" height="50" rx="7"/>
+  </g>
+  <g font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">
+    <text x="320" y="635">งานที่ 0</text><text x="660" y="635">งานที่ 2</text><text x="1000" y="635">งานที่ 4</text><text x="1320" y="635">งานที่ 6</text>
+  </g>
+  <g fill="#EFF4FE" stroke="#2563EB" stroke-width="1.6">
+    <rect x="330" y="694" width="320" height="50" rx="7"/><rect x="670" y="694" width="320" height="50" rx="7"/>
+    <rect x="1010" y="694" width="320" height="50" rx="7"/><rect x="1350" y="694" width="110" height="50" rx="7"/>
+  </g>
+  <g font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">
+    <text x="490" y="725">งานที่ 1</text><text x="830" y="725">งานที่ 3</text><text x="1170" y="725">งานที่ 5</text>
+  </g>
+
+  <line x1="160" y1="770" x2="1462" y2="770" stroke="#9CA3AF" stroke-width="1.6" marker-end="url(#p2ag)"/>
+  <text x="1476" y="775" font-size="13.5" fill="#9CA3AF">เวลา</text>
+
+  <path d="M300,584 L470,584" stroke="#1A1D21" stroke-width="1.6"/>
+  <path d="M300,578 V590 M470,578 V590" stroke="#1A1D21" stroke-width="1.6"/>
+  <rect x="344" y="571" width="82" height="26" rx="7" fill="#1A1D21"/>
+  <text x="385" y="589" text-anchor="middle" font-size="13.5" font-weight="700" fill="#FFFFFF">0.91 วิ</text>
+  <text x="486" y="589" font-size="13.5" fill="#6B7280">← ได้คำตอบใหม่ทุกช่วงนี้ (เร็วกว่าใช้ใบเดียว 2 เท่า)</text>
+
+  <line x1="52" y1="812" x2="1548" y2="812" stroke="#DDDDD8" stroke-width="1"/>
+  <text x="52" y="846" font-size="13.5" fill="#6B7280">การ์ดแต่ละใบมีโมเดลครบทั้งตัว (ไม่ได้ผ่าโมเดลแบ่งกัน) จึงไม่ต้องส่งข้อมูลข้ามการ์ด → เพิ่มการ์ดกี่ใบ ก็เร็วขึ้นตามจำนวนใบ</text>
+  <text x="52" y="872" font-size="13.5" fill="#6B7280">ผลลัพธ์: บรรยายได้ทุก 1 วินาที ขณะวิดีโอเล่นความเร็วปกติ — ทำได้จริงบนการ์ด RTX 4090 สองใบ (ประมาณ $0.70 ต่อชั่วโมง)</text>
+</svg>

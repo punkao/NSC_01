@@ -23,3 +23,8 @@ __pycache__/
 # ---- os ----
 .DS_Store
 Thumbs.db
+
+# backup/experiment timelines (เก็บ local ไว้เป็นหลักฐานเปรียบเทียบ)
+cam_a05_timeline_OLD_boxbug.json.bak
+cam_a05_timeline_new.json
+cam_a05_timeline_clean.json
