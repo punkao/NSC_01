@@ -7,7 +7,11 @@
     "tokens": 150,
     "step_sec": 1,
     "gpu": 2,
-    "date": "2026-07-15T20:07:01"
+    "date": "2026-07-15T20:07:01",
+    "safety_analysis": {
+      "model": "anthropic/claude-opus-4.8",
+      "matched": 10
+    }
   },
   "timeline": [
     {
@@ -1340,7 +1344,10 @@
       "label": "ของตก",
       "severity": "high",
       "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหลุดจากมือที่สายพาน",
-      "evidence_frame": "t0014.jpg"
+      "evidence_frame": "t0014.jpg",
+      "rule_id": "R3",
+      "category": "Unsafe Condition",
+      "rule_reason": "กระป๋องหล่นบนสายพานที่กำลังเดิน"
     },
     {
       "t_start": 96,
@@ -1348,9 +1355,12 @@
       "mmss": "01:36",
       "type": "unauthorized_person",
       "label": "บุคคลภายนอก",
-      "severity": "high",
+      "severity": "low",
       "description": "บุคคลภายนอกเข้ามาในพื้นที่ทำงาน",
-      "evidence_frame": "t0096.jpg"
+      "evidence_frame": "t0096.jpg",
+      "rule_id": "R10",
+      "category": "Unsafe Action",
+      "rule_reason": "บุคคลภายนอกเข้าพื้นที่ทำงาน"
     },
     {
       "t_start": 99,
@@ -1358,9 +1368,12 @@
       "mmss": "01:39",
       "type": "hygiene_violation",
       "label": "ของแปลกปลอม",
-      "severity": "low",
+      "severity": "medium",
       "description": "มีของแปลกปลอม (ขวดน้ำ) ในพื้นที่ทำงาน",
-      "evidence_frame": "t0099.jpg"
+      "evidence_frame": "t0099.jpg",
+      "rule_id": "R9",
+      "category": "Unsafe Condition",
+      "rule_reason": "วางขวดน้ำที่ไม่เกี่ยวกับงานในพื้นที่ทำงาน"
     },
     {
       "t_start": 112,
@@ -1370,7 +1383,8 @@
       "label": "ของตก",
       "severity": "high",
       "description": "ผู้ปฏิบัติงาน 2 ทำกระป๋องหล่นจากมือลงโต๊ะ",
-      "evidence_frame": "t0112.jpg"
+      "evidence_frame": "t0112.jpg",
+      "rule_id": null
     },
     {
       "t_start": 132,
@@ -1380,7 +1394,10 @@
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก",
-      "evidence_frame": "t0132.jpg"
+      "evidence_frame": "t0132.jpg",
+      "rule_id": "R5",
+      "category": "Unsafe Action",
+      "rule_reason": "ไม่สวมหน้ากาก (PPE) ตั้งแต่เริ่มงาน"
     },
     {
       "t_start": 132,
@@ -1388,9 +1405,12 @@
       "mmss": "02:12",
       "type": "ppe_violation",
       "label": "PPE",
-      "severity": "medium",
+      "severity": "high",
       "description": "ผู้ปฏิบัติงาน 2 ถอดถุงมือ 1 ข้าง (มือซ้ายเปลือย) ขณะหยิบกระป๋องลงกล่อง GOOD",
-      "evidence_frame": "t0132.jpg"
+      "evidence_frame": "t0132.jpg",
+      "rule_id": "R4",
+      "category": "Unsafe Action",
+      "rule_reason": "ถอดถุงมือระหว่างปฏิบัติงานขณะเครื่องยังทำงาน"
     },
     {
       "t_start": 165,
@@ -1400,7 +1420,10 @@
       "label": "Near-miss",
       "severity": "critical",
       "description": "มีความเสี่ยงสูงที่มือของผู้ปฏิบัติงานจะถูกสายพานม้วนเข้าไป ขณะวางกระป๋องลงบนสายพานโดยไม่ใช้เครื่องมือช่วย",
-      "evidence_frame": "t0165.jpg"
+      "evidence_frame": "t0165.jpg",
+      "rule_id": "R1",
+      "category": "Near-Miss",
+      "rule_reason": "มือเข้าใกล้จุดหนีบสายพานขณะสายพานเดิน"
     },
     {
       "t_start": 180,
@@ -1410,7 +1433,10 @@
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 2 ไม่สวมหมวก",
-      "evidence_frame": "t0180.jpg"
+      "evidence_frame": "t0180.jpg",
+      "rule_id": "R5",
+      "category": "Unsafe Action",
+      "rule_reason": "ไม่สวมหมวก (PPE) ตั้งแต่เริ่มงาน"
     },
     {
       "t_start": 213,
@@ -1420,7 +1446,10 @@
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก",
-      "evidence_frame": "t0213.jpg"
+      "evidence_frame": "t0213.jpg",
+      "rule_id": "R5",
+      "category": "Unsafe Action",
+      "rule_reason": "ไม่สวมหน้ากาก (PPE)"
     },
     {
       "t_start": 216,
@@ -1430,7 +1459,10 @@
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ",
-      "evidence_frame": "t0216.jpg"
+      "evidence_frame": "t0216.jpg",
+      "rule_id": "R5",
+      "category": "Unsafe Action",
+      "rule_reason": "ไม่สวมถุงมือ (PPE)"
     },
     {
       "t_start": 216,
@@ -1440,7 +1472,77 @@
       "label": "PPE",
       "severity": "medium",
       "description": "ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ",
-      "evidence_frame": "t0216.jpg"
+      "evidence_frame": "t0216.jpg",
+      "rule_id": "R5",
+      "category": "Unsafe Action",
+      "rule_reason": "ไม่สวมถุงมือ (PPE)"
     }
-  ]
+  ],
+  "sop_compliance": {
+    "steps_observed": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "steps_skipped": [],
+    "steps_unclear": [
+      4
+    ],
+    "detail": [
+      {
+        "step": 1,
+        "status": "observed",
+        "evidence_mmss": "00:00",
+        "confidence": "high",
+        "note": "มีกระป๋องอยู่ในลัง WAIT บนโต๊ะ และ worker1 หยิบจากลัง WAIT"
+      },
+      {
+        "step": 2,
+        "status": "observed",
+        "evidence_mmss": "00:02",
+        "confidence": "medium",
+        "note": "worker1 ถือกระป๋องตรวจสอบด้วยสายตา และมีการหยิบใส่/จัดกล่อง NG หลายครั้ง แต่การตัดสินด้วยสายตาดูจากภาพไม่ชัด"
+      },
+      {
+        "step": 3,
+        "status": "observed",
+        "evidence_mmss": "00:24",
+        "confidence": "high",
+        "note": "worker1 วางกระป๋องลงบนสายพานลำเลียงหลายครั้ง (00:24, 00:52, 02:02, 02:31)"
+      },
+      {
+        "step": 4,
+        "status": "unclear",
+        "evidence_mmss": "00:04",
+        "confidence": "low",
+        "note": "มีสายพานผ่านกล้อง/เครื่องตรวจวัด แต่การทำงานตรวจด้วย AI ดูจากภาพไม่ออก"
+      },
+      {
+        "step": 5,
+        "status": "observed",
+        "evidence_mmss": "01:04",
+        "confidence": "medium",
+        "note": "worker2 หยิบ/จัดกระป๋องที่ผ่านการตรวจสอบ ก่อนใส่กล่อง GOOD"
+      },
+      {
+        "step": 6,
+        "status": "observed",
+        "evidence_mmss": "00:14",
+        "confidence": "high",
+        "note": "worker2 ใช้ผ้าแดงเช็ดกระป๋องหลายครั้ง แต่ไม่ชัดว่าเช็ดครบทุกด้าน"
+      },
+      {
+        "step": 7,
+        "status": "observed",
+        "evidence_mmss": "00:29",
+        "confidence": "high",
+        "note": "worker2 จัดเรียงกระป๋องลงในกล่อง GOOD ซ้ำหลายครั้ง"
+      }
+    ],
+    "summary": "ทุกขั้นตอนพบการทำจริงตามลำดับ SOP ยกเว้นขั้นตอนที่ 4 (ตรวจด้วย AI) ที่ไม่ชัดเพราะเป็นการทำงานของเครื่องที่ดูจากภาพไม่ออก ส่วนขั้นตอนที่ 2 การตัดสินด้วยสายตาก็ยืนยันจากภาพได้เพียงบางส่วน",
+    "analyzed_by": "anthropic/claude-opus-4.8"
+  }
 }
