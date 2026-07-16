@@ -3,11 +3,16 @@
 
 เฉลย:
   ground_truth_cam_a05.json  = เฉลยเหตุการณ์ (คนทำมือ ทีละ ~2s -> ยุบเป็น segment)
-  claude_gt.json             = เฉลย PPE ต่อเฟรม (Claude อ่าน crop high-res)
+  claude_gt_v4.json          = เฉลย PPE ต่อเฟรม (ไล่ดูด้วยตาครบทุกเฟรม, ตรวจแก้ 4 รอบ)
 โมเดล: cam_a05_ai_events_final.json (timeline) + image_obs_sr.json / image_obs.json (PPE)
+
+หมายเหตุ: เดิมสคริปต์นี้อ่าน claude_gt.json (เฉลย v1) ซึ่งภายหลังพบว่า **ผิด 32 จุด**
+และถูกย้ายไป _archive/ground_truth/ แล้ว -- ดู MEASUREMENTS.md §2.4 / §2.7
+ตัวเลขที่ใช้ในรายงานมาจาก diff_gt.py ไม่ใช่สคริปต์นี้
 """
 import json
 
+GT_FILE = "claude_gt_v4.json"   # เฉลยปัจจุบัน -- ห้ามชี้กลับไป claude_gt.json (v1 ผิด 32 จุด)
 TOL = 6  # วินาที คลาด
 
 
@@ -71,9 +76,9 @@ if not fp:
 
 # ---- PPE per-item vs Claude-GT ----
 print("\n" + "=" * 68)
-print("PPE ต่อชิ้น (เทียบ claude_gt.json — เฉลยจริงต่อเฟรม)")
+print(f"PPE ต่อชิ้น (เทียบ {GT_FILE} — เฉลยจริงต่อเฟรม)")
 print("=" * 68)
-claude = json.load(open("claude_gt.json", encoding="utf-8"))
+claude = json.load(open(GT_FILE, encoding="utf-8"))
 base = {f["t"]: f["obs"] for f in json.load(open("image_obs.json", encoding="utf-8"))}
 srobs = {f["t"]: f["obs"] for f in json.load(open("image_obs_sr.json", encoding="utf-8"))}
 

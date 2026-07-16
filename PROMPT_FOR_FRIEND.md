@@ -1,5 +1,12 @@
 # 📨 Prompt สำหรับเพื่อน (copy วางใส่ Claude Code)
 
+> # 🛑 ฉบับเก่า — ใช้ `PROMPT_FOR_FRIEND_UPDATE.md` แทน
+>
+> ฉบับนี้เขียนก่อนแก้เรื่องระบุลังผิด และก่อนแก้เฉลย ตัวเลข/เวลา event ไม่ตรงกับ `cam_a05_timeline.json` ปัจจุบัน
+
+---
+
+
 > เพื่อน: clone repo นี้ เปิดด้วย Claude Code แล้ว **วาง prompt ข้างล่างนี้ทั้งก้อน** ให้ Claude อ่าน
 
 ---
