@@ -9,10 +9,19 @@ Per (frame, item):
   claude=on,  cosmos=off      -> FP          (Cosmos false alarm)
   else                        -> ok / abstain-benign
 """
+import argparse
 import json
 
-claude = json.loads(open("claude_gt.json", encoding="utf-8").read())
-cosmos = {f["t"]: f["obs"] for f in json.loads(open("image_obs.json", encoding="utf-8").read())}
+# เฉลยที่ใช้ = v3 (ตรวจด้วยตาครบทุกเฟรม). v1 ผิด 29 จุด -> เก็บใน _archive/ เพื่ออ้างอิงเท่านั้น
+# ดูเหตุผลใน MEASUREMENTS.md ข้อ 2.4
+_ap = argparse.ArgumentParser()
+_ap.add_argument("--gt", default="claude_gt_v3.json", help="ไฟล์เฉลย (ค่าเริ่มต้น = v3 ที่ตรวจแล้ว)")
+_ap.add_argument("--obs", default="image_obs.json", help="ไฟล์คำตอบของโมเดล")
+_args = _ap.parse_args()
+
+claude = json.loads(open(_args.gt, encoding="utf-8").read())
+cosmos = {f["t"]: f["obs"] for f in json.loads(open(_args.obs, encoding="utf-8").read())}
+print(f"เฉลย: {_args.gt}  |  คำตอบโมเดล: {_args.obs}")
 KEYS = ["1|cap", "1|gloves", "1|mask", "2|cap", "2|gloves", "2|mask"]
 TH = {"1|cap": "w1 หมวก", "1|gloves": "w1 ถุงมือ", "1|mask": "w1 หน้ากาก",
       "2|cap": "w2 หมวก", "2|gloves": "w2 ถุงมือ", "2|mask": "w2 หน้ากาก"}
