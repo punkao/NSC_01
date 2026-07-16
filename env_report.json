@@ -1,0 +1,14 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4090",
+ "gpu_count": "2",
+ "gpu_vram_mib": "24564 MiB",
+ "driver": "595.71.05",
+ "cpu": "AMD EPYC 7282 16-Core Processor",
+ "cpu_threads": "32",
+ "ram_gb": "125",
+ "os": "?",
+ "python": "3.12.13",
+ "torch": "2.11.0+cu130",
+ "vllm": "0.25.0",
+ "cuda": "13.0"
+}

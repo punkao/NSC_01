@@ -1,0 +1,25 @@
+endpoint : http://127.0.0.1:18000
+served   : {'cosmos': 'nvidia/Cosmos-Reason2-8B'}
+✅ ยืนยัน: nvidia/Cosmos-Reason2-8B
+sampling 74 frames every 3s (3 prompts each)...
+
+===== EVENTS ===== (saved -> image_events.json)
+  01:36-01:42  unauthorized_person  บุคคลภายนอกเข้ามาในพื้นที่ทำงาน
+  01:39-02:15  hygiene_violation    มีของแปลกปลอม (ขวดน้ำ) ในพื้นที่ทำงาน
+  03:00-03:39  ppe_violation        ผู้ปฏิบัติงาน 2 ไม่สวมหมวก
+  03:36-03:39  ppe_violation        ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ
+  03:36-03:39  ppe_violation        ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ
+
+===== GT CHECK =====
+  [OK ] unauthorized_person @ 01:36
+  [OK ] hygiene_violation @ 01:39
+  [OK ] ppe_violation @ 02:59
+  [OK ] ppe_violation @ 03:35
+
+===== PPE (temporal tracker — includes mask) =====
+  02:33-02:39  ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก
+  03:03-03:39  ผู้ปฏิบัติงาน 2 ไม่สวมหมวก
+  03:21-03:27  ผู้ปฏิบัติงาน 1 ไม่สวมหน้ากาก
+  03:39-03:39  ผู้ปฏิบัติงาน 1 ไม่สวมถุงมือ
+  03:39-03:39  ผู้ปฏิบัติงาน 2 ไม่สวมถุงมือ
+WALL_TIME_SEC=121

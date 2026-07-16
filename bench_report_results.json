@@ -1,0 +1,26 @@
+{
+ "1gpu": {
+  "label": "1gpu",
+  "n_gpu": 1,
+  "image_tier_latency_s": 1.98,
+  "image_tier_prompt_tokens": 2135.0,
+  "narration_latency_s": 2.29,
+  "narration_prompt_tokens": 4264.0,
+  "narration_output_tokens": 96.0,
+  "prompt": "PROMPT+BAN_BOX (ตัวจริง)",
+  "interval_s": 2.13,
+  "max_video_speed": 0.47
+ },
+ "2gpu": {
+  "label": "2gpu",
+  "n_gpu": 2,
+  "image_tier_latency_s": 1.92,
+  "image_tier_prompt_tokens": 2135.0,
+  "narration_latency_s": 2.09,
+  "narration_prompt_tokens": 4264.0,
+  "narration_output_tokens": 96.0,
+  "prompt": "PROMPT+BAN_BOX (ตัวจริง)",
+  "interval_s": 1.17,
+  "max_video_speed": 0.86
+ }
+}
