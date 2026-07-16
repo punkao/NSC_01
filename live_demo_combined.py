@@ -53,11 +53,11 @@ CATCH.sort(key=lambda x: x["t"])
 
 # ---- UNDERSTAND layer: live narration prompt (image mode, 2 frames/window) ----
 # co-located mode: บรรยายชัด 1-2 ประโยค — token พอให้จบประโยคเอง ไม่ตัดกลางคำ
-NARR_PROMPT = (
-    "ภาพ 2 เฟรมต่อเนื่อง กล้อง CCTV โรงงานกระป๋อง (คน1 ซ้าย คน2 ขวา). "
-    "บรรยายภาษาไทยล้วน 1-2 ประโยคสั้นกระชับ จบประโยคให้สมบูรณ์ "
-    "ว่าตอนนี้เห็นอะไร คนกำลังทำอะไร และมีจุดเสี่ยงความปลอดภัยไหม."
-)
+# ใช้ prompt + ตัวกรองตัวเดียวกับ generate_timeline.py (single source of truth)
+# -> demo สด กับ JSON offline พูดตรงกันเสมอ และไม่มีทางพ่นชื่อลังผิด (VLM ระบุลังผิด 66% ดู FINDINGS_SOP.md)
+from generate_timeline import BAN_BOX, PROMPT, _strip_box_names
+
+NARR_PROMPT = PROMPT + BAN_BOX
 
 
 def _clean_narration(txt, finish):
@@ -100,6 +100,7 @@ def narrate_live(t):
         m = ch["message"]
         txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
         txt = _clean_narration(txt, ch.get("finish_reason"))
+        txt = _strip_box_names(txt)  # กันหลุด: prompt อย่างเดียวเชื่อ 100% ไม่ได้ (วัดแล้วหลุด 1/4)
     except Exception as ex:
         txt = f"(narration error: {str(ex)[:40]})"
     return {"mmss": f"{a//60:02d}:{a%60:02d}", "narration": txt}
@@ -118,7 +119,8 @@ def confirm_live(idx):
     import requests
     e = lambda p: base64.b64encode(open(p, "rb").read()).decode()
     prompt = (f"ภาพ CCTV โรงงานกระป๋อง (คน1 ซ้าย, คน2 ขวา). ตรวจว่าข้อความนี้ตรงกับสิ่งที่เห็นในภาพไหม: "
-              f"\"{c['text']}\". ตอบภาษาไทยล้วน ขึ้นต้นด้วยคำว่า ใช่ หรือ ไม่ใช่ แล้วตามด้วยเหตุผลสั้นๆ 1 ประโยค.")
+              f"\"{c['text']}\". ตอบภาษาไทยล้วน ขึ้นต้นด้วยคำว่า ใช่ หรือ ไม่ใช่ แล้วตามด้วยเหตุผลสั้นๆ 1 ประโยค."
+              + BAN_BOX)
     payload = {"model": "cosmos", "messages": [{"role": "user", "content": [
         {"type": "text", "text": prompt},
         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{e(fa)}"}},
@@ -127,7 +129,7 @@ def confirm_live(idx):
     try:
         r = requests.post(_cosmos_ep(), json=payload, timeout=60)
         m = r.json()["choices"][0]["message"]
-        txt = (m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip()
+        txt = _strip_box_names((m.get("content") or m.get("reasoning_content") or m.get("reasoning") or "").strip())
     except Exception as ex:
         return {"verdict": "skip", "remark": f"(error {str(ex)[:30]})"}
     verdict = "maybe" if txt.startswith("ไม่") else ("yes" if txt.startswith("ใช่") else "maybe")
