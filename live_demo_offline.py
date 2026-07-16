@@ -42,8 +42,7 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
 </style></head><body>
 <div class="left">
   <h2>🏭 Line Guard — VLM Safety (Offline · เต็มสปีด 1.0×)</h2>
-  <div class="h">CAM-A05 · narration per-second · CATCH + evidence + severity/SOP (LLM Opus)</div>
-  <div class="h" id="sopline" style="color:#8fa3bd"></div>
+  <div class="h">CAM-A05 · narration per-second · CATCH + evidence + safety-rule severity (LLM Opus)</div>
   <video id="v" src="/video" controls autoplay muted></video>
   <div class="stat"><span class="dot" id="d"></span><span id="st">กด play เพื่อเริ่ม</span></div>
 </div>
@@ -54,13 +53,10 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8"><title>Line Guard —
      <div id="now" class="now"><div class="w">—</div><div class="n">รอเริ่ม…</div></div><div id="hist" class="hist"></div></div>
 </div>
 <script>
-const TL=__TIMELINE__, EV=__EVENTS__, SOP=__SOP__;
+const TL=__TIMELINE__, EV=__EVENTS__;
 const v=document.getElementById('v'),box=document.getElementById('alerts'),st=document.getElementById('st');
 const now=document.getElementById('now'),hist=document.getElementById('hist');
 const shown=new Set();let first=true,lastIdx=-1,hlog=[];
-if(SOP&&SOP.detail){const ic={observed:'✅',skipped:'❌',unclear:'❓'};
-  document.getElementById('sopline').innerHTML='📋 SOP: '+SOP.detail.map(s=>'ขั้น'+s.step+ic[s.status]).join(' ')+
-    ' · ข้าม: '+((SOP.steps_skipped&&SOP.steps_skipped.length)?SOP.steps_skipped.join(','):'ไม่มี');}
 function mmss(s){s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 v.addEventListener('timeupdate',()=>{
   const t=v.currentTime;
@@ -100,8 +96,7 @@ class H(BaseHTTPRequestHandler):
         p = urllib.parse.urlparse(self.path)
         if p.path == "/":
             body = (PAGE.replace("__TIMELINE__", json.dumps(DATA["timeline"], ensure_ascii=False))
-                        .replace("__EVENTS__", json.dumps(DATA["events"], ensure_ascii=False))
-                        .replace("__SOP__", json.dumps(DATA.get("sop_compliance", {}), ensure_ascii=False))).encode("utf-8")
+                        .replace("__EVENTS__", json.dumps(DATA["events"], ensure_ascii=False))).encode("utf-8")
             self._send(200, body, "text/html; charset=utf-8")
         elif p.path == "/video":
             self._serve_video()

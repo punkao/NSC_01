@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""F4: SOP step-skip — LLM (OpenRouter/Opus) อ่าน narration timeline เทียบ 7 ขั้นตอน SOP
+"""[EXPERIMENTAL — ไม่ใช้ใน demo] ดู FINDINGS_SOP.md — ติด data ceiling (VLM แยกกล่อง NG/WAIT/GOOD ไม่ออก).
+เก็บไว้เป็น finding + future work เท่านั้น. Deliverable จริงใช้แค่ F5 (analyze_safety.py).
+
+F4: SOP step-skip — LLM (OpenRouter/Opus) อ่าน narration timeline เทียบ 7 ขั้นตอน SOP
 บอกว่าทำครบ/ข้ามขั้นตอนไหน. เขียน sop_compliance{} กลับ cam_a05_timeline.json.
 Text-only, offline, ยิง LLM ครั้งเดียว. อ่าน key จาก .env.
 
