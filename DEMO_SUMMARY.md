@@ -127,7 +127,7 @@ ls _frames_full | wc -l    # ต้องได้ 220
 | `BENCHMARK_RESULTS.md` | ผล benchmark ละเอียด |
 
 ## 🧠 Feature LLM (OpenRouter/Opus — analyze_*.py)
-- ✅ **F5 Safety-rule + severity** (`analyze_safety.py`) — จับ event เข้ากฎ R1-R10 + ระดับ (10/11) **ใช้จริง**
+- ✅ **F5 Safety-rule + severity** (`analyze_safety.py`) — จับ event เข้ากฎ R1-R10 + ระดับ (11/11) **ใช้จริง**
 - ✅ **SOP Overview** (`sop_overview.py`) — LLM สรุป 'ภาพรวมประมาณการ' ว่ากระบวนการตาม SOP ไหม + บอกจุดที่ 'ประเมินไม่ได้' (แยกกล่อง/ตรวจสายตา) อย่างซื่อสัตย์ → โชว์ใน demo เป็น panel (ไม่ฟันธง = ไม่ false alert) **ใช้จริง**
 - ⚠️ **F4 SOP step-skip แบบเป๊ะ** (`analyze_sop.py`) — **EXPERIMENTAL ไม่ใช้** ติด data ceiling (VLM แยกกล่องไม่ออก) → ดู `FINDINGS_SOP.md`. ทางแก้ที่ใช้แทน = SOP Overview ข้างบน (ประมาณการ)
 
