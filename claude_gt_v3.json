@@ -1,0 +1,1270 @@
+{
+ "0": {
+  "t": 0,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "3": {
+  "t": 3,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "6": {
+  "t": 6,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "9": {
+  "t": 9,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "12": {
+  "t": 12,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "15": {
+  "t": 15,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "18": {
+  "t": 18,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "21": {
+  "t": 21,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "24": {
+  "t": 24,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "27": {
+  "t": 27,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "30": {
+  "t": 30,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "33": {
+  "t": 33,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "36": {
+  "t": 36,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "39": {
+  "t": 39,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "42": {
+  "t": 42,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "45": {
+  "t": 45,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "48": {
+  "t": 48,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "51": {
+  "t": 51,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "54": {
+  "t": 54,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "57": {
+  "t": 57,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "60": {
+  "t": 60,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "63": {
+  "t": 63,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "66": {
+  "t": 66,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "69": {
+  "t": 69,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "72": {
+  "t": 72,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "75": {
+  "t": 75,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "78": {
+  "t": 78,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "81": {
+  "t": 81,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "84": {
+  "t": 84,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "87": {
+  "t": 87,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "90": {
+  "t": 90,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "93": {
+  "t": 93,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": ""
+ },
+ "96": {
+  "t": 96,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": true,
+  "foreign_object": false,
+  "note": "3rd person top-left"
+ },
+ "99": {
+  "t": 99,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": true,
+  "foreign_object": true,
+  "note": "person + KMITL bottle"
+ },
+ "102": {
+  "t": 102,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": ""
+ },
+ "105": {
+  "t": 105,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": ""
+ },
+ "108": {
+  "t": 108,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": ""
+ },
+ "111": {
+  "t": 111,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": ""
+ },
+ "114": {
+  "t": 114,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "on",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": ""
+ },
+ "117": {
+  "t": 117,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "120": {
+  "t": 120,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "123": {
+  "t": 123,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "126": {
+  "t": 126,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "w1 mask down"
+ },
+ "129": {
+  "t": 129,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "w1 mask down (clear)"
+ },
+ "132": {
+  "t": 132,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "w1 mask down (clear)"
+ },
+ "135": {
+  "t": 135,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": true,
+  "note": "w1 mask down (clear)"
+ },
+ "138": {
+  "t": 138,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "141": {
+  "t": 141,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "144": {
+  "t": 144,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "147": {
+  "t": 147,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "150": {
+  "t": 150,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "153": {
+  "t": 153,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "156": {
+  "t": 156,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "159": {
+  "t": 159,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "162": {
+  "t": 162,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w1 mask down (clear)"
+ },
+ "165": {
+  "t": 165,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "168": {
+  "t": 168,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "171": {
+  "t": 171,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "174": {
+  "t": 174,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "177": {
+  "t": 177,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "on",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "180": {
+  "t": 180,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "183": {
+  "t": 183,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "186": {
+  "t": 186,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "189": {
+  "t": 189,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "192": {
+  "t": 192,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "195": {
+  "t": 195,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "198": {
+  "t": 198,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "201": {
+  "t": 201,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "204": {
+  "t": 204,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "207": {
+  "t": 207,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "210": {
+  "t": 210,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap",
+  "corrected": {
+   "1|mask": {
+    "from": "on",
+    "to": "off",
+    "reason": "หน้ากากห้อยที่คาง จมูก/ปากเปิด (ไล่ดูครบทุกเฟรม 1:57-3:39)",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "213": {
+  "t": 213,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "on",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "on",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap; w1 mask down"
+ },
+ "216": {
+  "t": 216,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "off",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "off",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap+gloves off; w1 mask down",
+  "corrected": {
+   "1|gloves": {
+    "from": "on",
+    "to": "off",
+    "reason": "เห็นมือเปลือยชัดเจน",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ },
+ "219": {
+  "t": 219,
+  "obs": {
+   "1|cap": "on",
+   "1|gloves": "off",
+   "1|mask": "off",
+   "2|cap": "off",
+   "2|gloves": "off",
+   "2|mask": "on"
+  },
+  "extra_person": false,
+  "foreign_object": false,
+  "note": "w2 no cap+gloves off; w1 mask down",
+  "corrected": {
+   "1|gloves": {
+    "from": "on",
+    "to": "off",
+    "reason": "เห็นมือเปลือยชัดเจน",
+    "by": "human frame audit 2026-07-17"
+   }
+  }
+ }
+}
