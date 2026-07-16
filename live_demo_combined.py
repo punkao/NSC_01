@@ -17,7 +17,7 @@ import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 VIDEO = "cam_a05_720p.mp4"
-FRAMES = "_frames"
+FRAMES = "_frames_full"  # ต้องตรงกับชุดที่ generate timeline (ดู INTEGRATION_FOR_FRONTEND.md)
 # 1 GPU/A100 = endpoint เดียว; 2 GPU = ตั้ง env COSMOS_ENDPOINTS="http://127.0.0.1:18000/...,http://127.0.0.1:18001/..."
 _EPS = [e.strip() for e in os.environ.get(
     "COSMOS_ENDPOINTS", "http://localhost:18000/v1/chat/completions").split(",") if e.strip()]

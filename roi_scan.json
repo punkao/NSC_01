@@ -1,0 +1,878 @@
+{
+"0": {
+"WAIT": "yes",
+"NG": "no"
+},
+"1": {
+"WAIT": "no",
+"NG": "no"
+},
+"2": {
+"WAIT": "no",
+"NG": "no"
+},
+"3": {
+"WAIT": "yes",
+"NG": "no"
+},
+"4": {
+"WAIT": "yes",
+"NG": "no"
+},
+"5": {
+"WAIT": "no",
+"NG": "no"
+},
+"6": {
+"WAIT": "no",
+"NG": "no"
+},
+"7": {
+"WAIT": "no",
+"NG": "no"
+},
+"8": {
+"WAIT": "yes",
+"NG": "no"
+},
+"9": {
+"WAIT": "no",
+"NG": "no"
+},
+"10": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"11": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"12": {
+"WAIT": "yes",
+"NG": "no"
+},
+"13": {
+"WAIT": "no",
+"NG": "no"
+},
+"14": {
+"WAIT": "no",
+"NG": "no"
+},
+"15": {
+"WAIT": "no",
+"NG": "no"
+},
+"16": {
+"WAIT": "yes",
+"NG": "no"
+},
+"17": {
+"WAIT": "yes",
+"NG": "no"
+},
+"18": {
+"WAIT": "no",
+"NG": "no"
+},
+"19": {
+"WAIT": "yes",
+"NG": "no"
+},
+"20": {
+"WAIT": "yes",
+"NG": "no"
+},
+"21": {
+"WAIT": "yes",
+"NG": "no"
+},
+"22": {
+"WAIT": "no",
+"NG": "no"
+},
+"23": {
+"WAIT": "no",
+"NG": "no"
+},
+"24": {
+"WAIT": "yes",
+"NG": "no"
+},
+"25": {
+"WAIT": "yes",
+"NG": "no"
+},
+"26": {
+"WAIT": "no",
+"NG": "no"
+},
+"27": {
+"WAIT": "yes",
+"NG": "no"
+},
+"28": {
+"WAIT": "yes",
+"NG": "no"
+},
+"29": {
+"WAIT": "yes",
+"NG": "no"
+},
+"30": {
+"WAIT": "no",
+"NG": "no"
+},
+"31": {
+"WAIT": "yes",
+"NG": "no"
+},
+"32": {
+"WAIT": "yes",
+"NG": "no"
+},
+"33": {
+"WAIT": "yes",
+"NG": "no"
+},
+"34": {
+"WAIT": "yes",
+"NG": "no"
+},
+"35": {
+"WAIT": "no",
+"NG": "no"
+},
+"36": {
+"WAIT": "yes",
+"NG": "no"
+},
+"37": {
+"WAIT": "yes",
+"NG": "no"
+},
+"38": {
+"WAIT": "no",
+"NG": "no"
+},
+"39": {
+"WAIT": "yes",
+"NG": "no"
+},
+"40": {
+"WAIT": "yes",
+"NG": "no"
+},
+"41": {
+"WAIT": "no",
+"NG": "no"
+},
+"42": {
+"WAIT": "yes",
+"NG": "no"
+},
+"43": {
+"WAIT": "yes",
+"NG": "no"
+},
+"44": {
+"WAIT": "yes",
+"NG": "no"
+},
+"45": {
+"WAIT": "no",
+"NG": "no"
+},
+"46": {
+"WAIT": "no",
+"NG": "no"
+},
+"47": {
+"WAIT": "yes",
+"NG": "no"
+},
+"48": {
+"WAIT": "yes",
+"NG": "no"
+},
+"49": {
+"WAIT": "yes",
+"NG": "no"
+},
+"50": {
+"WAIT": "no",
+"NG": "no"
+},
+"51": {
+"WAIT": "no",
+"NG": "no"
+},
+"52": {
+"WAIT": "no",
+"NG": "no"
+},
+"53": {
+"WAIT": "yes",
+"NG": "no"
+},
+"54": {
+"WAIT": "yes",
+"NG": "no"
+},
+"55": {
+"WAIT": "no",
+"NG": "no"
+},
+"56": {
+"WAIT": "no",
+"NG": "no"
+},
+"57": {
+"WAIT": "yes",
+"NG": "no"
+},
+"58": {
+"WAIT": "yes",
+"NG": "no"
+},
+"59": {
+"WAIT": "no",
+"NG": "no"
+},
+"60": {
+"WAIT": "no",
+"NG": "no"
+},
+"61": {
+"WAIT": "no",
+"NG": "no"
+},
+"62": {
+"WAIT": "no",
+"NG": "no"
+},
+"63": {
+"WAIT": "no",
+"NG": "no"
+},
+"64": {
+"WAIT": "no",
+"NG": "no"
+},
+"65": {
+"WAIT": "no",
+"NG": "no"
+},
+"66": {
+"WAIT": "no",
+"NG": "no"
+},
+"67": {
+"WAIT": "no",
+"NG": "no"
+},
+"68": {
+"WAIT": "no",
+"NG": "no"
+},
+"69": {
+"WAIT": "no",
+"NG": "no"
+},
+"70": {
+"WAIT": "no",
+"NG": "no"
+},
+"71": {
+"WAIT": "no",
+"NG": "no"
+},
+"72": {
+"WAIT": "no",
+"NG": "no"
+},
+"73": {
+"WAIT": "no",
+"NG": "no"
+},
+"74": {
+"WAIT": "no",
+"NG": "no"
+},
+"75": {
+"WAIT": "yes",
+"NG": "no"
+},
+"76": {
+"WAIT": "yes",
+"NG": "no"
+},
+"77": {
+"WAIT": "no",
+"NG": "no"
+},
+"78": {
+"WAIT": "no",
+"NG": "no"
+},
+"79": {
+"WAIT": "yes",
+"NG": "no"
+},
+"80": {
+"WAIT": "yes",
+"NG": "no"
+},
+"81": {
+"WAIT": "no",
+"NG": "no"
+},
+"82": {
+"WAIT": "no",
+"NG": "no"
+},
+"83": {
+"WAIT": "yes",
+"NG": "no"
+},
+"84": {
+"WAIT": "yes",
+"NG": "no"
+},
+"85": {
+"WAIT": "yes",
+"NG": "no"
+},
+"86": {
+"WAIT": "no",
+"NG": "no"
+},
+"87": {
+"WAIT": "yes",
+"NG": "no"
+},
+"88": {
+"WAIT": "yes",
+"NG": "no"
+},
+"89": {
+"WAIT": "no",
+"NG": "no"
+},
+"90": {
+"WAIT": "yes",
+"NG": "no"
+},
+"91": {
+"WAIT": "yes",
+"NG": "no"
+},
+"92": {
+"WAIT": "no",
+"NG": "no"
+},
+"93": {
+"WAIT": "no",
+"NG": "no"
+},
+"94": {
+"WAIT": "yes",
+"NG": "no"
+},
+"95": {
+"WAIT": "yes",
+"NG": "no"
+},
+"96": {
+"WAIT": "no",
+"NG": "no"
+},
+"97": {
+"WAIT": "no",
+"NG": "no"
+},
+"98": {
+"WAIT": "yes",
+"NG": "no"
+},
+"99": {
+"WAIT": "no",
+"NG": "no"
+},
+"100": {
+"WAIT": "yes",
+"NG": "no"
+},
+"101": {
+"WAIT": "no",
+"NG": "no"
+},
+"102": {
+"WAIT": "yes",
+"NG": "no"
+},
+"103": {
+"WAIT": "yes",
+"NG": "no"
+},
+"104": {
+"WAIT": "yes",
+"NG": "no"
+},
+"105": {
+"WAIT": "yes",
+"NG": "no"
+},
+"106": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"107": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"108": {
+"WAIT": "yes",
+"NG": "no"
+},
+"109": {
+"WAIT": "no",
+"NG": "no"
+},
+"110": {
+"WAIT": "no",
+"NG": "no"
+},
+"111": {
+"WAIT": "yes",
+"NG": "no"
+},
+"112": {
+"WAIT": "yes",
+"NG": "no"
+},
+"113": {
+"WAIT": "yes",
+"NG": "no"
+},
+"114": {
+"WAIT": "no",
+"NG": "no"
+},
+"115": {
+"WAIT": "yes",
+"NG": "no"
+},
+"116": {
+"WAIT": "yes",
+"NG": "no"
+},
+"117": {
+"WAIT": "yes",
+"NG": "no"
+},
+"118": {
+"WAIT": "no",
+"NG": "no"
+},
+"119": {
+"WAIT": "yes",
+"NG": "no"
+},
+"120": {
+"WAIT": "yes",
+"NG": "no"
+},
+"121": {
+"WAIT": "no",
+"NG": "no"
+},
+"122": {
+"WAIT": "no",
+"NG": "no"
+},
+"123": {
+"WAIT": "yes",
+"NG": "no"
+},
+"124": {
+"WAIT": "yes",
+"NG": "no"
+},
+"125": {
+"WAIT": "no",
+"NG": "no"
+},
+"126": {
+"WAIT": "no",
+"NG": "no"
+},
+"127": {
+"WAIT": "no",
+"NG": "no"
+},
+"128": {
+"WAIT": "no",
+"NG": "no"
+},
+"129": {
+"WAIT": "no",
+"NG": "no"
+},
+"130": {
+"WAIT": "no",
+"NG": "no"
+},
+"131": {
+"WAIT": "no",
+"NG": "no"
+},
+"132": {
+"WAIT": "no",
+"NG": "no"
+},
+"133": {
+"WAIT": "no",
+"NG": "no"
+},
+"134": {
+"WAIT": "no",
+"NG": "no"
+},
+"135": {
+"WAIT": "no",
+"NG": "no"
+},
+"136": {
+"WAIT": "yes",
+"NG": "no"
+},
+"137": {
+"WAIT": "no",
+"NG": "no"
+},
+"138": {
+"WAIT": "no",
+"NG": "no"
+},
+"139": {
+"WAIT": "yes",
+"NG": "no"
+},
+"140": {
+"WAIT": "yes",
+"NG": "no"
+},
+"141": {
+"WAIT": "no",
+"NG": "no"
+},
+"142": {
+"WAIT": "no",
+"NG": "no"
+},
+"143": {
+"WAIT": "yes",
+"NG": "no"
+},
+"144": {
+"WAIT": "yes",
+"NG": "no"
+},
+"145": {
+"WAIT": "yes",
+"NG": "no"
+},
+"146": {
+"WAIT": "no",
+"NG": "no"
+},
+"147": {
+"WAIT": "no",
+"NG": "no"
+},
+"148": {
+"WAIT": "no",
+"NG": "no"
+},
+"149": {
+"WAIT": "yes",
+"NG": "no"
+},
+"150": {
+"WAIT": "yes",
+"NG": "no"
+},
+"151": {
+"WAIT": "no",
+"NG": "no"
+},
+"152": {
+"WAIT": "no",
+"NG": "no"
+},
+"153": {
+"WAIT": "yes",
+"NG": "no"
+},
+"154": {
+"WAIT": "yes",
+"NG": "no"
+},
+"155": {
+"WAIT": "no",
+"NG": "no"
+},
+"156": {
+"WAIT": "no",
+"NG": "no"
+},
+"157": {
+"WAIT": "yes",
+"NG": "no"
+},
+"158": {
+"WAIT": "yes",
+"NG": "no"
+},
+"159": {
+"WAIT": "yes",
+"NG": "no"
+},
+"160": {
+"WAIT": "yes",
+"NG": "no"
+},
+"161": {
+"WAIT": "no",
+"NG": "no"
+},
+"162": {
+"WAIT": "no",
+"NG": "no"
+},
+"163": {
+"WAIT": "no",
+"NG": "no"
+},
+"164": {
+"WAIT": "yes",
+"NG": "no"
+},
+"165": {
+"WAIT": "yes",
+"NG": "no"
+},
+"166": {
+"WAIT": "yes",
+"NG": "no"
+},
+"167": {
+"WAIT": "no",
+"NG": "no"
+},
+"168": {
+"WAIT": "yes",
+"NG": "no"
+},
+"169": {
+"WAIT": "yes",
+"NG": "no"
+},
+"170": {
+"WAIT": "yes",
+"NG": "no"
+},
+"171": {
+"WAIT": "no",
+"NG": "no"
+},
+"172": {
+"WAIT": "no",
+"NG": "no"
+},
+"173": {
+"WAIT": "no",
+"NG": "no"
+},
+"174": {
+"WAIT": "no",
+"NG": "no"
+},
+"175": {
+"WAIT": "no",
+"NG": "no"
+},
+"176": {
+"WAIT": "no",
+"NG": "no"
+},
+"177": {
+"WAIT": "no",
+"NG": "no"
+},
+"178": {
+"WAIT": "no",
+"NG": "no"
+},
+"179": {
+"WAIT": "no",
+"NG": "no"
+},
+"180": {
+"WAIT": "yes",
+"NG": "no"
+},
+"181": {
+"WAIT": "yes",
+"NG": "no"
+},
+"182": {
+"WAIT": "no",
+"NG": "no"
+},
+"183": {
+"WAIT": "no",
+"NG": "no"
+},
+"184": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"185": {
+"WAIT": "yes",
+"NG": "yes"
+},
+"186": {
+"WAIT": "yes",
+"NG": "no"
+},
+"187": {
+"WAIT": "no",
+"NG": "no"
+},
+"188": {
+"WAIT": "no",
+"NG": "no"
+},
+"189": {
+"WAIT": "no",
+"NG": "no"
+},
+"190": {
+"WAIT": "yes",
+"NG": "no"
+},
+"191": {
+"WAIT": "yes",
+"NG": "no"
+},
+"192": {
+"WAIT": "yes",
+"NG": "no"
+},
+"193": {
+"WAIT": "no",
+"NG": "no"
+},
+"194": {
+"WAIT": "no",
+"NG": "no"
+},
+"195": {
+"WAIT": "no",
+"NG": "no"
+},
+"196": {
+"WAIT": "no",
+"NG": "no"
+},
+"197": {
+"WAIT": "no",
+"NG": "no"
+},
+"198": {
+"WAIT": "yes",
+"NG": "no"
+},
+"199": {
+"WAIT": "yes",
+"NG": "no"
+},
+"200": {
+"WAIT": "yes",
+"NG": "no"
+},
+"201": {
+"WAIT": "yes",
+"NG": "no"
+},
+"202": {
+"WAIT": "yes",
+"NG": "no"
+},
+"203": {
+"WAIT": "no",
+"NG": "no"
+},
+"204": {
+"WAIT": "no",
+"NG": "no"
+},
+"205": {
+"WAIT": "yes",
+"NG": "no"
+},
+"206": {
+"WAIT": "yes",
+"NG": "no"
+},
+"207": {
+"WAIT": "no",
+"NG": "no"
+},
+"208": {
+"WAIT": "no",
+"NG": "yes"
+},
+"209": {
+"WAIT": "yes",
+"NG": "no"
+},
+"210": {
+"WAIT": "no",
+"NG": "no"
+},
+"211": {
+"WAIT": "no",
+"NG": "no"
+},
+"212": {
+"WAIT": "no",
+"NG": "no"
+},
+"213": {
+"WAIT": "no",
+"NG": "no"
+},
+"214": {
+"WAIT": "no",
+"NG": "no"
+},
+"215": {
+"WAIT": "no",
+"NG": "no"
+},
+"216": {
+"WAIT": "no",
+"NG": "no"
+},
+"217": {
+"WAIT": "no",
+"NG": "no"
+},
+"218": {
+"WAIT": "no",
+"NG": "no"
+}
+}

@@ -11,7 +11,9 @@ import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 VIDEO = "cam_a05_720p.mp4"
-FRAMES = "_frames"
+# ต้องเป็นชุดเฟรมชุดเดียวกับที่ใช้ generate timeline (แตกด้วยคำสั่งใน INTEGRATION_FOR_FRONTEND.md)
+# _frames เก่าใช้ไม่ได้: มี 175/220 และ sub-second phase ต่างกัน -> evidence_frame ไม่ตรงภาพ
+FRAMES = "_frames_full"
 TIMELINE = "cam_a05_timeline.json"
 
 DATA = json.load(open(TIMELINE, encoding="utf-8"))

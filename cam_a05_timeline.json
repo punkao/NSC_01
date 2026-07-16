@@ -1529,5 +1529,1252 @@
     "note_for_human": "ควรตรวจซ้ำช่วง 00:03, 00:07, 00:19, 01:19 ที่ narration ระบุ worker1 วางกระป๋องลง 'ลังฝั่งซ้าย' แทนสายพาน ว่าผิดขั้นตอนหรือเป็นการอ่านภาพผิด และตรวจสอบว่ามีการคัดแยก NG จริง รวมถึงช่วง 01:04 และ 02:10-02:12 ที่มีการเคลื่อนย้ายกระป๋องด้วยมือใกล้เครื่องจักร และช่วง 01:37-01:39 ที่มีบุคคลที่สาม (ผู้หญิง) เข้ามาในพื้นที่",
     "disclaimer": "ประมาณการจาก AI (VLM+LLM) — ไม่ใช่คำตัดสิน จุดที่ไม่ชัดควรให้คนตรวจ",
     "by": "anthropic/claude-opus-4.8"
+  },
+  "box_activity": {
+    "0": {
+      "WAIT": true,
+      "NG": false
+    },
+    "1": {
+      "WAIT": false,
+      "NG": false
+    },
+    "2": {
+      "WAIT": false,
+      "NG": false
+    },
+    "3": {
+      "WAIT": true,
+      "NG": false
+    },
+    "4": {
+      "WAIT": true,
+      "NG": false
+    },
+    "5": {
+      "WAIT": false,
+      "NG": false
+    },
+    "6": {
+      "WAIT": false,
+      "NG": false
+    },
+    "7": {
+      "WAIT": false,
+      "NG": false
+    },
+    "8": {
+      "WAIT": true,
+      "NG": false
+    },
+    "9": {
+      "WAIT": false,
+      "NG": false
+    },
+    "10": {
+      "WAIT": true,
+      "NG": true
+    },
+    "11": {
+      "WAIT": true,
+      "NG": true
+    },
+    "12": {
+      "WAIT": true,
+      "NG": false
+    },
+    "13": {
+      "WAIT": false,
+      "NG": false
+    },
+    "14": {
+      "WAIT": false,
+      "NG": false
+    },
+    "15": {
+      "WAIT": false,
+      "NG": false
+    },
+    "16": {
+      "WAIT": true,
+      "NG": false
+    },
+    "17": {
+      "WAIT": true,
+      "NG": false
+    },
+    "18": {
+      "WAIT": false,
+      "NG": false
+    },
+    "19": {
+      "WAIT": true,
+      "NG": false
+    },
+    "20": {
+      "WAIT": true,
+      "NG": false
+    },
+    "21": {
+      "WAIT": true,
+      "NG": false
+    },
+    "22": {
+      "WAIT": false,
+      "NG": false
+    },
+    "23": {
+      "WAIT": false,
+      "NG": false
+    },
+    "24": {
+      "WAIT": true,
+      "NG": false
+    },
+    "25": {
+      "WAIT": true,
+      "NG": false
+    },
+    "26": {
+      "WAIT": false,
+      "NG": false
+    },
+    "27": {
+      "WAIT": true,
+      "NG": false
+    },
+    "28": {
+      "WAIT": true,
+      "NG": false
+    },
+    "29": {
+      "WAIT": true,
+      "NG": false
+    },
+    "30": {
+      "WAIT": false,
+      "NG": false
+    },
+    "31": {
+      "WAIT": true,
+      "NG": false
+    },
+    "32": {
+      "WAIT": true,
+      "NG": false
+    },
+    "33": {
+      "WAIT": true,
+      "NG": false
+    },
+    "34": {
+      "WAIT": true,
+      "NG": false
+    },
+    "35": {
+      "WAIT": false,
+      "NG": false
+    },
+    "36": {
+      "WAIT": true,
+      "NG": false
+    },
+    "37": {
+      "WAIT": true,
+      "NG": false
+    },
+    "38": {
+      "WAIT": false,
+      "NG": false
+    },
+    "39": {
+      "WAIT": true,
+      "NG": false
+    },
+    "40": {
+      "WAIT": true,
+      "NG": false
+    },
+    "41": {
+      "WAIT": false,
+      "NG": false
+    },
+    "42": {
+      "WAIT": true,
+      "NG": false
+    },
+    "43": {
+      "WAIT": true,
+      "NG": false
+    },
+    "44": {
+      "WAIT": true,
+      "NG": false
+    },
+    "45": {
+      "WAIT": false,
+      "NG": false
+    },
+    "46": {
+      "WAIT": false,
+      "NG": false
+    },
+    "47": {
+      "WAIT": true,
+      "NG": false
+    },
+    "48": {
+      "WAIT": true,
+      "NG": false
+    },
+    "49": {
+      "WAIT": true,
+      "NG": false
+    },
+    "50": {
+      "WAIT": false,
+      "NG": false
+    },
+    "51": {
+      "WAIT": false,
+      "NG": false
+    },
+    "52": {
+      "WAIT": false,
+      "NG": false
+    },
+    "53": {
+      "WAIT": true,
+      "NG": false
+    },
+    "54": {
+      "WAIT": true,
+      "NG": false
+    },
+    "55": {
+      "WAIT": false,
+      "NG": false
+    },
+    "56": {
+      "WAIT": false,
+      "NG": false
+    },
+    "57": {
+      "WAIT": true,
+      "NG": false
+    },
+    "58": {
+      "WAIT": true,
+      "NG": false
+    },
+    "59": {
+      "WAIT": false,
+      "NG": false
+    },
+    "60": {
+      "WAIT": false,
+      "NG": false
+    },
+    "61": {
+      "WAIT": false,
+      "NG": false
+    },
+    "62": {
+      "WAIT": false,
+      "NG": false
+    },
+    "63": {
+      "WAIT": false,
+      "NG": false
+    },
+    "64": {
+      "WAIT": false,
+      "NG": false
+    },
+    "65": {
+      "WAIT": false,
+      "NG": false
+    },
+    "66": {
+      "WAIT": false,
+      "NG": false
+    },
+    "67": {
+      "WAIT": false,
+      "NG": false
+    },
+    "68": {
+      "WAIT": false,
+      "NG": false
+    },
+    "69": {
+      "WAIT": false,
+      "NG": false
+    },
+    "70": {
+      "WAIT": false,
+      "NG": false
+    },
+    "71": {
+      "WAIT": false,
+      "NG": false
+    },
+    "72": {
+      "WAIT": false,
+      "NG": false
+    },
+    "73": {
+      "WAIT": false,
+      "NG": false
+    },
+    "74": {
+      "WAIT": false,
+      "NG": false
+    },
+    "75": {
+      "WAIT": true,
+      "NG": false
+    },
+    "76": {
+      "WAIT": true,
+      "NG": false
+    },
+    "77": {
+      "WAIT": false,
+      "NG": false
+    },
+    "78": {
+      "WAIT": false,
+      "NG": false
+    },
+    "79": {
+      "WAIT": true,
+      "NG": false
+    },
+    "80": {
+      "WAIT": true,
+      "NG": false
+    },
+    "81": {
+      "WAIT": false,
+      "NG": false
+    },
+    "82": {
+      "WAIT": false,
+      "NG": false
+    },
+    "83": {
+      "WAIT": true,
+      "NG": false
+    },
+    "84": {
+      "WAIT": true,
+      "NG": false
+    },
+    "85": {
+      "WAIT": true,
+      "NG": false
+    },
+    "86": {
+      "WAIT": false,
+      "NG": false
+    },
+    "87": {
+      "WAIT": true,
+      "NG": false
+    },
+    "88": {
+      "WAIT": true,
+      "NG": false
+    },
+    "89": {
+      "WAIT": false,
+      "NG": false
+    },
+    "90": {
+      "WAIT": true,
+      "NG": false
+    },
+    "91": {
+      "WAIT": true,
+      "NG": false
+    },
+    "92": {
+      "WAIT": false,
+      "NG": false
+    },
+    "93": {
+      "WAIT": false,
+      "NG": false
+    },
+    "94": {
+      "WAIT": true,
+      "NG": false
+    },
+    "95": {
+      "WAIT": true,
+      "NG": false
+    },
+    "96": {
+      "WAIT": false,
+      "NG": false
+    },
+    "97": {
+      "WAIT": false,
+      "NG": false
+    },
+    "98": {
+      "WAIT": true,
+      "NG": false
+    },
+    "99": {
+      "WAIT": false,
+      "NG": false
+    },
+    "100": {
+      "WAIT": true,
+      "NG": false
+    },
+    "101": {
+      "WAIT": false,
+      "NG": false
+    },
+    "102": {
+      "WAIT": true,
+      "NG": false
+    },
+    "103": {
+      "WAIT": true,
+      "NG": false
+    },
+    "104": {
+      "WAIT": true,
+      "NG": false
+    },
+    "105": {
+      "WAIT": true,
+      "NG": false
+    },
+    "106": {
+      "WAIT": true,
+      "NG": true
+    },
+    "107": {
+      "WAIT": true,
+      "NG": true
+    },
+    "108": {
+      "WAIT": true,
+      "NG": false
+    },
+    "109": {
+      "WAIT": false,
+      "NG": false
+    },
+    "110": {
+      "WAIT": false,
+      "NG": false
+    },
+    "111": {
+      "WAIT": true,
+      "NG": false
+    },
+    "112": {
+      "WAIT": true,
+      "NG": false
+    },
+    "113": {
+      "WAIT": true,
+      "NG": false
+    },
+    "114": {
+      "WAIT": false,
+      "NG": false
+    },
+    "115": {
+      "WAIT": true,
+      "NG": false
+    },
+    "116": {
+      "WAIT": true,
+      "NG": false
+    },
+    "117": {
+      "WAIT": true,
+      "NG": false
+    },
+    "118": {
+      "WAIT": false,
+      "NG": false
+    },
+    "119": {
+      "WAIT": true,
+      "NG": false
+    },
+    "120": {
+      "WAIT": true,
+      "NG": false
+    },
+    "121": {
+      "WAIT": false,
+      "NG": false
+    },
+    "122": {
+      "WAIT": false,
+      "NG": false
+    },
+    "123": {
+      "WAIT": true,
+      "NG": false
+    },
+    "124": {
+      "WAIT": true,
+      "NG": false
+    },
+    "125": {
+      "WAIT": false,
+      "NG": false
+    },
+    "126": {
+      "WAIT": false,
+      "NG": false
+    },
+    "127": {
+      "WAIT": false,
+      "NG": false
+    },
+    "128": {
+      "WAIT": false,
+      "NG": false
+    },
+    "129": {
+      "WAIT": false,
+      "NG": false
+    },
+    "130": {
+      "WAIT": false,
+      "NG": false
+    },
+    "131": {
+      "WAIT": false,
+      "NG": false
+    },
+    "132": {
+      "WAIT": false,
+      "NG": false
+    },
+    "133": {
+      "WAIT": false,
+      "NG": false
+    },
+    "134": {
+      "WAIT": false,
+      "NG": false
+    },
+    "135": {
+      "WAIT": false,
+      "NG": false
+    },
+    "136": {
+      "WAIT": true,
+      "NG": false
+    },
+    "137": {
+      "WAIT": false,
+      "NG": false
+    },
+    "138": {
+      "WAIT": false,
+      "NG": false
+    },
+    "139": {
+      "WAIT": true,
+      "NG": false
+    },
+    "140": {
+      "WAIT": true,
+      "NG": false
+    },
+    "141": {
+      "WAIT": false,
+      "NG": false
+    },
+    "142": {
+      "WAIT": false,
+      "NG": false
+    },
+    "143": {
+      "WAIT": true,
+      "NG": false
+    },
+    "144": {
+      "WAIT": true,
+      "NG": false
+    },
+    "145": {
+      "WAIT": true,
+      "NG": false
+    },
+    "146": {
+      "WAIT": false,
+      "NG": false
+    },
+    "147": {
+      "WAIT": false,
+      "NG": false
+    },
+    "148": {
+      "WAIT": false,
+      "NG": false
+    },
+    "149": {
+      "WAIT": true,
+      "NG": false
+    },
+    "150": {
+      "WAIT": true,
+      "NG": false
+    },
+    "151": {
+      "WAIT": false,
+      "NG": false
+    },
+    "152": {
+      "WAIT": false,
+      "NG": false
+    },
+    "153": {
+      "WAIT": true,
+      "NG": false
+    },
+    "154": {
+      "WAIT": true,
+      "NG": false
+    },
+    "155": {
+      "WAIT": false,
+      "NG": false
+    },
+    "156": {
+      "WAIT": false,
+      "NG": false
+    },
+    "157": {
+      "WAIT": true,
+      "NG": false
+    },
+    "158": {
+      "WAIT": true,
+      "NG": false
+    },
+    "159": {
+      "WAIT": true,
+      "NG": false
+    },
+    "160": {
+      "WAIT": true,
+      "NG": false
+    },
+    "161": {
+      "WAIT": false,
+      "NG": false
+    },
+    "162": {
+      "WAIT": false,
+      "NG": false
+    },
+    "163": {
+      "WAIT": false,
+      "NG": false
+    },
+    "164": {
+      "WAIT": true,
+      "NG": false
+    },
+    "165": {
+      "WAIT": true,
+      "NG": false
+    },
+    "166": {
+      "WAIT": true,
+      "NG": false
+    },
+    "167": {
+      "WAIT": false,
+      "NG": false
+    },
+    "168": {
+      "WAIT": true,
+      "NG": false
+    },
+    "169": {
+      "WAIT": true,
+      "NG": false
+    },
+    "170": {
+      "WAIT": true,
+      "NG": false
+    },
+    "171": {
+      "WAIT": false,
+      "NG": false
+    },
+    "172": {
+      "WAIT": false,
+      "NG": false
+    },
+    "173": {
+      "WAIT": false,
+      "NG": false
+    },
+    "174": {
+      "WAIT": false,
+      "NG": false
+    },
+    "175": {
+      "WAIT": false,
+      "NG": false
+    },
+    "176": {
+      "WAIT": false,
+      "NG": false
+    },
+    "177": {
+      "WAIT": false,
+      "NG": false
+    },
+    "178": {
+      "WAIT": false,
+      "NG": false
+    },
+    "179": {
+      "WAIT": false,
+      "NG": false
+    },
+    "180": {
+      "WAIT": true,
+      "NG": false
+    },
+    "181": {
+      "WAIT": true,
+      "NG": false
+    },
+    "182": {
+      "WAIT": false,
+      "NG": false
+    },
+    "183": {
+      "WAIT": false,
+      "NG": false
+    },
+    "184": {
+      "WAIT": true,
+      "NG": true
+    },
+    "185": {
+      "WAIT": true,
+      "NG": true
+    },
+    "186": {
+      "WAIT": true,
+      "NG": false
+    },
+    "187": {
+      "WAIT": false,
+      "NG": false
+    },
+    "188": {
+      "WAIT": false,
+      "NG": false
+    },
+    "189": {
+      "WAIT": false,
+      "NG": false
+    },
+    "190": {
+      "WAIT": true,
+      "NG": false
+    },
+    "191": {
+      "WAIT": true,
+      "NG": false
+    },
+    "192": {
+      "WAIT": true,
+      "NG": false
+    },
+    "193": {
+      "WAIT": false,
+      "NG": false
+    },
+    "194": {
+      "WAIT": false,
+      "NG": false
+    },
+    "195": {
+      "WAIT": false,
+      "NG": false
+    },
+    "196": {
+      "WAIT": false,
+      "NG": false
+    },
+    "197": {
+      "WAIT": false,
+      "NG": false
+    },
+    "198": {
+      "WAIT": true,
+      "NG": false
+    },
+    "199": {
+      "WAIT": true,
+      "NG": false
+    },
+    "200": {
+      "WAIT": true,
+      "NG": false
+    },
+    "201": {
+      "WAIT": true,
+      "NG": false
+    },
+    "202": {
+      "WAIT": true,
+      "NG": false
+    },
+    "203": {
+      "WAIT": false,
+      "NG": false
+    },
+    "204": {
+      "WAIT": false,
+      "NG": false
+    },
+    "205": {
+      "WAIT": true,
+      "NG": false
+    },
+    "206": {
+      "WAIT": true,
+      "NG": false
+    },
+    "207": {
+      "WAIT": false,
+      "NG": false
+    },
+    "208": {
+      "WAIT": false,
+      "NG": true
+    },
+    "209": {
+      "WAIT": true,
+      "NG": false
+    },
+    "210": {
+      "WAIT": false,
+      "NG": false
+    },
+    "211": {
+      "WAIT": false,
+      "NG": false
+    },
+    "212": {
+      "WAIT": false,
+      "NG": false
+    },
+    "213": {
+      "WAIT": false,
+      "NG": false
+    },
+    "214": {
+      "WAIT": false,
+      "NG": false
+    },
+    "215": {
+      "WAIT": false,
+      "NG": false
+    },
+    "216": {
+      "WAIT": false,
+      "NG": false
+    },
+    "217": {
+      "WAIT": false,
+      "NG": false
+    },
+    "218": {
+      "WAIT": false,
+      "NG": false
+    }
+  },
+  "sop_events": [
+    {
+      "t_start": 0,
+      "t_end": 0,
+      "mmss": "00:00",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0000.jpg"
+    },
+    {
+      "t_start": 3,
+      "t_end": 4,
+      "mmss": "00:03",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0003.jpg"
+    },
+    {
+      "t_start": 8,
+      "t_end": 12,
+      "mmss": "00:08",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0008.jpg"
+    },
+    {
+      "t_start": 10,
+      "t_end": 11,
+      "mmss": "00:10",
+      "box": "NG",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มีมือไปยุ่งกับลัง NG — อาจเป็นการใส่ของเสียลง (ถูก SOP) หรือหยิบกลับออกมา (ผิด R2) ระบบแยกไม่ได้จากภาพ -> ให้คนตรวจยืนยันจากเฟรมหลักฐาน",
+      "needs_review": true,
+      "evidence_frame": "t0010.jpg"
+    },
+    {
+      "t_start": 16,
+      "t_end": 21,
+      "mmss": "00:16",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0016.jpg"
+    },
+    {
+      "t_start": 24,
+      "t_end": 44,
+      "mmss": "00:24",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0024.jpg"
+    },
+    {
+      "t_start": 47,
+      "t_end": 49,
+      "mmss": "00:47",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0047.jpg"
+    },
+    {
+      "t_start": 53,
+      "t_end": 54,
+      "mmss": "00:53",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0053.jpg"
+    },
+    {
+      "t_start": 57,
+      "t_end": 58,
+      "mmss": "00:57",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0057.jpg"
+    },
+    {
+      "t_start": 75,
+      "t_end": 76,
+      "mmss": "01:15",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0075.jpg"
+    },
+    {
+      "t_start": 79,
+      "t_end": 80,
+      "mmss": "01:19",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0079.jpg"
+    },
+    {
+      "t_start": 83,
+      "t_end": 91,
+      "mmss": "01:23",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0083.jpg"
+    },
+    {
+      "t_start": 94,
+      "t_end": 95,
+      "mmss": "01:34",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0094.jpg"
+    },
+    {
+      "t_start": 98,
+      "t_end": 108,
+      "mmss": "01:38",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0098.jpg"
+    },
+    {
+      "t_start": 106,
+      "t_end": 107,
+      "mmss": "01:46",
+      "box": "NG",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มีมือไปยุ่งกับลัง NG — อาจเป็นการใส่ของเสียลง (ถูก SOP) หรือหยิบกลับออกมา (ผิด R2) ระบบแยกไม่ได้จากภาพ -> ให้คนตรวจยืนยันจากเฟรมหลักฐาน",
+      "needs_review": true,
+      "evidence_frame": "t0106.jpg"
+    },
+    {
+      "t_start": 111,
+      "t_end": 120,
+      "mmss": "01:51",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0111.jpg"
+    },
+    {
+      "t_start": 123,
+      "t_end": 124,
+      "mmss": "02:03",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0123.jpg"
+    },
+    {
+      "t_start": 136,
+      "t_end": 136,
+      "mmss": "02:16",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0136.jpg"
+    },
+    {
+      "t_start": 139,
+      "t_end": 140,
+      "mmss": "02:19",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0139.jpg"
+    },
+    {
+      "t_start": 143,
+      "t_end": 145,
+      "mmss": "02:23",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0143.jpg"
+    },
+    {
+      "t_start": 149,
+      "t_end": 150,
+      "mmss": "02:29",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0149.jpg"
+    },
+    {
+      "t_start": 153,
+      "t_end": 154,
+      "mmss": "02:33",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0153.jpg"
+    },
+    {
+      "t_start": 157,
+      "t_end": 160,
+      "mmss": "02:37",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0157.jpg"
+    },
+    {
+      "t_start": 164,
+      "t_end": 170,
+      "mmss": "02:44",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0164.jpg"
+    },
+    {
+      "t_start": 180,
+      "t_end": 181,
+      "mmss": "03:00",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0180.jpg"
+    },
+    {
+      "t_start": 184,
+      "t_end": 186,
+      "mmss": "03:04",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0184.jpg"
+    },
+    {
+      "t_start": 184,
+      "t_end": 185,
+      "mmss": "03:04",
+      "box": "NG",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มีมือไปยุ่งกับลัง NG — อาจเป็นการใส่ของเสียลง (ถูก SOP) หรือหยิบกลับออกมา (ผิด R2) ระบบแยกไม่ได้จากภาพ -> ให้คนตรวจยืนยันจากเฟรมหลักฐาน",
+      "needs_review": true,
+      "evidence_frame": "t0184.jpg"
+    },
+    {
+      "t_start": 190,
+      "t_end": 192,
+      "mmss": "03:10",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0190.jpg"
+    },
+    {
+      "t_start": 198,
+      "t_end": 202,
+      "mmss": "03:18",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0198.jpg"
+    },
+    {
+      "t_start": 205,
+      "t_end": 206,
+      "mmss": "03:25",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0205.jpg"
+    },
+    {
+      "t_start": 208,
+      "t_end": 208,
+      "mmss": "03:28",
+      "box": "NG",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มีมือไปยุ่งกับลัง NG — อาจเป็นการใส่ของเสียลง (ถูก SOP) หรือหยิบกลับออกมา (ผิด R2) ระบบแยกไม่ได้จากภาพ -> ให้คนตรวจยืนยันจากเฟรมหลักฐาน",
+      "needs_review": true,
+      "evidence_frame": "t0208.jpg"
+    },
+    {
+      "t_start": 209,
+      "t_end": 209,
+      "mmss": "03:29",
+      "box": "WAIT",
+      "who": "คน1 (ซ้าย)",
+      "detected": "hand_interaction",
+      "note": "มือคน1 อยู่ในลัง WAIT = หยิบกระป๋องมาตรวจ (SOP ขั้น 2) — เป็นเรื่องปกติ",
+      "needs_review": false,
+      "evidence_frame": "t0209.jpg"
+    }
+  ],
+  "sop_findings": {
+    "wait_interactions": 28,
+    "ng_interactions": 4,
+    "ng_review_times": [
+      "00:10",
+      "01:46",
+      "03:04",
+      "03:28"
+    ],
+    "verified": "ตรวจได้ว่า 'มือไปยุ่งกับลังไหน เมื่อไหร่' — ชื่อลังมาจาก ROI ที่โค้ดกำหนด (กล้องนิ่ง ลังอยู่กับที่) ส่วน VLM ตอบแค่ 'มีมือไหม'",
+    "not_verified": "แยกไม่ได้ว่า 'ใส่ลง' หรือ 'หยิบออก' — ลองวัดปริมาณของในลังด้วย pixel แล้ว แต่เงาคน/กล้องปรับแสงทำให้ค่าแกว่งแรงกว่าสัญญาณจริง 3 เท่า (ถอนออก) และคลิปมีรอยตัดต่อ (~02:17) ที่ของในลังเปลี่ยนเพราะจัดฉากใหม่",
+    "human_review_needed": 4,
+    "why_not_vlm_labels": "ไม่ให้ VLM อ่านป้ายลังเอง เพราะวัดแล้วผิด 146/220 จุด (66%) จาก attribute-binding: ลัง WAIT/NG ห่างกันแค่ 251px และเล็ก (4.5% ของภาพ) ส่วนลัง GOOD ที่อยู่เดี่ยวห่าง 1053px โมเดลไม่เคยเรียกผิดเลย",
+    "validation": "จุดที่ระบบแจ้งมือในลัง NG ตรงกับการไล่ดูเฟรมด้วยคน 7/7 (false positive = 0)"
   }
 }
