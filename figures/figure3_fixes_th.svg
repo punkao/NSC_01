@@ -1,0 +1,139 @@
+<svg viewBox="0 0 1600 940" width="1600" height="940" xmlns="http://www.w3.org/2000/svg" font-family="'Leelawadee UI', 'Segoe UI', Tahoma, sans-serif">
+  <title>รูปที่ 3 — กลไกที่เพิ่มเข้ามาเพื่อแก้ข้อจำกัดของแบบจำลอง</title>
+
+  <defs>
+    <marker id="p3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,1.2 L8.6,5 L0,8.8" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="940" fill="#FAFAF8"/>
+
+  <!-- ===== หัวรูป ===== -->
+  <text x="60" y="56" font-size="21" font-weight="700" fill="#1A1D21">รูปที่ 3.</text>
+  <text x="185" y="56" font-size="21" font-weight="700" fill="#1A1D21">กลไกที่เพิ่มเข้ามาเพื่อแก้ข้อจำกัดของแบบจำลอง</text>
+  <text x="60" y="86" font-size="14" fill="#6B7280">ทุกกลไกวัดผลก่อน–หลังด้วยเฉลยชุดเดียวกัน · ตัวเลขในภาพนี้คือผลที่วัดได้จริง</text>
+  <path d="M60,108 H1540" stroke="#E0E0DB" stroke-width="1.5"/>
+
+  <!-- ===== หัวคอลัมน์ ===== -->
+  <text x="60"   y="146" font-size="13" font-weight="700" fill="#9CA3AF">ปัญหาที่พบจากแบบจำลอง</text>
+  <text x="600"  y="146" font-size="13" font-weight="700" fill="#2563EB">กลไกที่เพิ่มเข้ามา</text>
+  <text x="1140" y="146" font-size="13" font-weight="700" fill="#9CA3AF">ผลที่วัดได้</text>
+  <text x="1420" y="146" font-size="13" font-weight="700" fill="#9CA3AF">อยู่ชั้น</text>
+
+  <!-- ===== แถว 1 : ระบุลัง ===== -->
+  <rect x="60" y="166" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="84" y="198" font-size="15" font-weight="700" fill="#1A1D21">ระบุลังผิด</text>
+  <text x="84" y="226" font-size="14" fill="#374151">อ่านป้ายออกทุกป้าย แต่จับคู่ป้ายเข้ากับลังผิด</text>
+  <text x="84" y="250" font-size="14" fill="#374151">เมื่อลังสองใบอยู่ใกล้กัน (ห่าง 251 พิกเซล)</text>
+  <text x="84" y="272" font-size="14" font-weight="700" fill="#1A1D21">ผิด 146 จาก 220 จุด = 66%</text>
+
+  <path d="M545,225 H590" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="600" y="166" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="624" y="198" font-size="15" font-weight="700" fill="#2563EB">ครอบภาพทีละลัง แล้วถามแค่ “มีมือไหม”</text>
+  <text x="624" y="226" font-size="14" fill="#374151">กล้องอยู่กับที่ ตำแหน่งลังจึงคงที่ →</text>
+  <text x="624" y="250" font-size="14" fill="#374151">ให้โปรแกรมเป็นผู้ระบุว่าเป็นลังไหน</text>
+  <text x="624" y="272" font-size="14" font-weight="700" fill="#1A1D21">ตัวตนของลังมาจากโปรแกรม ไม่ใช่จากแบบจำลอง</text>
+
+  <path d="M1085,225 H1130" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="1140" y="196" width="230" height="58" rx="8" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="1255" y="222" font-size="19" font-weight="700" fill="#1A1D21" text-anchor="middle">ถูก 7 / 7</text>
+  <text x="1255" y="243" font-size="13" fill="#6B7280" text-anchor="middle">ไม่มีการแจ้งผิด</text>
+  <text x="1420" y="230" font-size="14" font-weight="700" fill="#2563EB">L2</text>
+
+  <!-- ===== แถว 2 : หน้ากาก ===== -->
+  <rect x="60" y="304" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="84" y="336" font-size="15" font-weight="700" fill="#1A1D21">มองหน้ากากไม่เห็น</text>
+  <text x="84" y="364" font-size="14" fill="#374151">หน้ากากกินพื้นที่เพียง ~4% ของภาพ</text>
+  <text x="84" y="388" font-size="14" fill="#374151">และการละเมิดคือ “ดึงลงคาง” ไม่ใช่ “ไม่สวม”</text>
+  <text x="84" y="410" font-size="14" font-weight="700" fill="#1A1D21">ตรวจพบเพียง 8 จาก 35 จุด = 23%</text>
+
+  <path d="M545,363 H590" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="600" y="304" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="624" y="336" font-size="15" font-weight="700" fill="#2563EB">ขยายภาพเฉพาะส่วนศีรษะ 4 เท่า</text>
+  <text x="624" y="364" font-size="14" fill="#374151">ครอบเฉพาะหัวคน แล้วขยายด้วยแบบจำลอง</text>
+  <text x="624" y="388" font-size="14" fill="#374151">ขยายภาพ (ไม่ใช่การยืดภาพธรรมดา)</text>
+  <text x="624" y="410" font-size="14" font-weight="700" fill="#1A1D21">ก่อนส่งให้แบบจำลองดู</text>
+
+  <path d="M1085,363 H1130" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="1140" y="334" width="230" height="58" rx="8" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="1255" y="360" font-size="19" font-weight="700" fill="#1A1D21" text-anchor="middle">23% → 80%</text>
+  <text x="1255" y="381" font-size="13" fill="#6B7280" text-anchor="middle">28 จาก 35 · แจ้งผิด 2</text>
+  <text x="1420" y="368" font-size="14" font-weight="700" fill="#2563EB">L1 → L2</text>
+
+  <!-- ===== แถว 3 : คำบรรยายบอกลังผิด ===== -->
+  <rect x="60" y="442" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="84" y="474" font-size="15" font-weight="700" fill="#1A1D21">คำบรรยายเอ่ยชื่อลังผิด</text>
+  <text x="84" y="502" font-size="14" fill="#374151">ต่อให้ห้ามเอ่ยชื่อลังในคำสั่ง</text>
+  <text x="84" y="526" font-size="14" fill="#374151">ก็ยังหลุดออกมา 1 ใน 4 ครั้ง</text>
+  <text x="84" y="548" font-size="14" font-weight="700" fill="#1A1D21">คำสั่งควบคุมได้ไม่ครบ 100%</text>
+
+  <path d="M545,501 H590" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="600" y="442" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="624" y="474" font-size="15" font-weight="700" fill="#2563EB">ประกอบชื่อลังเข้ากับคำบรรยายภายหลัง</text>
+  <text x="624" y="502" font-size="14" fill="#374151">ให้แบบจำลองเรียกแค่ “ลังฝั่งซ้าย / ขวา”</text>
+  <text x="624" y="526" font-size="14" fill="#374151">แล้วโปรแกรมแทนชื่อลังจริงลงไป</text>
+  <text x="624" y="548" font-size="14" font-weight="700" fill="#1A1D21">ถ้าระบุไม่ได้ ไม่เดา — เว้นไว้</text>
+
+  <path d="M1085,501 H1130" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="1140" y="472" width="230" height="58" rx="8" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="1255" y="498" font-size="19" font-weight="700" fill="#1A1D21" text-anchor="middle">บอกลังถูก</text>
+  <text x="1255" y="519" font-size="13" fill="#6B7280" text-anchor="middle">สดกับเล่นย้อนหลังตรงกัน</text>
+  <text x="1420" y="506" font-size="14" font-weight="700" fill="#2563EB">L3</text>
+
+  <!-- ===== แถว 4 : สัญญาณกระพริบ ===== -->
+  <rect x="60" y="580" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="84" y="612" font-size="15" font-weight="700" fill="#1A1D21">สัญญาณกระพริบ</text>
+  <text x="84" y="640" font-size="14" fill="#374151">พอคนก้มหน้าหรือมือถูกบังชั่วครู่</text>
+  <text x="84" y="664" font-size="14" fill="#374151">แบบจำลองตอบว่า “ถอด” ทั้งที่ยังใส่อยู่</text>
+  <text x="84" y="686" font-size="14" font-weight="700" fill="#1A1D21">แจ้งเตือนเด้งขึ้น–ดับ สลับไปมา</text>
+
+  <path d="M545,639 H590" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="600" y="580" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="624" y="612" font-size="15" font-weight="700" fill="#2563EB">ตัวติดตามสถานะ + ยืนยันซ้ำ</text>
+  <text x="624" y="640" font-size="14" fill="#374151">กฎที่ 1 มองไม่เห็น → คงสถานะเดิม ไม่นับว่าละเมิด</text>
+  <text x="624" y="664" font-size="14" fill="#374151">กฎที่ 2 ต้องเห็นซ้ำ 2 ครั้งติดกัน จึงยืนยัน</text>
+  <text x="624" y="686" font-size="14" font-weight="700" fill="#1A1D21">แก้ที่การประมวลผลผลลัพธ์ ไม่ใช่ที่คำสั่ง</text>
+
+  <path d="M1085,639 H1130" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="1140" y="610" width="230" height="58" rx="8" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="1255" y="636" font-size="19" font-weight="700" fill="#1A1D21" text-anchor="middle">แจ้งผิดลดลง</text>
+  <text x="1255" y="657" font-size="13" fill="#6B7280" text-anchor="middle">ไม่กระพริบอีก</text>
+  <text x="1420" y="644" font-size="14" font-weight="700" fill="#2563EB">L3</text>
+
+  <!-- ===== แถว 5 : ไม่คงที่ ===== -->
+  <rect x="60" y="718" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="84" y="750" font-size="15" font-weight="700" fill="#1A1D21">คำตอบไม่คงที่</text>
+  <text x="84" y="778" font-size="14" fill="#374151">ถามซ้ำด้วยคำสั่งเดิม สั่งไม่ให้สุ่มเลย</text>
+  <text x="84" y="802" font-size="14" fill="#374151">แต่ยังได้คำบรรยาย 2 แบบจาก 3 ครั้ง</text>
+  <text x="84" y="824" font-size="14" font-weight="700" fill="#1A1D21">ข้อความยาว = ทำซ้ำให้เป๊ะไม่ได้</text>
+
+  <path d="M545,777 H590" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="600" y="718" width="470" height="118" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="624" y="750" font-size="15" font-weight="700" fill="#2563EB">แยกระบบเป็น 2 ชั้น</text>
+  <text x="624" y="778" font-size="14" fill="#374151">ชั้นแจ้งเตือน = ตอบสั้นว่าใช่/ไม่ใช่ → คงที่</text>
+  <text x="624" y="802" font-size="14" fill="#374151">ชั้นบรรยาย = เล่าเป็นภาษาคน → ไม่ต้องคงที่</text>
+  <text x="624" y="824" font-size="14" font-weight="700" fill="#1A1D21">สิ่งที่ต้องเชื่อถือได้ ห้ามพึ่งข้อความยาว</text>
+
+  <path d="M1085,777 H1130" stroke="#9CA3AF" stroke-width="1.8" marker-end="url(#p3a)"/>
+
+  <rect x="1140" y="748" width="230" height="58" rx="8" fill="#FFFFFF" stroke="#E0E0DB" stroke-width="1.5"/>
+  <text x="1255" y="774" font-size="19" font-weight="700" fill="#1A1D21" text-anchor="middle">คงที่ 12 / 12</text>
+  <text x="1255" y="795" font-size="13" fill="#6B7280" text-anchor="middle">เฉพาะชั้นข้อเท็จจริง</text>
+  <text x="1420" y="782" font-size="14" font-weight="700" fill="#2563EB">ทั้งระบบ</text>
+
+  <!-- ===== ท้ายรูป ===== -->
+  <path d="M60,866 H1540" stroke="#E0E0DB" stroke-width="1.5"/>
+  <rect x="60" y="884" width="14" height="14" rx="3" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="88" y="896" font-size="14" font-weight="700" fill="#1A1D21">หลักร่วมของทุกกลไก — ให้โปรแกรมกำหนดขอบเขตของคำถาม แล้วให้แบบจำลองตอบเฉพาะสิ่งที่อยู่ในกรอบนั้น</text>
+  <text x="88" y="920" font-size="13" fill="#6B7280">ข้อจำกัดทั้งห้าข้อนี้แก้ด้วยการปรับคำสั่งไม่ได้ จึงต้องออกแบบระบบให้ไม่ต้องถามคำถามที่แบบจำลองตอบไม่ได้</text>
+</svg>
