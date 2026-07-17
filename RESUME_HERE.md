@@ -46,11 +46,22 @@
 - `PROMPT_FOR_FRIEND_UPDATE.md` — ตรวจแล้วเลขตรง JSON ทุกตัว · ส่งเพื่อนได้เลย
 - `.docx` — สร้างจาก `build_docx.py` แล้ว (**ห้ามแก้ .docx ตรง ๆ — แก้ .md แล้ว build ใหม่**)
 
+## 📄 ไฟล์รายงาน — สร้างจากสคริปต์ทั้งหมด (**ห้ามแก้ .docx ตรง ๆ**)
+
+| คำสั่ง | ได้ไฟล์ | จาก |
+|---|---|---|
+| `python build_docx.py` | `รายงาน_บทที่5_Line-Guard.docx` | `REPORT_SECTION5.md` |
+| `python build_docx.py --preset ch789` | `รายงาน_บทที่7-9_Line-Guard.docx` | `REPORT_SECTION789.md` |
+| `python build_docx.py --preset all` | `รายงาน_Line-Guard_รวม.docx` | ทั้งสองไฟล์ |
+
+**บทที่ 7 (ผลการทดสอบ) · 8 (ปัญหาและอุปสรรค) · 9 (แนวทางพัฒนาต่อ) เขียนเสร็จแล้ว**
+ตัวเลขทุกตัวตรวจกับ `diff_gt.py` + `cam_a05_timeline.json` แล้ว
+
 ## 📌 ยังไม่ได้ทำ — **ต้องให้พี่ทำเอง Claude ทำแทนไม่ได้**
 
 1. **ติดตั้งฟอนต์ TH Sarabun New** ไม่งั้น .docx ขึ้นฟอนต์สำรอง (ไฟล์ตั้งฟอนต์ถูกแล้ว แค่เครื่องไม่มี)
 2. **เติมหน้าปก 5 ช่อง** `[ระบุ...]` — ชื่อผู้พัฒนา / ทีม-รหัส / อาจารย์ที่ปรึกษา / สถาบัน / โครงการ+ปี
-   แก้ที่ `COVER` ใน `build_docx.py` แล้วรัน `python build_docx.py` (**ห้ามแก้ .docx ตรง ๆ**)
+   แก้ที่ `COVER_TAIL` ใน `build_docx.py` แล้ว build ใหม่ (มีผลกับทุก preset พร้อมกัน)
 3. **📸 screenshot demo + story board** (ข้อกำหนด 5.1 บังคับ)
    ```bash
    python live_demo_offline.py     # ไม่ต้องใช้ GPU
