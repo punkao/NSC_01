@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""สร้างรายงาน .docx จาก REPORT_SECTION5.md — ทำเป็นสคริปต์เพื่อให้ generate ใหม่ได้ทุกครั้งที่แก้ .md
+"""สร้างรายงาน .docx จากไฟล์ markdown — generate ใหม่ได้ทุกครั้งที่แก้ .md
 
 ทำไมต้องมี: .docx ฉบับก่อนสร้างด้วยมือ พอแก้ตัวเลขใน .md แล้ว .docx ไม่ตาม
 -> ตอนจะส่งเลยกลายเป็นส่งเวอร์ชันที่ตัวเลขผิดทั้งหมด. สคริปต์นี้ตัดปัญหานั้นถาวร
@@ -7,10 +7,15 @@
 ฟอร์แมตตามข้อกำหนด: A4 · ขอบ 1 นิ้ว · TH Sarabun New 16pt · มีเลขหน้า
 (ฉบับก่อนหน้า footer ว่าง = ไม่มีเลขหน้า ซึ่งผิดข้อกำหนด — ฉบับนี้ใส่ให้แล้ว)
 
-Run: python build_docx.py
+Run:
+  python build_docx.py                 # บทที่ 5 (ค่าเริ่มต้น)
+  python build_docx.py --preset ch789  # บทที่ 7-9
+  python build_docx.py --preset all    # รวมทุกบทเป็นไฟล์เดียว
+  python build_docx.py --src A.md B.md --out ชื่อไฟล์.docx --title "..."
 """
 from __future__ import annotations
 
+import argparse
 import re
 from pathlib import Path
 
@@ -21,12 +26,20 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt
 
-SRC = Path("REPORT_SECTION5.md")
-OUT = Path("รายงาน_บทที่5_Line-Guard.docx")
 FONT = "TH Sarabun New"
 BASE_PT = 16
 
-COVER = [
+# แต่ละ preset = (ไฟล์ markdown ที่จะต่อกัน, ชื่อไฟล์ออก, บรรทัดบอกบทบนหน้าปก)
+PRESETS = {
+    "ch5": (["REPORT_SECTION5.md"], "รายงาน_บทที่5_Line-Guard.docx",
+            "บทที่ 5  รายละเอียดของการพัฒนา"),
+    "ch789": (["REPORT_SECTION789.md"], "รายงาน_บทที่7-9_Line-Guard.docx",
+              "บทที่ 7–9  ผลการทดสอบ · ปัญหาและอุปสรรค · แนวทางพัฒนาต่อ"),
+    "all": (["REPORT_SECTION5.md", "REPORT_SECTION789.md"], "รายงาน_Line-Guard_รวม.docx",
+            "บทที่ 5 · 7 · 8 · 9"),
+}
+
+COVER_TITLE = [
     ("รายงานฉบับสมบูรณ์", 24, True),
     ("", 16, False),
     ("Line Guard", 30, True),
@@ -36,7 +49,8 @@ COVER = [
     ("Line Guard: A Vision-Language Model Approach to", 18, False),
     ("Industrial Safety Event Detection from CCTV Video", 18, False),
     ("", 16, False),
-    ("บทที่ 5  รายละเอียดของการพัฒนา", 20, True),
+]
+COVER_TAIL = [
     ("", 16, False),
     ("", 16, False),
     ("จัดทำโดย", 18, True),
@@ -120,7 +134,24 @@ def md_table(doc, rows: list[str]) -> None:
             add_runs(cell.paragraphs[0], v or " ", BASE_PT - 2)
 
 
+def parse_args() -> tuple[list[Path], Path, str]:
+    ap = argparse.ArgumentParser(description="สร้าง .docx จากไฟล์ markdown")
+    ap.add_argument("--preset", choices=sorted(PRESETS), default="ch5",
+                    help="ชุดที่ตั้งไว้ให้ (ค่าเริ่มต้น ch5)")
+    ap.add_argument("--src", nargs="+", help="ระบุไฟล์ .md เอง (ทับ preset)")
+    ap.add_argument("--out", help="ชื่อไฟล์ .docx ที่จะสร้าง (ทับ preset)")
+    ap.add_argument("--title", help="บรรทัดบอกบทบนหน้าปก (ทับ preset)")
+    a = ap.parse_args()
+    srcs, out, title = PRESETS[a.preset]
+    srcs = [Path(s) for s in (a.src or srcs)]
+    for s in srcs:
+        if not s.exists():
+            raise SystemExit(f"ไม่พบไฟล์ {s}")
+    return srcs, Path(a.out or out), a.title or title
+
+
 def main() -> None:
+    srcs, out_path, cover_title = parse_args()
     doc = Document()
     st = doc.styles["Normal"]
     st.font.name = FONT
@@ -131,15 +162,20 @@ def main() -> None:
         setattr(sec, m, Inches(1))
 
     # ---- หน้าปก ----
-    for text, size, bold in COVER:
+    for text, size, bold in [*COVER_TITLE, (cover_title, 20, True), *COVER_TAIL]:
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         set_font(p.add_run(text), size, bold)
     doc.add_page_break()
     add_page_number(sec)
 
-    # ---- เนื้อหาจาก markdown ----
-    lines = SRC.read_text(encoding="utf-8").split("\n")
+    # ---- เนื้อหาจาก markdown (ต่อกันตามลำดับที่ระบุ) ----
+    parts = []
+    for k, s in enumerate(srcs):
+        if k:
+            parts.append("\n\n<<<PAGEBREAK>>>\n\n")   # ขึ้นหน้าใหม่ระหว่างบท
+        parts.append(s.read_text(encoding="utf-8"))
+    lines = "".join(parts).split("\n")
     i, in_code, buf_tbl = 0, False, []
     while i < len(lines):
         ln = lines[i]
@@ -177,6 +213,11 @@ def main() -> None:
             continue
 
         s = ln.strip()
+        if s == "<<<PAGEBREAK>>>":
+            doc.add_page_break()
+            last_blank = True
+            i += 1
+            continue
         if s.startswith("# "):
             p = doc.add_paragraph()
             set_font(p.add_run(s[2:]), 20, bold=True)
@@ -215,8 +256,10 @@ def main() -> None:
         last_blank = False
         i += 1
 
-    doc.save(OUT)
-    print(f"สร้าง {OUT} แล้ว  ({len(doc.paragraphs)} ย่อหน้า, {len(doc.tables)} ตาราง, {len(doc.inline_shapes)} รูป)")
+    doc.save(out_path)
+    src_names = " + ".join(s.name for s in srcs)
+    print(f"สร้าง {out_path} แล้ว  (จาก {src_names})")
+    print(f"  {len(doc.paragraphs)} ย่อหน้า, {len(doc.tables)} ตาราง, {len(doc.inline_shapes)} รูป")
 
 
 if __name__ == "__main__":
