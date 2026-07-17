@@ -18,6 +18,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
+from evidence_frames import pick as pick_evidence
+
 from test_box_layout import LAYOUT  # ผังลังตัวเดียวกับที่ A/B ทดสอบ (single source of truth)
 
 PROMPT = (
@@ -134,17 +136,26 @@ def main():
                 print(f"  {done}/{len(points)}  ({time.time()-t0:.0f}s)")
 
     # CATCH events + evidence
+    #
+    # เฟรมหลักฐาน: ค่าเริ่มต้นใช้เฟรมแรกของช่วง ซึ่งใช้ได้กับเหตุแบบ "สถานะ"
+    # (ไม่สวมหมวก = เห็นได้ทุกเฟรมตลอดช่วง) แต่ใช้ไม่ได้กับเหตุแบบ "การกระทำ"
+    # ที่เกิดเป็นจังหวะกลางช่วง -> near-miss เคยชี้ไปเฟรมที่ไม่มีเหตุเลย
+    # evidence_frames.OVERRIDE เก็บเฟรมที่ตรวจด้วยตายืนยันแล้ว พร้อมเหตุผล
     events = []
     if os.path.exists(args.events):
         for e in json.load(open(args.events, encoding="utf-8"))["events"]:
             ty = e["event_type"]
             label, sev = _TYPE_LABEL.get(ty, (ty, e.get("severity", "medium")))
             ts = _sec(e["timestamp_mmss"])
-            events.append({
+            ev_t, why = pick_evidence(ty, e["timestamp_mmss"], ts)
+            ent = {
                 "t_start": ts, "t_end": _sec(e.get("timestamp_end_mmss", e["timestamp_mmss"])),
                 "mmss": e["timestamp_mmss"], "type": ty, "label": label,
                 "severity": e.get("severity", sev), "description": e["description"],
-                "evidence_frame": f"t{nearest(ts):04d}.jpg"})
+                "evidence_frame": f"t{nearest(ev_t):04d}.jpg"}
+            if why:
+                ent["evidence_note"] = why
+            events.append(ent)
         events.sort(key=lambda x: x["t_start"])
 
     out = {
