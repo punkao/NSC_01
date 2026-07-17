@@ -35,8 +35,11 @@ PRESETS = {
             "บทที่ 5  รายละเอียดของการพัฒนา"),
     "ch789": (["REPORT_SECTION789.md"], "รายงาน_บทที่7-9_Line-Guard.docx",
               "บทที่ 7–9  ผลการทดสอบ · ปัญหาและอุปสรรค · แนวทางพัฒนาต่อ"),
-    "all": (["REPORT_SECTION5.md", "REPORT_SECTION789.md"], "รายงาน_Line-Guard_รวม.docx",
-            "บทที่ 5 · 7 · 8 · 9"),
+    "ref": (["REPORT_REFERENCES.md"], "รายงาน_เอกสารอ้างอิง_Line-Guard.docx",
+            "เอกสารอ้างอิง"),
+    # เอกสารอ้างอิงอยู่ท้ายเล่มเสมอ -- ห้ามแทรกกลาง
+    "all": (["REPORT_SECTION5.md", "REPORT_SECTION789.md", "REPORT_REFERENCES.md"],
+            "รายงาน_Line-Guard_รวม.docx", "บทที่ 5 · 7 · 8 · 9 · เอกสารอ้างอิง"),
 }
 
 COVER_TITLE = [

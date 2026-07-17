@@ -347,7 +347,7 @@
 | Pillow, requests | PyPI | MIT-CMU (Pillow) / Apache-2.0 (requests) | ไลบรารีมาตรฐาน |
 | Claude Opus | Anthropic ผ่าน OpenRouter | บริการเชิงพาณิชย์ (API) | วิเคราะห์ข้อความในชั้น L4 |
 
-> ✅ = เปิดหน้าต้นทางตรวจยืนยันแล้วเมื่อ 17 กรกฎาคม 2569 (ดูบรรณานุกรม [1], [5], [7])
+> ✅ = เปิดหน้าต้นทางตรวจยืนยันแล้วเมื่อ 17 กรกฎาคม 2569 (ดูเอกสารอ้างอิง [1], [16], [10])
 > รายการที่ไม่มีเครื่องหมายเป็นไลบรารีพื้นฐานที่สัญญาอนุญาตเป็นที่ทราบทั่วไปและไม่ได้แจกจ่ายซ้ำ
 >
 > **ข้อควรทราบ:** Cosmos-Reason2-8B ใช้สัญญาอนุญาตแบบคู่ ฉบับร่างก่อนหน้าระบุเพียง
@@ -543,77 +543,3 @@
    โดยไม่มีสัญญาณเตือนใด ๆ (รายละเอียดในบทที่ 8 หัวข้อ 8.5)
 
 ---
-
-## บรรณานุกรม
-
-> ทุกรายการเปิดตรวจจาก URL จริงแล้วก่อนอ้างอิง ไม่ได้อ้างจากความจำ
-> แยกให้ชัดระหว่าง **บทความวิชาการ** กับ **model card / โค้ด** เพราะบางแบบจำลองที่ใช้ยังไม่มีบทความตีพิมพ์ของตัวเอง
-
-### แบบจำลองที่ใช้และที่นำมาเปรียบเทียบ
-
-[1] NVIDIA. *Cosmos-Reason2-8B* [model card]. Hugging Face.
-    https://huggingface.co/nvidia/Cosmos-Reason2-8B
-    — **แบบจำลองหลักที่ใช้ในโครงงานนี้** เผยแพร่ภายใต้ NVIDIA Open Model License
-    *หมายเหตุ:* ณ วันที่จัดทำรายงาน ยังไม่พบบทความวิชาการเฉพาะของ Cosmos-Reason2
-    เอกสารวิชาการที่ใกล้ที่สุดคือของรุ่นก่อนหน้าตามรายการ [2]
-
-[2] NVIDIA. (2025). *Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning.*
-    arXiv:2503.15558. https://arxiv.org/abs/2503.15558
-    — บทความของรุ่นก่อนหน้า อธิบายแนวคิดตระกูล Cosmos-Reason (การให้เหตุผลเชิงกายภาพ
-    และการฝึกสี่ขั้น: vision pre-training → SFT → Physical AI SFT → RL)
-    **ไม่ใช่บทความของรุ่นที่ใช้จริง** แต่ใช้อธิบายที่มาของสถาปัตยกรรมได้
-
-[3] Qwen Team, Alibaba. *Qwen3-VL-8B-Instruct* [model card]. Hugging Face.
-    https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
-    — แบบจำลองที่นำมาเปรียบเทียบตอนเลือกแบบจำลองในหัวข้อ 5.2 (ตรวจพบ 62% · ไม่พบ near-miss
-    ขณะที่ Cosmos ตรวจพบ 75% · พบ near-miss ซึ่งเป็นจุดชี้ขาดในการเลือก)
-
-[4] Qwen Team. (2025). *Qwen3 Technical Report.* arXiv:2505.09388.
-    https://arxiv.org/abs/2505.09388
-    — เอกสารเทคนิคหลักที่ model card ตามรายการ [3] อ้างถึง
-
-### ระบบเสิร์ฟแบบจำลอง
-
-[5] Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu, C. H., Gonzalez, J. E.,
-    Zhang, H., & Stoica, I. (2023). *Efficient Memory Management for Large Language
-    Model Serving with PagedAttention.* In Proceedings of the 29th Symposium on
-    Operating Systems Principles (SOSP '23). https://doi.org/10.1145/3600006.3613165
-    arXiv:2309.06180. https://arxiv.org/abs/2309.06180
-    — ที่มาของ vLLM ซึ่งใช้เสิร์ฟแบบจำลองในโครงงานนี้ (เวอร์ชัน 0.25.0)
-    แนวคิด PagedAttention อธิบายว่าทำไม continuous batching จึงทำให้ throughput สูงขึ้น
-    และเป็นเหตุผลเชิงระบบที่ทำให้ผลลัพธ์ไม่คงที่แม้ตั้ง temperature = 0 (ดูหัวข้อ 5.5)
-
-### เทคนิคที่นำมาใช้และที่ทดลอง
-
-[6] Lim, B., Son, S., Kim, H., Nah, S., & Lee, K. M. (2017). *Enhanced Deep Residual
-    Networks for Single Image Super-Resolution.* In IEEE Conference on Computer Vision
-    and Pattern Recognition Workshops (CVPRW), pp. 1132–1140.
-    https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.pdf
-    — EDSR ซึ่งใช้ขยายภาพศีรษะ 4 เท่าก่อนส่งให้ VLM ตรวจหน้ากาก
-    เป็นวิธีที่ทำให้ recall หน้ากากเพิ่มจาก 23% เป็น 80% (หัวข้อ 5.5)
-    น้ำหนักที่ใช้จริงคือ `eugenesiow/edsr-base` (scale = 4) ตามรายการ [7]
-
-[7] Siow, E. *edsr-base* [model card]. Hugging Face.
-    https://huggingface.co/eugenesiow/edsr-base
-    — น้ำหนักแบบจำลอง EDSR ชุดที่โครงงานนี้เรียกใช้จริงในขั้นตอนขยายภาพศีรษะ
-
-[8] Yang, J., Zhang, H., Li, F., Zou, X., Li, C., & Gao, J. (2023). *Set-of-Mark
-    Prompting Unleashes Extraordinary Visual Grounding in GPT-4V.* arXiv:2310.11441.
-    https://arxiv.org/abs/2310.11441 · โค้ด: https://github.com/microsoft/SoM
-    — วิธีติดหมายเลขบนภาพเพื่อช่วยให้ VLM อ้างอิงตำแหน่งได้
-    **ทดลองแล้วไม่ได้ใช้ในผลงานสุดท้าย** เพราะช่วยเรื่องหน้ากากแต่ทำให้การตรวจถุงมือแย่ลง (หัวข้อ 5.3)
-
-### งานวิจัยที่รองรับข้อค้นพบเรื่องการจับคู่ป้ายกับวัตถุ
-
-[9] Yuksekgonul, M., Bianchi, F., Kalluri, P., Jurafsky, D., & Zou, J. (2023).
-    *When and why vision-language models behave like bags-of-words, and what to do
-    about it?* In International Conference on Learning Representations (ICLR 2023).
-    arXiv:2210.01936. https://arxiv.org/abs/2210.01936
-    — เสนอชุดทดสอบ ARO (Attribution, Relation, Order) มากกว่า 50,000 กรณี
-    และแสดงว่าแบบจำลองภาษาและภาพจำนวนมาก **เข้ารหัสภาพเสมือน "ถุงคำ"**
-    คือรู้ว่ามีวัตถุอะไรและมีคุณสมบัติอะไรอยู่ในภาพ แต่**จับคู่ว่าคุณสมบัติไหนเป็นของวัตถุไหนไม่ได้**
-    — เป็นงานที่อธิบายอาการที่พบในโครงงานนี้ได้ตรง คือ Cosmos อ่านป้าย NG/WAIT/GOOD ออกทุกป้าย
-    แต่จับคู่ป้ายเข้ากับลังผิดเมื่อลังสองใบอยู่ใกล้กัน 251 พิกเซล (ผิด 66%) ขณะที่ลังที่อยู่ห่าง
-    1,053 พิกเซลไม่เคยผิดเลย (หัวข้อ 5.5) ยืนยันว่าเป็น**ข้อจำกัดเชิงโครงสร้างที่มีรายงานในงานวิจัย**
-    ไม่ใช่ความผิดพลาดเฉพาะกรณีหรือปัญหาการอ่านป้าย จึงเป็นเหตุผลรองรับการแก้ด้วยวิธีครอบภาพทีละลัง
-    (ให้โปรแกรมกำหนดขอบเขต แล้วให้แบบจำลองตอบเฉพาะสิ่งที่อยู่ในกรอบ) แทนการพยายามปรับคำสั่ง
