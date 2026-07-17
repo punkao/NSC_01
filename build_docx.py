@@ -37,9 +37,12 @@ PRESETS = {
               "บทที่ 7–9  ผลการทดสอบ · ปัญหาและอุปสรรค · แนวทางพัฒนาต่อ"),
     "ref": (["REPORT_REFERENCES.md"], "รายงาน_เอกสารอ้างอิง_Line-Guard.docx",
             "เอกสารอ้างอิง"),
-    # เอกสารอ้างอิงอยู่ท้ายเล่มเสมอ -- ห้ามแทรกกลาง
-    "all": (["REPORT_SECTION5.md", "REPORT_SECTION789.md", "REPORT_REFERENCES.md"],
-            "รายงาน_Line-Guard_รวม.docx", "บทที่ 5 · 7 · 8 · 9 · เอกสารอ้างอิง"),
+    "abstract": (["REPORT_ABSTRACT.md"], "รายงาน_บทคัดย่อ_Line-Guard.docx",
+                 "บทคัดย่อ"),
+    # ลำดับตายตัว: บทคัดย่อหน้าสุด -> เนื้อหา -> เอกสารอ้างอิงท้ายเล่ม
+    "all": (["REPORT_ABSTRACT.md", "REPORT_SECTION5.md", "REPORT_SECTION789.md",
+             "REPORT_REFERENCES.md"],
+            "รายงาน_Line-Guard_รวม.docx", "บทคัดย่อ · บทที่ 5 · 7 · 8 · 9 · เอกสารอ้างอิง"),
 }
 
 COVER_TITLE = [
