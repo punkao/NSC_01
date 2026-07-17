@@ -1,6 +1,6 @@
 # บทคัดย่อ
 
-โครงงานนี้พัฒนา **Line Guard** ระบบตรวจจับเหตุการณ์ความปลอดภัยในสายการผลิตจากภาพกล้องวงจรปิด
+โครงงานนี้พัฒนา **SAFEVISION AI** ระบบตรวจจับเหตุการณ์ความปลอดภัยในสายการผลิตจากภาพกล้องวงจรปิด
 โดยใช้ **แบบจำลองภาษาและภาพ (Vision-Language Model)** ซึ่งดูภาพแล้วอธิบายเหตุการณ์เป็นภาษาคนได้
 ระบบตรวจจับการไม่สวมอุปกรณ์ป้องกันส่วนบุคคล เหตุเกือบเกิดอุบัติเหตุ บุคคลภายนอกเข้าพื้นที่
 และการทำงานผิดขั้นตอน พร้อมจับคู่เข้ากับกฎความปลอดภัยและระบุระดับความรุนแรงโดยอัตโนมัติ
@@ -34,7 +34,7 @@
 
 # Abstract
 
-This project presents **Line Guard**, a safety event detection system for industrial production lines
+This project presents **SAFEVISION AI**, a safety event detection system for industrial production lines
 that operates on standard CCTV footage using a **Vision-Language Model (VLM)** — a model that
 interprets images and describes events in natural language. The system detects personal protective
 equipment (PPE) violations, near-miss incidents, unauthorized personnel, and procedural deviations,

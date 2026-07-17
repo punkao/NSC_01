@@ -39,20 +39,23 @@ PRESETS = {
             "เอกสารอ้างอิง"),
     "abstract": (["REPORT_ABSTRACT.md"], "รายงาน_บทคัดย่อ_Line-Guard.docx",
                  "บทคัดย่อ"),
-    # ลำดับตายตัว: บทคัดย่อหน้าสุด -> เนื้อหา -> เอกสารอ้างอิงท้ายเล่ม
+    "appendix": (["REPORT_APPENDIX.md"], "รายงาน_ภาคผนวก_Line-Guard.docx",
+                 "ภาคผนวก"),
+    # ลำดับตายตัว: บทคัดย่อหน้าสุด -> เนื้อหา -> เอกสารอ้างอิง -> ภาคผนวกท้ายสุด
     "all": (["REPORT_ABSTRACT.md", "REPORT_SECTION5.md", "REPORT_SECTION789.md",
-             "REPORT_REFERENCES.md"],
-            "รายงาน_Line-Guard_รวม.docx", "บทคัดย่อ · บทที่ 5 · 7 · 8 · 9 · เอกสารอ้างอิง"),
+             "REPORT_REFERENCES.md", "REPORT_APPENDIX.md"],
+            "รายงาน_Line-Guard_รวม.docx",
+            "บทคัดย่อ · บทที่ 5 · 7 · 8 · 9 · เอกสารอ้างอิง · ภาคผนวก"),
 }
 
 COVER_TITLE = [
     ("รายงานฉบับสมบูรณ์", 24, True),
     ("", 16, False),
-    ("Line Guard", 30, True),
+    ("SAFEVISION AI", 30, True),
     ("ระบบตรวจจับเหตุการณ์ความปลอดภัยในสายการผลิต", 22, True),
     ("ด้วยแบบจำลองภาษาและภาพ (Vision-Language Model)", 22, True),
     ("", 16, False),
-    ("Line Guard: A Vision-Language Model Approach to", 18, False),
+    ("SAFEVISION AI: A Vision-Language Model Approach to", 18, False),
     ("Industrial Safety Event Detection from CCTV Video", 18, False),
     ("", 16, False),
 ]

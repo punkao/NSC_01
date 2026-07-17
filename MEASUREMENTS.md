@@ -276,7 +276,7 @@
 ```bash
 # บนเครื่อง GPU (co-located)
 python3 preflight.py                       # ยืนยันว่าเป็น Cosmos-Reason2-8B จริง
-bash run_eval.sh                           # PPE eval 74 เฟรม -> image_obs.json (121 วิ)
+python3 image_tier.py                      # PPE eval 74 เฟรม -> image_obs.json (121 วิ)
 python3 som_sr_ppe.py                      # หน้ากาก + super-resolution -> image_obs_sr.json
 python3 bench_report.py --endpoints <ep0> --label 1gpu
 python3 bench_report.py --endpoints <ep0>,<ep1> --label 2gpu

@@ -17,7 +17,7 @@
 | ไฟล์ | คืออะไร | หมายเหตุ |
 |---|---|---|
 | **`claude_gt_v4.json`** | **เฉลยที่ใช้จริง** — 74 จุดตรวจ พบการละเมิด **56 จุด** | ไล่ดูด้วยตาครบทุกเฟรม · การแก้ทุกจุดบันทึกในฟิลด์ `corrected` · **v3 ถูกแทนที่แล้ว** (ตรวจถุงมือจากภาพเล็กเกินไป จึงตกไป 3 จุด) |
-| `image_obs.json` | คำตอบโมเดลรายเฟรม (หมวก/ถุงมือ/หน้ากาก จากเฟรมเต็ม) | รันใหม่ 2026-07-16 · ทำซ้ำได้ด้วย `run_eval.sh` |
+| `image_obs.json` | คำตอบโมเดลรายเฟรม (หมวก/ถุงมือ/หน้ากาก จากเฟรมเต็ม) | รันใหม่ 2026-07-16 · ทำซ้ำได้ด้วย `image_tier.py` |
 | `image_obs_sr.json` | คำตอบโมเดลสำหรับหน้ากาก (super-resolution) | ใช้คู่กับ `image_obs.json` |
 | `image_events.json` | เหตุการณ์ที่ image tier ตรวจได้ | ผลพลอยได้จาก `image_tier.py` |
 | `roi_scan.json` | มือยุ่งกับลัง WAIT/NG ทุกวินาที | `roi_scan.py` (ต้องใช้ GPU, 67 วินาที) |
@@ -58,7 +58,7 @@
 ```bash
 # --- ต้องมี GPU (รัน co-located บนเครื่อง GPU เท่านั้น) ---
 python3 preflight.py                      # ยืนยันว่าเสิร์ฟ Cosmos-Reason2-8B จริง (กัน env ของเครื่องเช่า)
-bash run_eval.sh                          # PPE 74 เฟรม        -> image_obs.json      (~121 วิ)
+python3 image_tier.py                     # PPE 74 เฟรม        -> image_obs.json      (~121 วิ)
 python3 som_sr_ppe.py                     # หน้ากาก + SR       -> image_obs_sr.json
 python3 roi_scan.py --endpoints <ep0>,<ep1>   # ROI ระบุลัง     -> roi_scan.json       (~67 วิ)
 python3 generate_timeline.py --no-box-names --endpoints <ep0>,<ep1>   # คำบรรยาย 220 จุด (~311 วิ)
